@@ -65,6 +65,51 @@ export const FOOTER_LINKS = [
 ];
 
 export const TESTIMONIALS = [
+  /* ── TADOBA – August 2024 ── */
+  {
+    name: "Guest",
+    location: "",
+    text: "This trip had everything we could have asked for Salil Nair - Thanks for the coordination and arrangements, it was super comfortable and for making our first safari a memorable one. Thanks @Pavithra Venkatagopalan for having us over and making sure we were having fun. @Aparna you guys are fabulous and hopefully we have more reasons to catch up often. And yes cheers to all the 'Gundappa' rockstars, who woke up early without complaining and for keeping the trip lively.",
+    safari: "Tadoba – August 2024",
+  },
+  {
+    name: "Aparna",
+    location: "",
+    text: "Good morning from the concrete jungle - thank you all for coming with me I couldn't have asked for a better \"herd\" to hang out with. Salil you were fabulous as per usual, very nice meeting the S's - pls stay in touch! As for the rest we will meet on Fridays (if you will have me) any other day. I had a great time and hope you guys did too. The tigers were incidentals :)",
+    safari: "Tadoba – August 2024",
+  },
+  /* ── KANHA & PENCH – October 2025 ── */
+  {
+    name: "Rani",
+    location: "",
+    text: "Had fantastic safaris. And I'm glad that I didn't miss the night Safari. Thanks Salil for making that happen inspire of me giving my request at the last minute. Thanks to you Salil and everyone who made this safari happen. Thanks to all of you for making it a great trip.",
+    safari: "Kanha & Pench – October 2025",
+  },
+  {
+    name: "Sunita",
+    location: "",
+    text: "Hello hello. We have such amazing writers and poets in this group!! I'm just going to simply say that I had an amazing safari! Great sightings and seeing different animals and birds was really interesting. Never noticed so many birds before thanks to Lakshmi and Salil's little booklet 🦉🦚 So happy to meet some old friends again and to make new ones. Thank you to Salil and to everyone who worked so hard to make this safari happen….",
+    safari: "Kanha & Pench – October 2025",
+  },
+  {
+    name: "Gita Ganesh",
+    location: "",
+    text: "Woke up with a smile remembering the last three mornings. The moon, gentle breeze, the lush forest, above all hope that today we are going to see that beautiful animal… tiger. Salil, thank you for organising a brilliant safari. Enjoyed every moment. Bunty, if you remember, I said yes, the next moment you asked if I wanted to go. Yes, Balu, we made some new friends. Once again thank you and look forward to seeing you all again.",
+    safari: "Kanha & Pench – October 2025",
+  },
+  {
+    name: "Rain Bunty",
+    location: "",
+    text: "Thank you Salil for all the planning and the execution. We had a marvellous trip and I think luck beamed bright on us. The way we saw the sight of a lifetime, a tiger with its kill, eating it as well as tender moments with its cub... when the most feared huntress became a gentle mother... amazing sight.\n\nThe weather was with us and the luck held out till we made our flights home. So many thanks to the powers that be.\n\nTo my co travellers. You guys made this journey a memorable one. Such easy company and so much laughter... That's what travel is about.\n\nThank you for your company and for the wonderful memories made.",
+    safari: "Kanha & Pench – October 2025",
+  },
+  {
+    name: "Balaji Ganesh",
+    location: "",
+    text: "Hi guys what a whirlwind tour enjoyed it and am seeing a beginning of a great friendship.\n\nThank you Salil and of course, Bunty what a weird lot of lovable friends. No wonder we are so incompatibly compatible. Love you guys we will soon meet in the club for a lovely evening and will talk about this trip and mainly about the following:\n\nHow the aloo bonda was yum. How the samosa was yum. Of course, we saw the tiger bloody even she was eating 🙄. And thanks for putting up with the bluntest of the jokes.\n\nWe have spotted the Tiger, Sambar, Rasam, Monkey 🐒, Bluegai (Nilgai), Gaur and of course also travelled with a PANDA. Enjoy guys.",
+    safari: "Kanha & Pench – October 2025",
+  },
+  /* ── MASAI MARA – January 2026 ── */
   {
     name: "Janani",
     location: "Chennai",
