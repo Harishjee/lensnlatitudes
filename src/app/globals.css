@@ -24,6 +24,8 @@ body {
   background: #0a0a0a;
   color: #ffffff;
   font-family: var(--font-pt-serif), Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
