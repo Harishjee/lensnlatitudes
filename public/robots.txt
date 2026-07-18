@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# Host
+Host: https://www.lensnlatitudes.com
+
+# Sitemaps
+Sitemap: https://www.lensnlatitudes.com/sitemap.xml
