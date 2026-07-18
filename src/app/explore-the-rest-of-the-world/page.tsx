@@ -4,63 +4,142 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Explore the Rest of the World — Global Wildlife Photography Tours",
+  title: "Explore the Rest of the World — Global Wildlife Photography Expeditions",
   description:
-    "Global wildlife photography expeditions — Pantanal jaguars, Sumatra orangutans, Yellowstone wolves, Svalbard polar bears, Scottish Highlands red deer. Led by Salil Nair.",
+    "Global wildlife photography expeditions — Pantanal jaguars, Yellowstone wolves, Svalbard polar bears, Sumatra orangutans, Scottish Highlands. Led by Salil Nair.",
   path: "/explore-the-rest-of-the-world",
-  image: "/images/og-world.jpg",
+  image: "/images/world-wildlife-photography-hero.jpg",
 });
 
-const destinations = [
-  { name: "Pantanal", country: "Brazil", desc: "The Jaguar's Domain — Venture by boat through flooded forests and photograph jaguars stalking caimans in broad daylight. Add giant river otters and hyacinth macaws, and it's a color-rich spectacle." },
-  { name: "Sumatra", country: "Indonesia", desc: "Home of the Orangutan — Mist-draped rainforests echo with ancient calls. Capture orangutans swinging through dense canopy and elephants wandering through tropical fog." },
-  { name: "Yellowstone National Park", country: "USA", desc: "Fire, Ice, and Fur — Bison in blizzards, wolves in twilight, and steaming geysers painting the landscape. A truly cinematic blend of wildlife and natural drama." },
-  { name: "The Scottish Highlands", country: "UK", desc: "Of Myths and Stags — A moody, medieval backdrop for red deer, golden eagles, and elusive wildcats. Nature meets legend in every haunting frame." },
-  { name: "Svalbard", country: "Norway", desc: "Kingdom of Ice Bears — Sail through glacial silence as polar bears hunt on sea ice. The Arctic light will leave your memory cards full and your heart fuller." },
+const row1 = [
+  {
+    name: "Pantanal",
+    country: "Brazil",
+    desc: "The Jaguar's Domain — Venture by boat through flooded forests and photograph jaguars stalking caimans in broad daylight. Add giant river otters and hyacinth macaws for a colour-rich spectacle.",
+    image: "/images/pantanal-jaguar-brazil-wildlife-photography.jpg",
+  },
+  {
+    name: "Yellowstone National Park",
+    country: "USA",
+    desc: "Fire, Ice, and Fur — Bison in blizzards, wolves in twilight, and steaming geysers painting the landscape. A truly cinematic blend of wildlife and natural drama.",
+    image: "/images/yellowstone-bison-usa-wildlife-photography.jpg",
+  },
+  {
+    name: "Svalbard",
+    country: "Norway",
+    desc: "Kingdom of Ice Bears — Sail through glacial silence as polar bears hunt on sea ice. The Arctic light will leave your memory cards full and your heart fuller.",
+    image: "/images/svalbard-polar-bear-norway-arctic.jpg",
+  },
+];
+
+const row2 = [
+  {
+    name: "Sumatra",
+    country: "Indonesia",
+    desc: "Home of the Orangutan — Mist-draped rainforests echo with ancient calls. Capture orangutans swinging through dense canopy and elephants wandering through tropical fog.",
+    image: "/images/sumatra-orangutan-indonesia-wildlife.jpg",
+  },
+  {
+    name: "The Scottish Highlands",
+    country: "UK",
+    desc: "Of Myths and Stags — A moody, medieval backdrop for red deer, golden eagles, and elusive wildcats. Nature meets legend in every haunting frame.",
+    image: "/images/scottish-highlands-wildlife-photography.jpg",
+  },
 ];
 
 export default function ExploreRestOfWorldPage() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[460px] flex items-end pb-12 overflow-hidden">
-        <Image src="/images/world-hero.jpg" alt="Global wildlife photography" fill className="object-cover" priority sizes="100vw" />
+      {/* ── HERO ─────────────────────────────────────── */}
+      <section className="relative h-[65vh] min-h-[480px] flex items-end overflow-hidden">
+        <Image
+          src="/images/world-wildlife-photography-hero.jpg"
+          alt="World wildlife photography expeditions — Lens N Latitudes"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full pb-12">
+          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
             Explore the Rest<br />of the World
           </h1>
-          <p className="text-gray-300 mt-2 text-xl">Untouched. Unexpected. Unrepeatable.</p>
+          <p className="text-gray-300 mt-2 italic">Untouched. Unexpected. Unrepeatable.</p>
         </div>
       </section>
 
-      <section className="py-20 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gray-400 text-lg max-w-3xl mb-16 leading-relaxed">
-            Wildlife wonders don&apos;t end with continents — they expand into corners you didn&apos;t know existed. Let Lens and Latitudes take you beyond borders, to places where it&apos;s &ldquo;unseen, unspoiled, and utterly unforgettable.&rdquo;
+      {/* ── INTRO ─────────────────────────────────────── */}
+      <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-gray-400 leading-relaxed max-w-3xl">
+            Wildlife wonders don&apos;t end with continents — they expand into corners you didn&apos;t know existed. Let Lens and Latitudes take you beyond borders, to places where it&apos;s <span className="text-white">&ldquo;unseen, unspoiled, and utterly unforgettable.&rdquo;</span>
           </p>
+        </div>
+      </section>
 
-          <div className="space-y-6">
-            {destinations.map((d) => (
-              <div key={d.name} className="flex gap-6 p-6 bg-[#111] rounded-xl border border-white/10 hover:border-[#00bcd4]/30 transition-colors">
-                <div className="shrink-0 w-1 bg-[#00bcd4] rounded-full" />
-                <div>
-                  <h2 className="text-white font-bold text-xl mb-1">{d.name}</h2>
-                  <p className="text-[#00bcd4] text-xs uppercase tracking-wider mb-3">{d.country}</p>
-                  <p className="text-gray-400 leading-relaxed">{d.desc}</p>
+      {/* ── DESTINATIONS ────────────────────────────── */}
+      <section className="bg-[#0a0a0a] pb-16 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Row 1 — 3 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            {row1.map((d) => (
+              <div key={d.name} className="group">
+                <div className="relative aspect-[4/3] overflow-hidden mb-3">
+                  <Image
+                    src={d.image}
+                    alt={`${d.name} ${d.country} wildlife photography`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
                 </div>
+                <h2 className="font-display text-white text-lg font-normal">{d.name}</h2>
+                <p className="text-[#00bcd4] text-xs uppercase tracking-wider mb-2">{d.country}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{d.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 p-6 bg-[#0d0d0d] rounded-xl border border-white/10">
-            <p className="text-gray-400 leading-relaxed mb-2">
-              Whether it&apos;s photographing pumas in Patagonia, watching kiwis scurry under the moonlight in New Zealand, or following Grizzly bears fishing in Alaska&apos;s rushing rivers — we&apos;re always ready to go where the call of the wild is loudest.
-            </p>
-            <p className="text-white italic font-medium">&ldquo;Hidden, untamed, and far from the ordinary — keep your camera ready.&rdquo;</p>
+          {/* Row 2 — 2 cards + text */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {row2.map((d) => (
+              <div key={d.name} className="group">
+                <div className="relative aspect-[4/3] overflow-hidden mb-3">
+                  <Image
+                    src={d.image}
+                    alt={`${d.name} ${d.country} wildlife photography`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </div>
+                <h2 className="font-display text-white text-lg font-normal">{d.name}</h2>
+                <p className="text-[#00bcd4] text-xs uppercase tracking-wider mb-2">{d.country}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
+            {/* Text block */}
+            <div className="flex flex-col justify-center p-6 bg-[#0d0d0d] border border-white/5">
+              <p className="font-display text-white text-xl font-normal mb-3">The wild doesn&apos;t stop here, and neither do we.</p>
+              <div className="text-gray-400 text-sm leading-relaxed space-y-1">
+                <p>Whether it&apos;s photographing <span className="text-white">pumas in Patagonia</span>,</p>
+                <p>watching <span className="text-white">kiwis scurry under the moonlight</span> in New Zealand,</p>
+                <p>or following <span className="text-white">Grizzly bears fishing in Alaska&apos;s rushing rivers</span> for salmon,</p>
+                <p className="mt-2">we&apos;re always ready to go where the call of the wild is loudest.</p>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-10">
-            <WhatsAppButton message="Hi Salil, I'm interested in an international wildlife photography expedition." label="Plan Your Expedition" />
+          {/* Closing quote */}
+          <div className="mt-14 text-center space-y-1">
+            <p className="font-display text-white text-2xl sm:text-3xl font-normal">
+              If it&apos;s &ldquo;hidden, untamed, and far from the ordinary&rdquo;
+            </p>
+            <p className="text-gray-400">you can bet we&apos;ll get you there, keep your camera ready.</p>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <WhatsAppButton message="Hi Salil, I'm interested in an international wildlife photography expedition." label="Plan My Expedition" />
           </div>
         </div>
       </section>
