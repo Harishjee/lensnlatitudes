@@ -25,7 +25,7 @@ export default function SignatureShootsPage() {
       {/* ── TITLE BLOCK ─────────────────────────────── */}
       <section className="bg-[#0a0a0a] pt-28 pb-10 px-4 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal">
+          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image">
             Signature Shoots
           </h1>
         </div>
@@ -51,8 +51,9 @@ export default function SignatureShootsPage() {
             <Image
               src={sliderImages[0].src}
               alt={sliderImages[0].alt}
-              fill
-              className="object-cover"
+              width={1920}
+              height={1280}
+              className="w-full h-auto block"
               sizes="100vw"
               priority
             />

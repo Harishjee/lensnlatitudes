@@ -15,20 +15,21 @@ export default function TrackMePage() {
   return (
     <>
       {/* ── HERO — person on rock with text overlay ── */}
-      <section className="relative min-h-[65vh] flex items-end overflow-hidden">
+      <section className="relative w-full">
         <Image
           src="/images/salil-nair-track-me-wildlife-photographer.jpg"
           alt="Salil Nair wildlife photographer — track me"
-          fill
-          className="object-cover object-center"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/20" />
+        
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-12 pt-28">
           <div className="grid lg:grid-cols-2 gap-8 items-end">
             <div>
-              <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal mb-0">
+              <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image mb-0">
                 Track Me
               </h1>
             </div>
@@ -50,8 +51,9 @@ export default function TrackMePage() {
               <Image
                 src="/images/eagle-flight-wildlife-photography-india.jpg"
                 alt="Eagle in flight — Salil Nair wildlife photography"
-                fill
-                className="object-cover"
+                width={1920}
+                height={1280}
+                className="w-full h-auto block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <p className="absolute bottom-3 left-3 text-white/60 text-xs font-display italic">Salil S. Nair</p>

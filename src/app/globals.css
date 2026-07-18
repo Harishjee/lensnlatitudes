@@ -35,27 +35,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.01em;
 }
 
+/* Text shadow for readability over images — no dark overlay needed */
+.text-on-image {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7), 0 2px 20px rgba(0,0,0,0.5);
+}
+
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #00bcd4;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
 
-/* Image lazy loading fade */
-img {
-  transition: opacity 0.3s ease;
-}
-
-/* Dropdown transition */
-.dropdown-menu {
-  transform-origin: top center;
-}
+/* Ensure images never overflow */
+img { max-width: 100%; display: block; }

@@ -51,21 +51,22 @@ export default function ExploreRestOfWorldPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative h-[65vh] min-h-[480px] flex items-end overflow-hidden">
+      <section className="relative w-full">
         <Image
           src="/images/world-wildlife-photography-hero.jpg"
           alt="World wildlife photography expeditions — Lens N Latitudes"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full pb-12">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
+        
+        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-14 z-10">
+          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image leading-tight">
             Explore the Rest<br />of the World
           </h1>
-          <p className="text-gray-300 mt-2 italic">Untouched. Unexpected. Unrepeatable.</p>
+          <p className="text-gray-300 mt-2 italic text-on-image">Untouched. Unexpected. Unrepeatable.</p>
         </div>
       </section>
 

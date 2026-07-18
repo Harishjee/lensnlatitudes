@@ -36,12 +36,13 @@ export default function AwardsPage() {
         <Image
           src="/images/awards-hero.jpg"
           alt="Award-winning tiger photograph by Salil Nair"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Awards</h1>
         </div>
@@ -86,8 +87,9 @@ export default function AwardsPage() {
                 <Image
                   src="/images/awards-medals.jpg"
                   alt="Salil Nair's award medals"
-                  fill
-                  className="object-cover"
+                  width={1920}
+                  height={1280}
+                  className="w-full h-auto block"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -112,7 +114,7 @@ export default function AwardsPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
                 <p className="absolute bottom-0 left-0 right-0 p-3 text-white text-sm font-medium translate-y-full group-hover:translate-y-0 transition-transform">
                   {img.title}
                 </p>

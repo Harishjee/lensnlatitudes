@@ -22,7 +22,7 @@ export default function ExploreLatitudesPage() {
     <>
       <section className="relative h-[65vh] min-h-[460px] flex items-end pb-12 overflow-hidden">
         <Image src="/images/explore-latitudes-hero.jpg" alt="Wildlife safari photography journey" fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Explore Latitudes</h1>
         </div>
@@ -55,7 +55,7 @@ export default function ExploreLatitudesPage() {
             {destinations.map((d) => (
               <Link key={d.href} href={d.href} className="group relative aspect-[3/4] rounded-xl overflow-hidden">
                 <Image src={d.image} alt={d.label} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                
                 <div className="absolute bottom-0 left-0 p-6">
                   <h2 className="text-white font-bold text-xl mb-2">{d.label}</h2>
                   <p className="text-gray-300 text-sm mb-3">{d.desc}</p>

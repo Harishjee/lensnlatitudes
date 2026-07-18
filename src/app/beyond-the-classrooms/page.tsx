@@ -15,18 +15,19 @@ export default function BeyondTheClassroomsPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative h-[65vh] min-h-[480px] flex items-end overflow-hidden">
+      <section className="relative w-full">
         <Image
           src="/images/student-wildlife-education-tour-hero.jpg"
           alt="Beyond the Classrooms — student wildlife education tour"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full pb-12">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal">
+        
+        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-14 z-10">
+          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image">
             Beyond the Classrooms
           </h1>
         </div>
@@ -58,8 +59,9 @@ export default function BeyondTheClassroomsPage() {
                 <Image
                   src="/images/student-wildlife-tour-masai-mara.jpg"
                   alt="Students on wildlife safari photography tour"
-                  fill
-                  className="object-cover"
+                  width={1920}
+                  height={1280}
+                  className="w-full h-auto block"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -67,8 +69,9 @@ export default function BeyondTheClassroomsPage() {
                 <Image
                   src="/images/student-wildlife-photography-safari.jpg"
                   alt="Wildlife education photography session for students"
-                  fill
-                  className="object-cover"
+                  width={1920}
+                  height={1280}
+                  className="w-full h-auto block"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -97,8 +100,9 @@ export default function BeyondTheClassroomsPage() {
               <Image
                 src="/images/tiger-wildlife-education-tour-india.jpg"
                 alt="Tiger — wildlife education experience India"
-                fill
-                className="object-cover"
+                width={1920}
+                height={1280}
+                className="w-full h-auto block"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

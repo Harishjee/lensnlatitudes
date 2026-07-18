@@ -27,16 +27,17 @@ export default function AbstractsUnleashedPage() {
   return (
     <>
       {/* ── HERO SECTION — title right, image full bg ── */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative w-full">
         <Image
           src="/images/abstract-wildlife-jungle-light-shadow.jpg"
           alt="Abstract wildlife photography — Abstracts Unleashed"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full pt-24">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Text left */}
@@ -78,11 +79,12 @@ export default function AbstractsUnleashedPage() {
         <Image
           src="/images/abstract-forest-light-photography.jpg"
           alt="Abstract forest light photography — creative wildlife"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1280}
+          className="w-full h-auto block"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/65" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           <div className="max-w-2xl">
             <p className="font-display text-white text-2xl sm:text-3xl lg:text-4xl font-normal leading-snug mb-6">

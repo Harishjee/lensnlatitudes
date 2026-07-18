@@ -16,7 +16,7 @@ export default function OwnItPage() {
     <>
       <section className="relative h-[60vh] min-h-[420px] flex items-end pb-12 overflow-hidden">
         <Image src="/images/own-it-hero.jpg" alt="Wildlife photography prints" fill className="object-cover" priority sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Own It</h1>
           <p className="text-gray-300 mt-2 text-lg">The Power of the Photograph</p>
