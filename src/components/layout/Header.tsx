@@ -65,7 +65,7 @@ export default function Header() {
 
           {/* Logo — icon only (no text beside it) */}
           <Link href="/" className="shrink-0">
-            <div className="relative w-12 h-12 lg:w-14 lg:h-14">
+            <div className="relative w-16 h-16 lg:w-20 lg:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Lens N Latitudes"

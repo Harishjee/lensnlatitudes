@@ -60,23 +60,19 @@ export default function HomePage() {
         {/* subtle dark gradient — darker at edges, lighter in centre */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/20 to-black/40" />
 
-        {/* title — bottom-left */}
-        <div className="absolute bottom-16 left-8 sm:left-12 lg:left-16 z-10">
+        {/* title — upper-left, directly below the logo */}
+        <div className="absolute left-6 sm:left-10 lg:left-16 z-10"
+             style={{ top: "clamp(140px, 22vh, 260px)" }}>
           <h1 className="font-display text-white font-normal leading-none"
-              style={{ fontSize: "clamp(2.5rem, 6vw, 5.5rem)" }}>
+              style={{ fontSize: "clamp(2.8rem, 6.5vw, 6rem)" }}>
             Lens N Latitudes
           </h1>
-          <p className="mt-3 text-white/90 italic font-display"
+          <p className="mt-4 text-white/90 italic font-display"
              style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}>
             Framing Nature, One Latitude at a Time
           </p>
         </div>
 
-        {/* Salil S Nair watermark — bottom-left below title */}
-        <p className="absolute bottom-5 left-8 sm:left-12 lg:left-16 z-10
-                      text-white/60 font-display italic text-sm tracking-wide">
-          Salil S Nair
-        </p>
       </section>
 
       {/* ══════════════════════════════════════════════
