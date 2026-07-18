@@ -169,15 +169,15 @@ export default function HomePage() {
           Images displayed at FULL NATURAL SIZE — no cropping, no overlay
       ══════════════════════════════════════════════ */}
       <section className="bg-white py-16 px-6 sm:px-10 lg:px-20">
-        {/* Heading */}
-        <div className="mb-12">
+        {/* Heading — single line, centered */}
+        <div className="mb-12 text-center">
           <h2
-            className="font-display text-black font-normal leading-tight mb-5"
-            style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
+            className="font-display text-black font-normal whitespace-nowrap mb-5"
+            style={{ fontSize: "clamp(1.2rem, 3.2vw, 3rem)" }}
           >
             Your Pack…&nbsp;&nbsp;&nbsp;Your Path…&nbsp;&nbsp;&nbsp;Let Nature Do the Talking
           </h2>
-          <p className="text-gray-700" style={{ fontSize: "20px" }}>
+          <p className="text-gray-700 text-center" style={{ fontSize: "20px" }}>
             This is where the Wi-Fi ends and real connection begins — we&apos;ve got you covered.
           </p>
         </div>
