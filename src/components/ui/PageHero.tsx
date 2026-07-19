@@ -103,7 +103,7 @@ export default function PageHero({
   return (
     <section
       className="relative w-full overflow-hidden"
-      style={{ height: fullHeight ? "100vh" : "clamp(300px, 45vh, 520px)" }}
+      style={{ height: fullHeight ? "75vh" : "clamp(300px, 45vh, 520px)" }}
     >
       <Image
         src={image}
@@ -114,6 +114,17 @@ export default function PageHero({
         priority
         sizes="100vw"
       />
+      {/* Soft scrim behind the title for legibility (photo stays fully visible) */}
+      {fullHeight && !isDark && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: isRight
+              ? "linear-gradient(to left, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.18) 32%, rgba(0,0,0,0) 60%)"
+              : "linear-gradient(to right, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.18) 32%, rgba(0,0,0,0) 60%)",
+          }}
+        />
+      )}
       <div className={titleWrap}>
         <h1 className={titleClasses} style={{ fontSize: "clamp(2.8rem, 5vw, 6rem)" }}>
           {title}
