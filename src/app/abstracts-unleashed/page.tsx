@@ -49,6 +49,7 @@ export default function AbstractsUnleashedPage() {
             <Image
               src="/images/abstract-ostrich-backlit-dark-portrait.jpg"
               alt="Backlit ostrich neck silhouette — abstract wildlife photography by Salil Nair"
+              title="Backlit ostrich neck silhouette — abstract wildlife photography by Salil Nair"
               fill
               className="object-contain"
               sizes="(max-width: 1024px) 100vw, 25vw"
@@ -85,6 +86,7 @@ export default function AbstractsUnleashedPage() {
             <Image
               src="/images/abstract-animal-silhouette-white-mist.jpg"
               alt="Abstract animal silhouette in white light — abstract wildlife photography by Salil Nair"
+              title="Abstract animal silhouette in white light — abstract wildlife photography by Salil Nair"
               fill
               className="object-contain"
               sizes="(max-width: 1024px) 100vw, 25vw"
@@ -114,6 +116,7 @@ export default function AbstractsUnleashedPage() {
             <Image
               src="/images/abstract-forest-motion-blur-green.jpg"
               alt="Green forest intentional camera movement blur — abstract nature photography by Salil Nair"
+              title="Green forest intentional camera movement blur — abstract nature photography by Salil Nair"
               width={1400}
               height={875}
               className="w-full h-auto block"
@@ -132,6 +135,7 @@ export default function AbstractsUnleashedPage() {
             <Image
               src="/images/abstract-forest-motion-blur-blue.jpg"
               alt="Blue forest intentional camera movement blur — abstract nature photography by Salil Nair"
+              title="Blue forest intentional camera movement blur — abstract nature photography by Salil Nair"
               width={800}
               height={1200}
               className="w-full h-auto block"

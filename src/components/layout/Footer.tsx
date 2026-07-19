@@ -15,6 +15,7 @@ export default function Footer() {
                 <Image
                   src="/images/logo.png"
                   alt="Lens N Latitudes logo"
+                  title="Lens N Latitudes logo"
                   fill
                   className="object-contain"
                 />
@@ -84,6 +85,24 @@ export default function Footer() {
               </p>
             </address>
           </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-gray-500 text-sm text-center sm:text-left">
+            © {new Date().getFullYear()} Lens N Latitudes. All rights reserved.
+          </p>
+          <p className="text-gray-500 text-sm text-center sm:text-right">
+            Website designed by{" "}
+            <a
+              href="https://www.digitalnadu.com/"
+              target="_blank"
+              rel="noopener"
+              className="text-gray-300 hover:text-white underline underline-offset-2 transition-colors"
+            >
+              DigitalNadu
+            </a>
+          </p>
         </div>
       </div>
     </footer>

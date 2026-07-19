@@ -116,6 +116,7 @@ export default function OwnItPage() {
             <Image
               src="/images/own-it-hero.jpg"
               alt="Fine art black and white lion portrait print — Salil Nair"
+              title="Fine art black and white lion portrait print — Salil Nair"
               fill
               className="object-cover"
               style={{ objectPosition: "center bottom" }}
@@ -161,6 +162,7 @@ export default function OwnItPage() {
               <Image
                 src={row.image}
                 alt={row.alt}
+                title={row.alt}
                 width={row.width}
                 height={row.height}
                 className="w-full h-auto"

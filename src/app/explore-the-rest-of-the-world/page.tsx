@@ -83,6 +83,7 @@ function DestinationCard({ dest }: { dest: Destination }) {
         <Image
           src={dest.image}
           alt={dest.alt}
+          title={`${dest.name} ${dest.country}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"

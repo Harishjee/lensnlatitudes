@@ -124,6 +124,7 @@ export default function AwardsPage() {
               <Image
                 src="/images/awards-medals-wpai-fip-nature-in-focus.jpg"
                 alt="Salil Nair wildlife photography award medals — WPAI, FIP, Nature in Focus"
+                title="Salil Nair wildlife photography award medals — WPAI, FIP, Nature in Focus"
                 width={1200}
                 height={900}
                 className="w-full h-auto block"
@@ -204,6 +205,7 @@ export default function AwardsPage() {
             <Image
               src="/images/award-closing-bird-crane-wildlife-art.jpg"
               alt="Award-winning bird photography — crane in flight, Salil Nair"
+              title="Award-winning bird photography — crane in flight, Salil Nair"
               width={800}
               height={1200}
               className="w-full h-auto block"

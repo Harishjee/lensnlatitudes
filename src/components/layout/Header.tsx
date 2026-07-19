@@ -77,6 +77,7 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Lens N Latitudes"
+                title="Lens N Latitudes"
                 fill
                 className="object-contain"
                 priority

@@ -35,6 +35,7 @@ export default function ExploreLatitudesPage() {
             <Image
               src="/images/explore-maasai-warrior-jumping-kenya.jpg"
               alt="Maasai warrior jumping in traditional dress, Kenya — Lens and Latitudes safari"
+              title="Maasai warrior jumping in traditional dress, Kenya — Lens and Latitudes safari"
               width={900}
               height={1350}
               className="w-full h-auto block"
@@ -57,6 +58,7 @@ export default function ExploreLatitudesPage() {
             <Image
               src="/images/explore-elephants-playing-amboseli.jpg"
               alt="Two elephants playing in green savanna with mountain backdrop — Amboseli safari"
+              title="Two elephants playing in green savanna with mountain backdrop — Amboseli safari"
               width={1000}
               height={667}
               className="w-full h-auto block"
@@ -69,6 +71,7 @@ export default function ExploreLatitudesPage() {
             <Image
               src="/images/explore-lion-cubs-walking-masai-mara.jpg"
               alt="Two lion cubs walking together in Masai Mara — Lens and Latitudes safari"
+              title="Two lion cubs walking together in Masai Mara — Lens and Latitudes safari"
               width={1000}
               height={667}
               className="w-full h-auto block"
@@ -98,6 +101,7 @@ export default function ExploreLatitudesPage() {
             <Image
               src="/images/explore-lion-portrait-bw-rain.jpg"
               alt="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
+              title="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
               width={1200}
               height={800}
               className="w-full h-auto block"
@@ -125,6 +129,7 @@ export default function ExploreLatitudesPage() {
               <Image
                 src="/images/explore-cape-buffalo-bw-grass.webp"
                 alt="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
+                title="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
                 width={600}
                 height={600}
                 className="w-1/2 lg:w-[52%] h-auto block"
@@ -159,6 +164,7 @@ export default function ExploreLatitudesPage() {
             <Image
               src="/images/salil-nair-tiger-reflection-wildlife-photography.jpg"
               alt="Tiger walking beside water with reflection, lush jungle — Salil Nair wildlife photography"
+              title="Tiger walking beside water with reflection, lush jungle — Salil Nair wildlife photography"
               width={1200}
               height={800}
               className="w-full h-auto block"

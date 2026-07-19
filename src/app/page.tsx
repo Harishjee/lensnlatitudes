@@ -52,6 +52,7 @@ export default function HomePage() {
         <Image
           src="/images/home-hero-wildlife-safari-lens-n-latitudes.jpg"
           alt="Lens N Latitudes — wildlife photography safari"
+          title="Lens N Latitudes — wildlife photography safari"
           width={1920}
           height={1280}
           className="w-full h-auto block"
@@ -86,6 +87,7 @@ export default function HomePage() {
         <Image
           src="/images/home-wildlife-photography-intro.jpg"
           alt="Lens N Latitudes — wildlife photography story, Goa beach landscape"
+          title="Lens N Latitudes — wildlife photography story, Goa beach landscape"
           width={1920}
           height={1280}
           className="w-full h-auto block"
@@ -128,6 +130,7 @@ export default function HomePage() {
         <Image
           src="/images/home-more-than-safari-jeep-wild.jpg"
           alt="More than just a safari — safari jeep at dramatic sunset, Masai Mara"
+          title="More than just a safari — safari jeep at dramatic sunset, Masai Mara"
           width={1920}
           height={1280}
           className="w-full h-auto block"
@@ -191,6 +194,7 @@ export default function HomePage() {
                 <Image
                   src={cap.image}
                   alt={cap.alt}
+                  title={cap.title}
                   width={840}
                   height={560}
                   className="w-full h-auto block"
@@ -267,6 +271,7 @@ export default function HomePage() {
               <Image
                 src={v.thumb}
                 alt={v.label}
+                title={v.label}
                 width={800}
                 height={450}
                 className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"

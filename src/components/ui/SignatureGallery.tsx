@@ -50,6 +50,7 @@ export default function SignatureGallery({ images }: { images: GalleryImage[] })
             key={current}
             src={images[current].src}
             alt={images[current].alt}
+            title={images[current].alt}
             width={1600}
             height={1067}
             className="w-auto h-auto max-h-[75vh] max-w-full object-contain animate-[fadeIn_0.5s_ease]"
@@ -85,7 +86,8 @@ export default function SignatureGallery({ images }: { images: GalleryImage[] })
           >
             <Image
               src={img.src}
-              alt=""
+              alt={`${img.alt} — thumbnail`}
+              title={img.alt}
               fill
               className="object-cover"
               sizes="96px"

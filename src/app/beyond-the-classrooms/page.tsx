@@ -84,6 +84,7 @@ export default function BeyondTheClassroomsPage() {
             <Image
               src="/images/beyond-classrooms-buffalo-water.jpg"
               alt="Buffalo — wildlife by Salil Nair"
+              title="Buffalo — wildlife by Salil Nair"
               width={1080}
               height={1620}
               className="w-full h-auto block"
@@ -103,6 +104,7 @@ export default function BeyondTheClassroomsPage() {
             <Image
               src="/images/beyond-classrooms-leopard-cub-portrait.jpg"
               alt="Leopard cub — wildlife education by Salil Nair"
+              title="Leopard cub — wildlife education by Salil Nair"
               width={2236}
               height={2236}
               className="w-full h-auto block"

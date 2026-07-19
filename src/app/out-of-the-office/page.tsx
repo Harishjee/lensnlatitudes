@@ -81,6 +81,7 @@ export default function OutOfTheOfficePage() {
               <Image
                 src="/images/ooo-safari-jeep-team.jpg"
                 alt="Cheetah in grassland — Out of the Office by Salil Nair"
+                title="Cheetah in grassland — Out of the Office by Salil Nair"
                 width={1600}
                 height={1000}
                 className="w-full h-auto block"
@@ -143,6 +144,7 @@ export default function OutOfTheOfficePage() {
             <Image
               src="/images/ooo-dslr-on-jeep-dashboard.jpg"
               alt="DSLR camera on jeep dashboard — Out of the Office by Salil Nair"
+              title="DSLR camera on jeep dashboard — Out of the Office by Salil Nair"
               width={1200}
               height={900}
               className="w-full h-auto block"
@@ -196,6 +198,7 @@ export default function OutOfTheOfficePage() {
             <Image
               src="/images/ooo-sunset-elephants-savanna.jpg"
               alt="Sunset elephants in savanna — Out of the Office by Salil Nair"
+              title="Sunset elephants in savanna — Out of the Office by Salil Nair"
               width={1200}
               height={800}
               className="w-full h-auto block"

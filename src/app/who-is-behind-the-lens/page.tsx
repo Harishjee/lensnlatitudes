@@ -38,6 +38,7 @@ export default function WhoIsBehindTheLensPage() {
         <Image
           src="/images/salil-nair-rhino-bw-wildlife-photography.jpg"
           alt="Salil Nair — the man behind the lens, founder of Lens and Latitudes. Framing Nature, One Latitude at a Time."
+          title="Salil Nair — the man behind the lens, founder of Lens and Latitudes. Framing Nature, One Latitude at a Time."
           width={1400}
           height={787}
           className="w-full h-auto block"
@@ -53,6 +54,7 @@ export default function WhoIsBehindTheLensPage() {
         <Image
           src="/images/home-wildlife-photography-intro.jpg"
           alt="Salil Nair long-exposure seascape — Goa beach landscape photography"
+          title="Salil Nair long-exposure seascape — Goa beach landscape photography"
           width={1920}
           height={1200}
           className="w-full h-auto block"
@@ -119,6 +121,7 @@ export default function WhoIsBehindTheLensPage() {
             <Image
               src="/images/salil-nair-tiger-reflection-wildlife-photography.jpg"
               alt="Salil Nair wildlife photography — tiger walking with reflection in water"
+              title="Salil Nair wildlife photography — tiger walking with reflection in water"
               width={1400}
               height={933}
               className="w-full h-auto block"

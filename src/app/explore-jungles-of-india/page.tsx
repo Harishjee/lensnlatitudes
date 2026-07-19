@@ -71,6 +71,7 @@ function ParkCard({ park }: { park: Park }) {
         <Image
           src={park.image}
           alt={park.alt}
+          title={`${park.name} ${park.state}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"

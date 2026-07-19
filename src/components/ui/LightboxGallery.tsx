@@ -72,6 +72,7 @@ export default function LightboxGallery({
               <Image
                 src={img.src}
                 alt={img.alt}
+                title={img.title ?? img.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, 33vw"
@@ -141,6 +142,7 @@ export default function LightboxGallery({
             <img
               src={active.src}
               alt={active.alt}
+              title={active.title ?? active.alt}
               className="max-w-[92vw] max-h-[78vh] w-auto h-auto object-contain shadow-2xl"
             />
             {active.title && (

@@ -32,6 +32,7 @@ export default function TrackMePage() {
               <Image
                 src="/images/eagle-flight-wildlife-photography-india.jpg"
                 alt="African fish eagle swooping to catch fish — Salil Nair wildlife photography"
+                title="African fish eagle swooping to catch fish — Salil Nair wildlife photography"
                 width={1600}
                 height={1067}
                 className="w-full h-auto block"

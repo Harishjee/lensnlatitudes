@@ -79,6 +79,7 @@ export default function PageHero({
         <Image
           src={image}
           alt={alt}
+          title={alt}
           fill
           className="object-cover"
           style={{ objectPosition: imagePosition }}
@@ -108,6 +109,7 @@ export default function PageHero({
       <Image
         src={image}
         alt={alt}
+        title={alt}
         fill
         className="object-cover"
         style={{ objectPosition: imagePosition }}

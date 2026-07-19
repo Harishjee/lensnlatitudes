@@ -113,6 +113,7 @@ export default function UpcomingSafarisPage() {
               <Image
                 src={img.src}
                 alt={img.alt}
+                title={img.alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 33vw"
@@ -222,6 +223,7 @@ export default function UpcomingSafarisPage() {
                       <Image
                         src={safari.image}
                         alt={safari.imageAlt}
+                        title={`${safari.title} — ${safari.date}`}
                         width={1024}
                         height={1536}
                         className="w-full h-auto"
@@ -331,6 +333,7 @@ export default function UpcomingSafarisPage() {
         <Image
           src="/images/ooo-hero-sunset-elephants-masai-mara.jpg"
           alt="Elephants at sunset in the Masai Mara, Kenya"
+          title="Elephants at sunset in the Masai Mara, Kenya"
           fill
           className="object-cover"
           sizes="100vw"
