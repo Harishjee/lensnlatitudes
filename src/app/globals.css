@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background: #0a0a0a;
   color: #ffffff;
@@ -29,6 +34,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Media never forces horizontal scroll */
+img, video, svg {
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

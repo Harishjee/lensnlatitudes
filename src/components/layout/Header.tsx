@@ -90,7 +90,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-1">
             {NAV.map((item) => {
               if ("href" in item && !("dropdown" in item)) {
                 /* plain link */
@@ -98,8 +98,8 @@ export default function Header() {
                   <Link
                     key={item.label}
                     href={(item as { href: string }).href}
-                    className={`text-sm px-3 py-2 transition-colors whitespace-nowrap ${
-                      darkText ? "text-gray-800 hover:text-black" : "text-white/90 hover:text-white"
+                    className={`text-[17px] font-semibold px-3.5 py-2 transition-colors whitespace-nowrap ${
+                      darkText ? "text-gray-900 hover:text-black" : "text-white hover:text-white/80"
                     }`}
                   >
                     {item.label}
@@ -110,11 +110,11 @@ export default function Header() {
               const d = item as { label: string; dropdown: DropdownItem[] };
               return (
                 <div key={d.label} className="relative group">
-                  <button className={`flex items-center gap-0.5 text-sm px-3 py-2 transition-colors whitespace-nowrap ${
-                    darkText ? "text-gray-800 hover:text-black" : "text-white/90 hover:text-white"
+                  <button className={`flex items-center gap-0.5 text-[17px] font-semibold px-3.5 py-2 transition-colors whitespace-nowrap ${
+                    darkText ? "text-gray-900 hover:text-black" : "text-white hover:text-white/80"
                   }`}>
                     {d.label}
-                    <span className={`ml-0.5 text-base leading-none ${darkText ? "text-gray-500" : "text-white/60"}`}>+</span>
+                    <span className={`ml-0.5 text-lg leading-none ${darkText ? "text-gray-600" : "text-white/70"}`}>+</span>
                   </button>
                   {/* dropdown panel */}
                   <div className="absolute top-full left-0 mt-0.5 min-w-[180px] bg-[#0d0d0d]/98 border border-white/10
@@ -124,7 +124,7 @@ export default function Header() {
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="block px-5 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap"
+                        className="block px-5 py-2.5 text-[15px] font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-colors whitespace-nowrap"
                       >
                         {sub.label}
                       </Link>
@@ -137,7 +137,7 @@ export default function Header() {
             {/* Upcoming Safari CTA — white pill with dark text (matches original) */}
             <Link
               href="/upcoming-safaris"
-              className={`ml-3 text-sm font-medium px-5 py-2.5 rounded-full transition-colors whitespace-nowrap ${
+              className={`ml-3 text-[16px] font-semibold px-5 py-2.5 rounded-full transition-colors whitespace-nowrap ${
                 darkText
                   ? "bg-gray-900 text-white hover:bg-black"
                   : "bg-white text-black hover:bg-gray-100"
@@ -149,7 +149,7 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2"
+            className="xl:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -162,15 +162,15 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-black/95 border-t border-white/10">
+        <div className="xl:hidden bg-black/95 border-t border-white/10">
           <nav className="px-6 py-4 max-h-[80vh] overflow-y-auto space-y-0.5">
-            <Link href="/" className="block py-2.5 text-sm text-gray-300 border-b border-white/5"
+            <Link href="/" className="block py-3 text-base font-semibold text-gray-200 border-b border-white/5"
                   onClick={() => setMobileOpen(false)}>Home</Link>
             {NAV.slice(1).map((item) => {
               if ("href" in item && !("dropdown" in item)) {
                 return (
                   <Link key={item.label} href={(item as { href: string }).href}
-                        className="block py-2.5 text-sm text-gray-300 border-b border-white/5"
+                        className="block py-3 text-base font-semibold text-gray-200 border-b border-white/5"
                         onClick={() => setMobileOpen(false)}>
                     {item.label}
                   </Link>
@@ -180,7 +180,7 @@ export default function Header() {
               return (
                 <div key={d.label}>
                   <button
-                    className="w-full flex justify-between py-2.5 text-sm text-gray-300 border-b border-white/5"
+                    className="w-full flex justify-between py-3 text-base font-semibold text-gray-200 border-b border-white/5"
                     onClick={() => setOpenMobile(openMobile === d.label ? null : d.label)}
                   >
                     {d.label}
@@ -190,7 +190,7 @@ export default function Header() {
                     <div className="pl-4 pb-1">
                       {d.dropdown.map((sub) => (
                         <Link key={sub.href} href={sub.href}
-                              className="block py-2 text-sm text-gray-500 hover:text-white"
+                              className="block py-2.5 text-[15px] font-medium text-gray-400 hover:text-white"
                               onClick={() => setMobileOpen(false)}>
                           {sub.label}
                         </Link>
