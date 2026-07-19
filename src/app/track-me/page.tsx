@@ -24,9 +24,9 @@ export default function TrackMePage() {
       />
 
       {/* ── CONTENT — big eagle image LEFT, text RIGHT ─── */}
-      <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[2fr_1fr] gap-8 lg:gap-12 items-center mb-20">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid lg:grid-cols-[3fr_1fr] gap-8 lg:gap-10 items-center mb-20">
             {/* Eagle image — big */}
             <div className="relative">
               <Image
