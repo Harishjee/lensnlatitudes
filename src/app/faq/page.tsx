@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
-import FAQAccordion from "@/components/ui/FAQAccordion";
+import FAQSection from "@/components/ui/FAQSection";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -81,27 +81,11 @@ export default function FAQPage() {
         image="/images/india-wildlife-safari-jeep-photography.jpg"
         alt="Wildlife safari FAQ — jeep photography tour India, Lens N Latitudes"
         title="Frequently Asked Questions"
+        subtitle="Everything you wanted to ask before the wild calls."
         titlePosition="right-center"
       />
 
-      <section className="py-12 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Override dark card styles for light bg */}
-          <div className="space-y-3">
-            {faqs.map((item, i) => (
-              <details key={i} className="group border border-gray-200 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-4 text-gray-800 font-medium cursor-pointer hover:bg-gray-50 list-none">
-                  <span>{item.q}</span>
-                  <span className="text-[#00bcd4] text-xl shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                  {item.a}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FAQSection faqs={faqs} />
 
       {/* JSON-LD FAQPage structured data */}
       <script
