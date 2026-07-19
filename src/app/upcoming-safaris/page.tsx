@@ -277,10 +277,10 @@ export default function UpcomingSafarisPage() {
                         className="justify-center text-base px-7 py-3.5"
                       />
                       <a
-                        href={`tel:${CONTACT.phone2.replace(/[^+\d]/g, "")}`}
+                        href="/contact"
                         className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 text-white px-7 py-3.5 font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                       >
-                        📞 Call Salil
+                        ✉️ Contact Us
                       </a>
                     </div>
                   </div>
