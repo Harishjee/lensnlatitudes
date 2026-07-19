@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+// Cloudflare (OpenNext) — enables platform bindings during `next dev`.
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+
+initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   images: {

@@ -1,0 +1,2 @@
+# Local secrets for Cloudflare Workers dev (do NOT commit real keys)
+RESEND_API_KEY=your_resend_api_key_here
