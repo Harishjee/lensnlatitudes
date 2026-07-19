@@ -9,6 +9,7 @@ const schema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Enter a valid email"),
+  phone: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
   honeypot: z.string().max(0),
 });
@@ -44,35 +45,71 @@ export default function ContactForm() {
     }
   };
 
+  const labelClass = "block text-gray-300 text-sm font-medium mb-2";
   const inputClass =
-    "w-full bg-[#111] border border-white/15 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#00bcd4] transition-colors text-sm";
-  const errorClass = "text-red-400 text-xs mt-1";
+    "w-full bg-[#0f0f0f] border border-white/12 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#00bcd4] focus:ring-2 focus:ring-[#00bcd4]/20 transition text-[15px]";
+  const errorClass = "text-red-400 text-xs mt-1.5";
+
+  if (status === "success") {
+    return (
+      <div className="flex flex-col items-center justify-center text-center py-16 px-6">
+        <div className="w-16 h-16 rounded-full bg-[#00bcd4]/15 flex items-center justify-center mb-6">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+        </div>
+        <h3 className="font-display text-white text-2xl font-normal mb-3">Message sent!</h3>
+        <p className="text-gray-400 leading-relaxed max-w-sm" style={{ fontSize: "16px" }}>
+          Thank you for reaching out. Salil and the team will get back to you shortly —
+          keep an eye on your inbox.
+        </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="mt-8 text-[#00bcd4] hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       {/* Honeypot — hidden from real users */}
       <input type="text" {...register("honeypot")} className="hidden" tabIndex={-1} autoComplete="off" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <input {...register("firstName")} placeholder="First Name *" className={inputClass} />
+          <label className={labelClass}>First Name *</label>
+          <input {...register("firstName")} placeholder="Jane" className={inputClass} />
           {errors.firstName && <p className={errorClass}>{errors.firstName.message}</p>}
         </div>
         <div>
-          <input {...register("lastName")} placeholder="Last Name *" className={inputClass} />
+          <label className={labelClass}>Last Name *</label>
+          <input {...register("lastName")} placeholder="Doe" className={inputClass} />
           {errors.lastName && <p className={errorClass}>{errors.lastName.message}</p>}
         </div>
       </div>
 
-      <div>
-        <input {...register("email")} type="email" placeholder="Email *" className={inputClass} />
-        {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label className={labelClass}>Email *</label>
+          <input {...register("email")} type="email" placeholder="jane@email.com" className={inputClass} />
+          {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+        </div>
+        <div>
+          <label className={labelClass}>
+            Phone <span className="text-gray-600 font-normal">(optional)</span>
+          </label>
+          <input {...register("phone")} type="tel" placeholder="+91 90000 00000" className={inputClass} />
+        </div>
       </div>
 
       <div>
+        <label className={labelClass}>Message *</label>
         <textarea
           {...register("message")}
-          placeholder="Message *"
+          placeholder="Tell us which safari or shoot you're interested in, dates, group size, or any questions…"
           rows={5}
           className={`${inputClass} resize-none`}
         />
@@ -82,16 +119,11 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-[#00bcd4] hover:bg-[#0097a7] text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full bg-[#00bcd4] hover:bg-[#0097a7] text-white font-semibold py-4 rounded-xl transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-base"
       >
         {status === "loading" ? "Sending…" : "Send Message"}
       </button>
 
-      {status === "success" && (
-        <p className="text-green-400 text-sm text-center">
-          Thank you! We&apos;ll get back to you soon.
-        </p>
-      )}
       {status === "error" && (
         <p className="text-red-400 text-sm text-center">
           Something went wrong. Please email us directly at lensnlatitudes@gmail.com

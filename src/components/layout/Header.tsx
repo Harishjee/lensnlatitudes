@@ -39,13 +39,8 @@ const NAV = [
       { label: "FAQ", href: "/faq" },
     ],
   },
-  {
-    label: "Up-coming Safari's", dropdown: [
-      { label: "Upcoming Safaris", href: "/upcoming-safaris" },
-      { label: "Own It", href: "/own-it" },
-    ],
-  },
   { label: "Own It", href: "/own-it" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 type NavItem = (typeof NAV)[number];
