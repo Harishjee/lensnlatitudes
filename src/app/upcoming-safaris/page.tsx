@@ -9,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Join Salil Nair on Kenya's most iconic wildlife photography expeditions — The Super Tuskers & Walk with the Cheetahs. Oct 14–20, 2026. Amboseli, Lake Naivasha, Lake Nakuru & Masai Mara. Small groups, luxury all-inclusive stays, limited seats.",
   path: "/upcoming-safaris",
-  image: "/images/og-upcoming-safaris.jpg",
+  image: "/images/ooo-hero-sunset-elephants-masai-mara.jpg",
 });
 
 /* ── Collage images for the hero background ── */
@@ -122,12 +122,12 @@ export default function UpcomingSafarisPage() {
           ))}
         </div>
         {/* Overlays — light enough to show the collage, dark enough to read */}
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/48" />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 50% 42%, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.34) 60%, rgba(0,0,0,0.6) 100%)",
+              "radial-gradient(120% 90% at 50% 42%, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.7) 100%)",
           }}
         />
 

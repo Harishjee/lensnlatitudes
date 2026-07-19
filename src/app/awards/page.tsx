@@ -59,7 +59,7 @@ export default function AwardsPage() {
         alt="Award-winning tiger resting in water — Tadoba wildlife photography by Salil Nair"
         title="Awards"
         titlePosition="right-center"
-        imagePosition="center bottom"
+        imagePosition="center"
       />
 
       {/* ══════════════════════════════════════

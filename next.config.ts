@@ -6,6 +6,9 @@ initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   images: {
+    // The Next optimizer isn't available on Cloudflare/OpenNext, so serve the
+    // (already pre-compressed) source files directly from Cloudflare's edge CDN.
+    unoptimized: true,
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     minimumCacheTTL: 31536000,

@@ -9,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Get in touch with Salil Nair at Lens N Latitudes. Enquire about upcoming safaris, wildlife photography tours, corporate retreats, or fine art prints.",
   path: "/contact",
-  image: "/images/wildlife-photography-prints-gallery-wall.png",
+  image: "/images/explore-latitudes-masai-mara-wildlife.jpg",
 });
 
 const MAP_SRC =

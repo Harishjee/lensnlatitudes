@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Everything you need to know about our wildlife safaris — gear, physical requirements, group sizes, accommodation, what to pack, and more.",
   path: "/faq",
-  image: "/images/og-faq.jpg",
+  image: "/images/india-wildlife-safari-jeep-photography.jpg",
 });
 
 const faqs = [

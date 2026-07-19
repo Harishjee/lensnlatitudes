@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Own a real, unfiltered moment from the wild. Salil Nair's award-winning wildlife photography prints turn any wall into a story — buy one, gift one, hang one.",
   path: "/own-it",
-  image: "/images/og-own-it.jpg",
+  image: "/images/ooo-sunset-reflection-tree.jpg",
 });
 
 type Row = {

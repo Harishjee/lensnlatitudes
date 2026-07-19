@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Curated wildlife photography safaris to India, Africa & worldwide. Under the mentorship of Salil Nair — 18+ years of global experience, photography-centric itineraries.",
   path: "/explore-latitudes",
-  image: "/images/og-explore-latitudes.jpg",
+  image: "/images/explore-latitudes-masai-mara-wildlife.jpg",
 });
 
 const bodyText = { fontSize: "20px" };
