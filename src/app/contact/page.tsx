@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import ContactForm from "@/components/ui/ContactForm";
 import { CONTACT } from "@/lib/constants";
@@ -15,14 +16,20 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-[#0a0a0a] pt-28 pb-16 px-4 sm:px-8 lg:px-12">
+      <PageHero
+        image="/images/explore-latitudes-masai-mara-wildlife.jpg"
+        alt="Contact Lens N Latitudes — wildlife safari enquiries"
+        title="Contact Us"
+        titlePosition="right-center"
+      />
+      <section className="bg-[#0a0a0a] pt-14 pb-16 px-4 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left — form */}
             <div>
-              <h1 className="font-display text-white text-4xl sm:text-5xl font-normal mb-3">
-                Contact Us
-              </h1>
+              <h2 className="font-display text-white text-3xl font-normal mb-3">
+                Get In Touch
+              </h2>
               <p className="text-gray-400 text-sm mb-2">
                 Let people know what to reach out about and what to expect after contacting you.
               </p>

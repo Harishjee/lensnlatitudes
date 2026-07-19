@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -51,13 +52,12 @@ const safaris = [
 export default function UpcomingSafarisPage() {
   return (
     <>
-      <section className="relative h-[50vh] min-h-[360px] flex items-end pb-12 overflow-hidden">
-        <Image src="/images/upcoming-safaris-hero.jpg" alt="Kenya wildlife safari" fill className="object-cover" priority sizes="100vw" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Upcoming Safaris</h1>
-        </div>
-      </section>
+            <PageHero
+        image="/images/kenya-safari-super-tuskers-expedition-2026.png"
+        alt="Upcoming Kenya Wildlife Safaris 2026 — Lens N Latitudes"
+        title="Upcoming Safaris"
+        titlePosition="right-center"
+      />
 
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

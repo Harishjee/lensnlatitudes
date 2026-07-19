@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import PageHero from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -52,30 +53,12 @@ const galleryImages = [
 export default function AwardsPage() {
   return (
     <>
-      {/* ══════════════════════════════════════
-          SECTION 1 — HERO (full-width tiger)
-          "Awards" right-aligned over image
-      ══════════════════════════════════════ */}
-      <section className="relative w-full">
-        <Image
-          src="/images/awards-hero-tiger-tadoba-wildlife.jpg"
-          alt="Award-winning tiger wildlife photography — Tadoba, Salil Nair"
-          width={1920}
-          height={1080}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        {/* "Awards" — right side, vertically centred */}
-        <div className="absolute inset-0 flex items-center justify-end pr-10 sm:pr-16 lg:pr-24 z-10">
-          <h1
-            className="font-display text-white font-normal text-on-image"
-            style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
-          >
-            Awards
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        image="/images/awards-hero-tiger-tadoba-wildlife.jpg"
+        alt="Award-winning tiger resting in water — Tadoba wildlife photography by Salil Nair"
+        title="Awards"
+        titlePosition="right-center"
+      />
 
       {/* ══════════════════════════════════════
           SECTION 2 — AWARD-WINNING STORIES

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Link from "next/link";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -14,9 +15,14 @@ export const metadata: Metadata = buildMetadata({
 export default function StoryBehindThePhotoPage() {
   return (
     <>
-      <section className="pt-32 min-h-[60vh] bg-[#0a0a0a] flex items-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl mb-4">Story Behind the Photo</h1>
+      <PageHero
+        image="/images/home-more-than-safari-jeep-wild.jpg"
+        alt="Story Behind the Photo — wildlife photography stories by Salil Nair"
+        title="Story Behind the Photo"
+        titlePosition="left-bottom"
+      />
+      <section className="bg-[#0a0a0a] py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <p className="text-gray-400 text-xl leading-relaxed mb-12">
             Every frame has a story. The patience, the wait, the moment — and what came before the shutter clicked.
           </p>

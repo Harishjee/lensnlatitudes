@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
@@ -15,32 +16,12 @@ export default function TrackMePage() {
   return (
     <>
       {/* ── HERO — person on rock with text overlay ── */}
-      <section className="relative w-full">
-        <Image
-          src="/images/salil-nair-track-me-wildlife-photographer.jpg"
-          alt="Salil Nair wildlife photographer — track me"
-          width={1920}
-          height={1280}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-12 pt-28">
-          <div className="grid lg:grid-cols-2 gap-8 items-end">
-            <div>
-              <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image mb-0">
-                Track Me
-              </h1>
-            </div>
-            <div>
-              <p className="text-gray-200 text-base sm:text-lg leading-relaxed italic">
-                If you&apos;re looking to meet the man behind the lens, you&apos;ll probably find him in the middle of nowhere — grinning, kneeling, whispering, &ldquo;Just one more shot.&rdquo;
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            <PageHero
+        image="/images/salil-nair-track-me-wildlife-photographer.jpg"
+        alt="Track Me — Salil Nair wildlife photographer on location"
+        title="Track Me"
+        titlePosition="left-bottom"
+      />
 
       {/* ── CONTENT — eagle image left, text right ─── */}
       <section className="bg-[#0a0a0a] py-16 px-4 sm:px-8 lg:px-12">

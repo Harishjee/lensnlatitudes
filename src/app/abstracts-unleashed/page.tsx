@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
@@ -27,40 +28,12 @@ export default function AbstractsUnleashedPage() {
   return (
     <>
       {/* ── HERO SECTION — title right, image full bg ── */}
-      <section className="relative w-full">
-        <Image
-          src="/images/abstract-wildlife-jungle-light-shadow.jpg"
-          alt="Abstract wildlife photography — Abstracts Unleashed"
-          width={1920}
-          height={1280}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full pt-24">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Text left */}
-            <div className="space-y-5 text-gray-300 leading-relaxed">
-              <p>
-                After years of capturing award-winning wildlife moments — the kind that make judges weep and Instagram swoon.
-              </p>
-              <p>
-                I&apos;ve taken a sharp, creative left turn. These days, I&apos;m less about the checklist shots and more about the ones that stir something deeper.
-              </p>
-              <p>
-                I&apos;m chasing abstraction, emotion, movement — photos that don&apos;t just document wildlife but distill it. The kind where a blur says more than sharp focus ever could.
-              </p>
-            </div>
-            {/* Title right */}
-            <div className="lg:text-right">
-              <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight">
-                Abstracts<br />Unleashed
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
+            <PageHero
+        image="/images/abstract-wildlife-jungle-light-shadow.jpg"
+        alt="Abstracts Unleashed — abstract wildlife photography"
+        title="Abstracts Unleashed"
+        titlePosition="right-center"
+      />
 
       {/* ── BODY + FOREST QUOTE SECTION ──────────────── */}
       <section className="bg-[#0a0a0a] py-14 px-4 sm:px-8 lg:px-12">

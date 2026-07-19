@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -14,13 +15,12 @@ export const metadata: Metadata = buildMetadata({
 export default function OutOfTheOfficePage() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[460px] flex items-end pb-12 overflow-hidden">
-        <Image src="/images/out-of-office-hero.jpg" alt="Corporate wildlife safari retreat" fill className="object-cover" priority sizes="100vw" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Out of the Office</h1>
-        </div>
-      </section>
+            <PageHero
+        image="/images/corporate-wildlife-safari-retreat-india.jpg"
+        alt="Out of the Office — corporate wildlife safari retreat India"
+        title="Out of the Office"
+        titlePosition="left-bottom"
+      />
 
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-gray-400 leading-relaxed text-lg">

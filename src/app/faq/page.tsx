@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -76,14 +77,12 @@ const faqs = [
 export default function FAQPage() {
   return (
     <>
-      {/* Light background for contrast — matches Squarespace design */}
-      <section className="pt-32 pb-8 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-gray-900 font-bold text-4xl sm:text-5xl">
-            Frequently Asked Questions
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        image="/images/india-wildlife-safari-jeep-photography.jpg"
+        alt="Wildlife safari FAQ — jeep photography tour India, Lens N Latitudes"
+        title="Frequently Asked Questions"
+        titlePosition="right-center"
+      />
 
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

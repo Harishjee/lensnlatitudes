@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
@@ -20,13 +21,12 @@ const destinations = [
 export default function ExploreLatitudesPage() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[460px] flex items-end pb-12 overflow-hidden">
-        <Image src="/images/explore-latitudes-hero.jpg" alt="Wildlife safari photography journey" fill className="object-cover" priority sizes="100vw" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Explore Latitudes</h1>
-        </div>
-      </section>
+            <PageHero
+        image="/images/explore-latitudes-masai-mara-wildlife.jpg"
+        alt="Explore Latitudes — wildlife safari photography journeys worldwide"
+        title="Explore Latitudes"
+        titlePosition="left-bottom"
+      />
 
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import TestimonialsCarousel from "@/components/ui/TestimonialsCarousel";
+import TestimonialsSection from "@/components/ui/TestimonialsSection";
 
 export const metadata: Metadata = {
   title: "Lens N Latitudes — Wildlife Photography & Safari Tours India",
@@ -227,7 +227,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════
           SECTION 6 — TESTIMONIALS
       ══════════════════════════════════════════════ */}
-      <TestimonialsCarousel />
+      <TestimonialsSection />
 
       {/* ══════════════════════════════════════════════
           SECTION 7 — REAL ADVENTURES (light bg + 2×2 videos)

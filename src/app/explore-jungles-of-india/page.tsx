@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import Link from "next/link";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
@@ -49,26 +50,13 @@ export default function ExploreJunglesOfIndiaPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative w-full">
-        <Image
-          src="/images/india-wildlife-safari-jeep-photography.jpg"
-          alt="Wildlife safari jeep photography India — Explore Jungles"
-          width={1920}
-          height={1280}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        
-        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-14 z-10">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image">
-            Explore Jungles of India
-          </h1>
-          <p className="text-gray-300 mt-2 italic text-on-image">
-            Ancient Forests. Elusive Beasts. A Symphony of Shadows and Silence.
-          </p>
-        </div>
-      </section>
+            <PageHero
+        image="/images/india-wildlife-safari-jeep-photography.jpg"
+        alt="Explore Jungles of India — wildlife safari photography"
+        title="Explore Jungles of India"
+        subtitle="Ancient Forests. Elusive Beasts. A Symphony of Shadows and Silence."
+        titlePosition="left-bottom"
+      />
 
       {/* ── INTRO ─────────────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">

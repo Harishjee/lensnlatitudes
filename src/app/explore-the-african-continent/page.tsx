@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -48,26 +49,13 @@ export default function ExploreAfricanContinentPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative w-full">
-        <Image
-          src="/images/africa-rhino-wildlife-photography-hero.jpg"
-          alt="African rhino wildlife photography — Explore the African Continent"
-          width={1920}
-          height={1280}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        
-        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-14 z-10">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image leading-tight">
-            Explore the<br />African Continent
-          </h1>
-          <p className="text-gray-300 mt-2 italic text-on-image">
-            Where Earth Roars. Where Light Dances. Where the Wild is Eternal.
-          </p>
-        </div>
-      </section>
+            <PageHero
+        image="/images/africa-rhino-wildlife-photography-hero.jpg"
+        alt="Explore the African Continent — rhino wildlife photography safari"
+        title="Explore the African Continent"
+        subtitle="Where Earth Roars. Where Light Dances. Where the Wild is Eternal."
+        titlePosition="right-center"
+      />
 
       {/* ── INTRO ─────────────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">

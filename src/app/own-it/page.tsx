@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -14,14 +15,12 @@ export const metadata: Metadata = buildMetadata({
 export default function OwnItPage() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[420px] flex items-end pb-12 overflow-hidden">
-        <Image src="/images/own-it-hero.jpg" alt="Wildlife photography prints" fill className="object-cover" priority sizes="100vw" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <h1 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl">Own It</h1>
-          <p className="text-gray-300 mt-2 text-lg">The Power of the Photograph</p>
-        </div>
-      </section>
+            <PageHero
+        image="/images/wildlife-photography-prints-for-sale.jpg"
+        alt="Own It — wildlife photography fine art prints by Salil Nair"
+        title="Own It"
+        titlePosition="right-center"
+      />
 
       <section className="py-20 bg-[#0a0a0a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-gray-400 leading-relaxed text-lg">

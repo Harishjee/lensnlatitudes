@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -22,14 +23,12 @@ const sliderImages = [
 export default function SignatureShootsPage() {
   return (
     <>
-      {/* ── TITLE BLOCK ─────────────────────────────── */}
-      <section className="bg-[#0a0a0a] pt-28 pb-10 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image">
-            Signature Shoots
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        image="/images/signature-shoot-elephant-golden-grass.jpg"
+        alt="Signature wildlife photography shoot — elephant in golden African grass"
+        title="Signature Shoots"
+        titlePosition="left-bottom"
+      />
 
       {/* ── HERO QUOTE ──────────────────────────────── */}
       <section className="bg-[#0a0a0a] pb-12 px-4 sm:px-8 lg:px-12">

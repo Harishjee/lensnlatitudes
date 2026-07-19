@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
@@ -15,23 +16,12 @@ export default function BeyondTheClassroomsPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="relative w-full">
-        <Image
-          src="/images/student-wildlife-education-tour-hero.jpg"
-          alt="Beyond the Classrooms — student wildlife education tour"
-          width={1920}
-          height={1280}
-          className="w-full h-auto block"
-          priority
-          sizes="100vw"
-        />
-        
-        <div className="absolute bottom-10 left-6 sm:left-10 lg:left-14 z-10">
-          <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-normal text-on-image">
-            Beyond the Classrooms
-          </h1>
-        </div>
-      </section>
+            <PageHero
+        image="/images/student-wildlife-education-tour-hero.jpg"
+        alt="Beyond the Classrooms — student wildlife education tour"
+        title="Beyond the Classrooms"
+        titlePosition="right-center"
+      />
 
       {/* ── MAIN CONTENT ──────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-14 px-4 sm:px-8 lg:px-12">
