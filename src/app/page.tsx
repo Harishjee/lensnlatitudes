@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TestimonialsSection from "@/components/ui/TestimonialsSection";
+import VideoTestimonials from "@/components/ui/VideoTestimonials";
 
 export const metadata: Metadata = {
   title: "Lens N Latitudes — Wildlife Photography & Safari Tours India",
@@ -251,48 +252,35 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* 2×2 video grid with real thumbnails */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-          {[
-            { thumb: "/images/video-testimonial-safari-1.jpg", dur: "1:20", label: "Dr. S. Manivannan — Masai Mara" },
-            { thumb: "/images/video-testimonial-safari-2.jpg", dur: "1:14", label: "Safari testimonial — wildlife journey" },
-            { thumb: "/images/video-testimonial-safari-3.jpg", dur: "0:46", label: "Client review — photography tour" },
-            { thumb: "/images/video-testimonial-safari-4.jpg", dur: "0:41", label: "Client testimonial — safari experience" },
-          ].map((v, i) => (
-            <a
-              key={i}
-              href="https://www.youtube.com/channel/UCYuLxoEjjepb6nBw9EG1W8g"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden bg-black"
-              aria-label={v.label}
-            >
-              {/* Real thumbnail */}
-              <Image
-                src={v.thumb}
-                alt={v.label}
-                title={v.label}
-                width={800}
-                height={450}
-                className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, 50vw"
-              />
-              {/* Play button overlay (minimal — just the play icon, no dark overlay) */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-black/60 border-2 border-white/90 flex items-center justify-center
-                                group-hover:bg-[#00bcd4] group-hover:border-[#00bcd4] transition-colors">
-                  <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-              {/* Duration badge */}
-              <span className="absolute bottom-2 left-2 text-white text-xs font-mono bg-black/60 px-1.5 py-0.5 rounded">
-                {v.dur}
-              </span>
-            </a>
-          ))}
-        </div>
+        {/* Inline video testimonials — uniform 16:9 cards, click to play */}
+        <VideoTestimonials
+          videos={[
+            {
+              src: "/videos/dr-manivannan-masai-mara.mp4",
+              poster: "/videos/dr-manivannan-masai-mara-poster.jpg",
+              name: "Dr. S. Manivannan",
+              role: "Founder & MD, Kauvery Hospital — Masai Mara",
+            },
+            {
+              src: "/videos/jaykumar-chennai.mp4",
+              poster: "/videos/jaykumar-chennai-poster.jpg",
+              name: "Jaykumar",
+              role: "Chennai — Wildlife Safari",
+            },
+            {
+              src: "/videos/ambika-bangalore.mp4",
+              poster: "/videos/ambika-bangalore-poster.jpg",
+              name: "Ambika",
+              role: "Bangalore — Wildlife Safari",
+            },
+            {
+              src: "/videos/bala-masai-mara.mp4",
+              poster: "/videos/bala-masai-mara-poster.jpg",
+              name: "Bala",
+              role: "Masai Mara — Trip Testimonial",
+            },
+          ]}
+        />
 
         <div className="text-center mt-8">
           <a
