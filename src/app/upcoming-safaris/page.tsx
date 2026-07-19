@@ -60,7 +60,7 @@ export default function UpcomingSafarisPage() {
       />
 
       <section className="py-20 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
             {safaris.map((safari, i) => (
               <article key={i} className="bg-[#111] rounded-2xl overflow-hidden border border-white/10 hover:border-[#00bcd4]/30 transition-colors">

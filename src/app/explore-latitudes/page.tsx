@@ -29,7 +29,7 @@ export default function ExploreLatitudesPage() {
           Maasai (tall, left) · intro + cubs (middle) · elephants + tigers text (right)
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 items-start">
+        <div className="max-w-8xl mx-auto grid lg:grid-cols-3 gap-8 items-start">
           {/* Left — Maasai warrior, spans both rows */}
           <div className="lg:row-span-2">
             <Image
@@ -92,7 +92,7 @@ export default function ExploreLatitudesPage() {
           Lion is the base layer (left); dark boxes overlap its right edge.
       ══════════════════════════════════════ */}
       <section className="bg-white py-12 lg:py-20 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto relative">
+        <div className="max-w-8xl mx-auto relative">
           {/* Lion — base layer, vertically centered on desktop */}
           <div className="w-full lg:w-[58%] lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-0">
             <Image
@@ -108,7 +108,7 @@ export default function ExploreLatitudesPage() {
           {/* Right column — flows normally (defines height), overlaps the lion */}
           <div className="mt-8 lg:mt-0 lg:ml-[46%] lg:w-[54%] relative z-10 space-y-8 lg:space-y-10">
             {/* Dark box 1 — overlaps lion top-right */}
-            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
+            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={{ fontSize: "16px" }}>
               <p>
                 Our itineraries are crafted to ensure <strong className="text-white">maximum time in
                 the wild</strong>, avoiding tourist-heavy hours and placing you in the best spots
@@ -123,17 +123,17 @@ export default function ExploreLatitudesPage() {
             {/* Buffalo square — sits in the clear area, right of the lion */}
             <div className="flex justify-center">
               <Image
-                src="/images/explore-buffalo-grass-bw-placeholder.jpg"
+                src="/images/explore-cape-buffalo-bw-grass.webp"
                 alt="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
                 width={600}
                 height={600}
-                className="w-1/2 lg:w-[52%] h-auto block grayscale"
+                className="w-1/2 lg:w-[52%] h-auto block"
                 sizes="(max-width: 1024px) 50vw, 28vw"
               />
             </div>
 
             {/* Dark box 2 — overlaps lion bottom-right */}
-            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
+            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={{ fontSize: "16px" }}>
               <p>
                 Every journey is <strong className="text-white">photography-centric</strong>, offering
                 not just sightings, but the opportunity to learn how to turn those moments into
@@ -153,7 +153,7 @@ export default function ExploreLatitudesPage() {
           SECTION C — tiger reflection + closing text (white bg)
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-8xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — tiger reflection */}
           <div>
             <Image

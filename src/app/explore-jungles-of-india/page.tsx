@@ -60,7 +60,7 @@ export default function ExploreJunglesOfIndiaPage() {
 
       {/* ── INTRO ─────────────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <p className="text-gray-400 leading-relaxed max-w-3xl">
             India&apos;s jungles are more than wilderness — they&apos;re <span className="text-white">mystical realms</span> where nature hides her best stories in whispers.
           </p>
@@ -72,7 +72,7 @@ export default function ExploreJunglesOfIndiaPage() {
 
       {/* ── DESTINATIONS GRID ────────────────────────── */}
       <section className="bg-[#0a0a0a] pb-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           {/* First row — 3 cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             {parks.slice(0, 3).map((park) => (

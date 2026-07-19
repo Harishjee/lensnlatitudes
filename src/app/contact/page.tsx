@@ -23,7 +23,7 @@ export default function ContactPage() {
         titlePosition="right-center"
       />
       <section className="bg-[#0a0a0a] pt-14 pb-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left — form */}
             <div>

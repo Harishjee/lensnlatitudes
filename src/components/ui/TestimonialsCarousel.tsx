@@ -77,7 +77,7 @@ export default function TestimonialsCarousel() {
       </div>
 
       {/* Desktop: 3 cards | Mobile: 1 card */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-8xl mx-auto">
         {visible.map((t, i) => (
           <div
             key={`${current}-${i}`}

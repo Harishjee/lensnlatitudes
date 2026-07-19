@@ -62,7 +62,7 @@ export default function ExploreRestOfWorldPage() {
 
       {/* ── INTRO ─────────────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <p className="text-gray-400 leading-relaxed max-w-3xl">
             Wildlife wonders don&apos;t end with continents — they expand into corners you didn&apos;t know existed. Let Lens and Latitudes take you beyond borders, to places where it&apos;s <span className="text-white">&ldquo;unseen, unspoiled, and utterly unforgettable.&rdquo;</span>
           </p>
@@ -71,7 +71,7 @@ export default function ExploreRestOfWorldPage() {
 
       {/* ── DESTINATIONS ────────────────────────────── */}
       <section className="bg-[#0a0a0a] pb-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           {/* Row 1 — 3 cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             {row1.map((d) => (

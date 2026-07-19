@@ -59,7 +59,7 @@ export default function ExploreAfricanContinentPage() {
 
       {/* ── INTRO ─────────────────────────────────────── */}
       <section className="bg-[#0a0a0a] py-12 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto space-y-3 text-gray-400 leading-relaxed max-w-3xl">
+        <div className="max-w-8xl mx-auto space-y-3 text-gray-400 leading-relaxed max-w-3xl">
           <p>Africa is not just a destination — it&apos;s the origin of awe.</p>
           <p>Every horizon burns with possibility, and every safari here is an orchestra of motion and instinct.</p>
           <p>With Salil Nair&apos;s expert eye guiding your lens, witness the grand theatre of nature like never before.</p>
@@ -68,7 +68,7 @@ export default function ExploreAfricanContinentPage() {
 
       {/* ── DESTINATIONS GRID ────────────────────────── */}
       <section className="bg-[#0a0a0a] pb-16 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           {/* First row — 3 */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
             {destinations.slice(0, 3).map((d) => (
