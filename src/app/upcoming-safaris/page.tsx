@@ -121,13 +121,13 @@ export default function UpcomingSafarisPage() {
             </div>
           ))}
         </div>
-        {/* Overlays for legibility + premium mood */}
-        <div className="absolute inset-0 bg-black/55" />
+        {/* Overlays — light enough to show the collage, dark enough to read */}
+        <div className="absolute inset-0 bg-black/35" />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 50% 40%, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.82) 100%)",
+              "radial-gradient(120% 90% at 50% 42%, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.34) 60%, rgba(0,0,0,0.6) 100%)",
           }}
         />
 
@@ -243,26 +243,26 @@ export default function UpcomingSafarisPage() {
                     <h3 className="font-display text-white font-normal leading-tight" style={{ fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)" }}>
                       {safari.title}
                     </h3>
-                    <p className="text-[#00bcd4] mt-2 text-sm font-medium uppercase tracking-wide">
+                    <p className="text-[#00bcd4] mt-2 font-medium uppercase tracking-wide" style={{ fontSize: "15px" }}>
                       {safari.subtitle}
                     </p>
-                    <p className="text-gray-300 leading-relaxed mt-5" style={{ fontSize: "18px" }}>
+                    <p className="text-gray-200 leading-relaxed mt-5" style={{ fontSize: "20px" }}>
                       {safari.hook}
                     </p>
 
                     {/* Destinations */}
-                    <div className="flex flex-wrap gap-2 mt-6">
+                    <div className="flex flex-wrap gap-2.5 mt-6">
                       {safari.destinations.map((d) => (
-                        <span key={d} className="rounded-full bg-white/5 border border-white/10 text-gray-200 text-xs px-3 py-1.5">
+                        <span key={d} className="rounded-full bg-white/5 border border-white/10 text-gray-200 px-4 py-2" style={{ fontSize: "15px" }}>
                           📍 {d}
                         </span>
                       ))}
                     </div>
 
                     {/* Highlights */}
-                    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5 mt-7">
+                    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mt-7">
                       {safari.highlights.map((h) => (
-                        <li key={h} className="flex items-start gap-2.5 text-gray-300 text-sm leading-snug">
+                        <li key={h} className="flex items-start gap-2.5 text-gray-200 leading-snug" style={{ fontSize: "17px" }}>
                           <span className="text-[#00bcd4] shrink-0 mt-0.5">✓</span>
                           {h}
                         </li>
