@@ -66,7 +66,7 @@ export default function PageHero({
     return (
       <section
         className="relative w-full overflow-hidden bg-white"
-        style={{ height: "clamp(420px, 74vh, 720px)" }}
+        style={{ height: "100vh" }}
       >
         <Image
           src={image}
