@@ -78,15 +78,16 @@ const destinations: Destination[] = [
 function DestinationCard({ dest }: { dest: Destination }) {
   return (
     <div>
-      {/* Image — full/natural size, never cropped */}
-      <Image
-        src={dest.image}
-        alt={dest.alt}
-        width={dest.width}
-        height={dest.height}
-        className="w-full h-auto"
-        sizes="(max-width: 768px) 100vw, 33vw"
-      />
+      {/* Image — uniform 3:2 size across the whole grid */}
+      <div className="relative aspect-[3/2] w-full overflow-hidden bg-gray-50">
+        <Image
+          src={dest.image}
+          alt={dest.alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
       {/* Name (Country) */}
       <h3 className="font-display text-gray-900 font-normal mt-5" style={{ fontSize: "clamp(1.4rem, 2vw, 1.8rem)" }}>
         {dest.name} <span className="whitespace-nowrap">{dest.country}</span>

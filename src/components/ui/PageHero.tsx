@@ -59,16 +59,21 @@ export default function PageHero({
     isDark ? "text-gray-800" : "text-white/90 text-on-image"
   }`;
 
-  /* ── CONTAIN: full uncropped image on white, title bottom-left ── */
+  /* ── CONTAIN: high-key image on white, constrained to fit the viewport,
+       title overlaps the bottom-left. Only the blank white margins are
+       trimmed so the whole subject stays visible with the title. ── */
   if (variant === "contain") {
     return (
-      <section className="relative w-full overflow-hidden bg-white">
+      <section
+        className="relative w-full overflow-hidden bg-white"
+        style={{ height: "clamp(420px, 74vh, 720px)" }}
+      >
         <Image
           src={image}
           alt={alt}
-          width={1732}
-          height={1155}
-          className="w-full h-auto object-contain"
+          fill
+          className="object-cover"
+          style={{ objectPosition: imagePosition }}
           priority
           sizes="100vw"
         />
