@@ -11,6 +11,7 @@ const NAV = [
     label: "Salil", dropdown: [
       { label: "Who's Behind the Lens", href: "/who-is-behind-the-lens" },
       { label: "Awards", href: "/awards" },
+      { label: "Track Me", href: "/track-me" },
     ],
   },
   {
