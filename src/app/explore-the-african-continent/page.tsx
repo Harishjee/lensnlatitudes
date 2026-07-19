@@ -98,6 +98,7 @@ export default function ExploreAfricanContinentPage() {
         title="Explore the African Continent"
         subtitle="Where Earth Roars. Where Light Dances. Where the Wild is Eternal."
         titlePosition="right-center"
+        fullHeight
       />
 
       {/* ── INTRO (centered) ── */}

@@ -25,6 +25,8 @@ interface PageHeroProps {
   variant?: "cover" | "contain";
   /** Title colour — "light" for photos, "dark" for high-key white images */
   titleColor?: "light" | "dark";
+  /** Make the hero a full 100vh section (image sits behind the header) */
+  fullHeight?: boolean;
 }
 
 /**
@@ -42,13 +44,19 @@ export default function PageHero({
   imagePosition = "center",
   variant = "cover",
   titleColor,
+  fullHeight = false,
 }: PageHeroProps) {
   const isRight = titlePosition === "right-center";
   const isDark = (titleColor ?? (variant === "contain" ? "dark" : "light")) === "dark";
 
+  // On a full-height hero the right title sits vertically centred (like the
+  // Squarespace original); otherwise it hugs the bottom edge.
+  const rightPos = fullHeight
+    ? "right-6 sm:right-12 lg:right-20 top-1/2 -translate-y-1/2 text-right max-w-[85vw] sm:max-w-[55vw] lg:max-w-[46vw]"
+    : "right-8 sm:right-14 lg:right-20 bottom-8 sm:bottom-10 lg:bottom-12 text-right";
   const titleWrap = `absolute z-10 ${
     isRight
-      ? "right-8 sm:right-14 lg:right-20 bottom-8 sm:bottom-10 lg:bottom-12 text-right"
+      ? rightPos
       : "left-6 sm:left-10 lg:left-16 bottom-8 sm:bottom-10 lg:bottom-12 text-left"
   }`;
 
@@ -93,7 +101,10 @@ export default function PageHero({
 
   /* ── COVER: full-bleed image cropped to a fixed height ── */
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: "clamp(300px, 45vh, 520px)" }}>
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ height: fullHeight ? "100vh" : "clamp(300px, 45vh, 520px)" }}
+    >
       <Image
         src={image}
         alt={alt}
