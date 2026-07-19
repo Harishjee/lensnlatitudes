@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
-import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -12,57 +11,171 @@ export const metadata: Metadata = buildMetadata({
   image: "/images/og-explore-latitudes.jpg",
 });
 
-const destinations = [
-  { label: "Jungles of India", href: "/explore-jungles-of-india", image: "/images/dest-india.jpg", desc: "Tigers, leopards, elephants in 58+ tiger reserves" },
-  { label: "African Continent", href: "/explore-the-african-continent", image: "/images/dest-africa.jpg", desc: "The Great Migration, Big Five, cinematic savannahs" },
-  { label: "Rest of the World", href: "/explore-the-rest-of-the-world", image: "/images/dest-world.jpg", desc: "Jaguars, polar bears, gorillas & beyond" },
-];
+const bodyText = { fontSize: "20px" };
 
 export default function ExploreLatitudesPage() {
   return (
     <>
-            <PageHero
+      {/* ── HERO / TITLE (unchanged) ── */}
+      <PageHero
         image="/images/explore-latitudes-masai-mara-wildlife.jpg"
         alt="Explore Latitudes — wildlife safari photography journeys worldwide"
         title="Explore Latitudes"
         titlePosition="left-bottom"
       />
 
-      <section className="py-20 bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            <div className="space-y-5 text-gray-400 leading-relaxed text-lg">
-              <p>
-                At Lens and Latitudes, we don&apos;t just plan wildlife safaris — we curate immersive, purpose-driven photography journeys to some of the most spectacular jungles in India and around the world.
-              </p>
-              <p>
-                Every journey is photography-centric, offering not just sightings, but the opportunity to learn how to turn those moments into impactful images.
-              </p>
-              <p>
-                Under the mentorship of Salil Nair, an award-winning wildlife photographer with over 18 years of global experience, guests receive personal guidance on framing, creative storytelling, and mastering natural light.
-              </p>
-              <p>
-                Our itineraries are crafted to ensure maximum time in the wild, avoiding tourist-heavy hours and placing you in the best spots during the golden hours of light.
-              </p>
-            </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image src="/images/explore-latitudes-salil.jpg" alt="Salil Nair on safari" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-            </div>
+      {/* ══════════════════════════════════════
+          SECTION A — magazine grid (white bg)
+          Maasai (tall, left) · intro + cubs (middle) · elephants + tigers text (right)
+      ══════════════════════════════════════ */}
+      <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8 items-start">
+          {/* Left — Maasai warrior, spans both rows */}
+          <div className="lg:row-span-2">
+            <Image
+              src="/images/explore-maasai-warrior-jumping-kenya.jpg"
+              alt="Maasai warrior jumping in traditional dress, Kenya — Lens and Latitudes safari"
+              width={900}
+              height={1350}
+              className="w-full h-auto block"
+              priority
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
           </div>
 
-          {/* Destination cards */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {destinations.map((d) => (
-              <Link key={d.href} href={d.href} className="group relative aspect-[3/4] rounded-xl overflow-hidden">
-                <Image src={d.image} alt={d.label} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
-                
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h2 className="text-white font-bold text-xl mb-2">{d.label}</h2>
-                  <p className="text-gray-300 text-sm mb-3">{d.desc}</p>
-                  <span className="text-[#00bcd4] text-sm font-medium">Explore →</span>
-                </div>
-              </Link>
-            ))}
+          {/* Middle top — intro paragraph */}
+          <div className="flex items-start">
+            <p className="text-gray-800 leading-relaxed" style={bodyText}>
+              At <strong>Lens and Latitudes</strong>, we don&apos;t just plan wildlife safaris—we
+              curate immersive, purpose-driven photography journeys to some of the most spectacular
+              jungles in India and around the world.
+            </p>
+          </div>
+
+          {/* Right top — elephants image */}
+          <div>
+            <Image
+              src="/images/explore-elephants-playing-amboseli.jpg"
+              alt="Two elephants playing in green savanna with mountain backdrop — Amboseli safari"
+              width={1000}
+              height={667}
+              className="w-full h-auto block"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+          </div>
+
+          {/* Middle bottom — lion cubs image */}
+          <div>
+            <Image
+              src="/images/explore-lion-cubs-walking-masai-mara.jpg"
+              alt="Two lion cubs walking together in Masai Mara — Lens and Latitudes safari"
+              width={1000}
+              height={667}
+              className="w-full h-auto block"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+          </div>
+
+          {/* Right bottom — tigers text */}
+          <div className="flex items-center">
+            <p className="text-gray-800 leading-relaxed" style={bodyText}>
+              Whether it&apos;s tracking tigers in Jim Corbett, leopards in Jawai, a pride of lions in
+              the African bush or cheetahs across the golden plains of Kenya, each safari is designed
+              with care and intent.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          SECTION B — big lion + dark text boxes (white bg)
+      ══════════════════════════════════════ */}
+      <section className="bg-white py-4 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left — large B&W lion */}
+          <div>
+            <Image
+              src="/images/explore-lion-portrait-bw-rain.jpg"
+              alt="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
+              width={1200}
+              height={800}
+              className="w-full h-auto block"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          {/* Right — stacked dark text boxes + buffalo */}
+          <div className="space-y-6">
+            {/* Dark box 1 */}
+            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
+              <p>
+                Our itineraries are crafted to ensure <strong className="text-white">maximum time in
+                the wild</strong>, avoiding tourist-heavy hours and placing you in the best spots
+                during the golden hours of light.
+              </p>
+              <p>
+                Travel logistics are handled seamlessly, so your time and energy stay focused on the
+                field—not on figuring out transit or schedules.
+              </p>
+            </div>
+
+            {/* Buffalo square */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/explore-buffalo-grass-bw-placeholder.jpg"
+                alt="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
+                width={600}
+                height={600}
+                className="w-2/3 h-auto block grayscale"
+                sizes="(max-width: 1024px) 66vw, 33vw"
+              />
+            </div>
+
+            {/* Dark box 2 */}
+            <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
+              <p>
+                Every journey is <strong className="text-white">photography-centric</strong>, offering
+                not just sightings, but the opportunity to learn how to turn those moments into
+                impactful images.
+              </p>
+              <p>
+                Under the mentorship of <strong className="text-white">Salil Nair</strong>, an
+                award-winning wildlife photographer with over 18 years of global experience, guests
+                receive personal guidance on framing, creative storytelling, and mastering natural light.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          SECTION C — tiger reflection + closing text (white bg)
+      ══════════════════════════════════════ */}
+      <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left — tiger reflection */}
+          <div>
+            <Image
+              src="/images/salil-nair-tiger-reflection-wildlife-photography.jpg"
+              alt="Tiger walking beside water with reflection, lush jungle — Salil Nair wildlife photography"
+              width={1200}
+              height={800}
+              className="w-full h-auto block"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          {/* Right — closing text */}
+          <div className="space-y-6 text-gray-800 leading-relaxed" style={bodyText}>
+            <p>
+              Whether you&apos;re a beginner or an enthusiast, you&apos;ll return not just with great
+              photos, but as a more thoughtful photographer.
+            </p>
+            <p>
+              Safety, comfort, and an eye for rare moments define our safaris. With Lens and Latitudes,
+              you&apos;re not just seeing the wild—you&apos;re learning to{" "}
+              <strong className="text-gray-900">see through it, with intent and creative imagination</strong>.
+            </p>
           </div>
         </div>
       </section>
