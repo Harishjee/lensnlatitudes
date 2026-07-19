@@ -70,7 +70,7 @@ export default function OwnItPage() {
         image="/images/ooo-sunset-reflection-tree.jpg"
         alt="Own It — wildlife photography fine art prints by Salil Nair"
         title="Own It"
-        titlePosition="right-center"
+        titlePosition="left-bottom"
       />
 
       {/* ── THE POWER OF THE PHOTOGRAPH (text left + lion right) ── */}
