@@ -18,6 +18,8 @@ type Destination = {
   desc: string;
   image: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 const destinations: Destination[] = [
@@ -28,6 +30,8 @@ const destinations: Destination[] = [
     desc: "Venture by boat through flooded forests and photograph jaguars stalking caimans in broad daylight. Add giant river otters and hyacinth macaws, and it's a color-rich spectacle.",
     image: "/images/pantanal-jaguar-brazil-wildlife-photography.jpg",
     alt: "High-key black and white jaguar walking, Pantanal, Brazil — Salil Nair wildlife photography",
+    width: 1732,
+    height: 1155,
   },
   {
     name: "Yellowstone National Park",
@@ -36,6 +40,8 @@ const destinations: Destination[] = [
     desc: "Bison in blizzards, wolves in twilight, and steaming geysers painting the landscape. A truly cinematic blend of wildlife and natural drama.",
     image: "/images/yellowstone-bison-usa-wildlife-photography.jpg",
     alt: "Lone bison grazing beneath the Teton range, Yellowstone National Park, USA — Salil Nair",
+    width: 2240,
+    height: 1488,
   },
   {
     name: "Svalbard",
@@ -44,6 +50,8 @@ const destinations: Destination[] = [
     desc: "Sail through glacial silence as polar bears hunt on sea ice. The Arctic light will leave your memory cards full and your heart fuller.",
     image: "/images/svalbard-polar-bear-norway-arctic.jpg",
     alt: "Polar bear standing on sea ice in Svalbard, Norway — Salil Nair Arctic wildlife photography",
+    width: 1280,
+    height: 718,
   },
   {
     name: "Sumatra",
@@ -52,6 +60,8 @@ const destinations: Destination[] = [
     desc: "Mist-draped rainforests echo with ancient calls. Capture orangutans swinging through dense canopy and elephants wandering through tropical fog.",
     image: "/images/sumatra-orangutan-indonesia-wildlife.jpg",
     alt: "Orangutan swinging through the green rainforest canopy, Sumatra, Indonesia — Salil Nair",
+    width: 2000,
+    height: 1333,
   },
   {
     name: "The Scottish Highlands",
@@ -60,22 +70,23 @@ const destinations: Destination[] = [
     desc: "A moody, medieval backdrop for red deer, golden eagles, and elusive wildcats. Nature meets legend in every haunting frame.",
     image: "/images/scottish-highlands-wildlife-photography.jpg",
     alt: "Fox walking through snow in the Scottish Highlands, UK — Salil Nair wildlife photography",
+    width: 1885,
+    height: 1060,
   },
 ];
 
 function DestinationCard({ dest }: { dest: Destination }) {
   return (
     <div>
-      {/* Image — uniform aspect for clean alignment */}
-      <div className="relative aspect-[3/2] overflow-hidden">
-        <Image
-          src={dest.image}
-          alt={dest.alt}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
-      </div>
+      {/* Image — full/natural size, never cropped */}
+      <Image
+        src={dest.image}
+        alt={dest.alt}
+        width={dest.width}
+        height={dest.height}
+        className="w-full h-auto"
+        sizes="(max-width: 768px) 100vw, 33vw"
+      />
       {/* Name (Country) */}
       <h3 className="font-display text-gray-900 font-normal mt-5" style={{ fontSize: "clamp(1.4rem, 2vw, 1.8rem)" }}>
         {dest.name} <span className="whitespace-nowrap">{dest.country}</span>
@@ -98,6 +109,8 @@ export default function ExploreRestOfWorldPage() {
         title="Explore the Rest of the World"
         subtitle="Untouched. Unexpected. Unrepeatable."
         titlePosition="left-bottom"
+        variant="contain"
+        titleColor="dark"
       />
 
       {/* ── INTRO (centered) ── */}

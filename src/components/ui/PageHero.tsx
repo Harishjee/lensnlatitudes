@@ -16,13 +16,22 @@ interface PageHeroProps {
   titlePosition?: "right-center" | "left-bottom";
   /** Optional custom position for the image (e.g. "bottom", "center bottom") */
   imagePosition?: string;
+  /**
+   * How the image fills the hero.
+   * "cover"   = full-bleed, cropped to a fixed height (default).
+   * "contain" = show the full image uncropped on a plain background
+   *             (for high-key / airy compositions like the elephant).
+   */
+  variant?: "cover" | "contain";
+  /** Title colour — "light" for photos, "dark" for high-key white images */
+  titleColor?: "light" | "dark";
 }
 
 /**
- * Reusable fixed-height hero for all inner pages.
- * Height matches the Squarespace original (~60vh, min 400px).
- * Title overlaps the image at the bottom edge so it bleeds into the next section.
- * NO dark overlay — the photo shows fully.
+ * Reusable hero for all inner pages.
+ * - cover:   fixed height (~45vh), image cropped, light title with shadow.
+ * - contain: full uncropped image on white, title overlaps the bottom-left.
+ * NO dark overlay — the photo always shows fully.
  */
 export default function PageHero({
   image,
@@ -31,12 +40,55 @@ export default function PageHero({
   subtitle,
   titlePosition = "right-center",
   imagePosition = "center",
+  variant = "cover",
+  titleColor,
 }: PageHeroProps) {
   const isRight = titlePosition === "right-center";
+  const isDark = (titleColor ?? (variant === "contain" ? "dark" : "light")) === "dark";
 
+  const titleWrap = `absolute z-10 ${
+    isRight
+      ? "right-8 sm:right-14 lg:right-20 bottom-8 sm:bottom-10 lg:bottom-12 text-right"
+      : "left-6 sm:left-10 lg:left-16 bottom-8 sm:bottom-10 lg:bottom-12 text-left"
+  }`;
+
+  const titleClasses = `font-display font-normal leading-none ${
+    isDark ? "text-gray-900" : "text-white text-on-image"
+  }`;
+  const subtitleClasses = `mt-3 italic font-display ${
+    isDark ? "text-gray-800" : "text-white/90 text-on-image"
+  }`;
+
+  /* ── CONTAIN: full uncropped image on white, title bottom-left ── */
+  if (variant === "contain") {
+    return (
+      <section className="relative w-full overflow-hidden bg-white">
+        <Image
+          src={image}
+          alt={alt}
+          width={1732}
+          height={1155}
+          className="w-full h-auto object-contain"
+          priority
+          sizes="100vw"
+        />
+        <div className={titleWrap}>
+          <h1 className={titleClasses} style={{ fontSize: "clamp(2.4rem, 5vw, 5.5rem)" }}>
+            {title}
+          </h1>
+          {subtitle && (
+            <p className={subtitleClasses} style={{ fontSize: "clamp(0.9rem, 1.8vw, 1.3rem)" }}>
+              {subtitle}
+            </p>
+          )}
+        </div>
+      </section>
+    );
+  }
+
+  /* ── COVER: full-bleed image cropped to a fixed height ── */
   return (
     <section className="relative w-full overflow-hidden" style={{ height: "clamp(300px, 45vh, 520px)" }}>
-      {/* Full-bleed image, cropped to fixed height */}
       <Image
         src={image}
         alt={alt}
@@ -46,26 +98,12 @@ export default function PageHero({
         priority
         sizes="100vw"
       />
-
-      {/* Title — overlaps the image, positioned at right or left bottom */}
-      <div
-        className={`absolute z-10 ${
-          isRight
-            ? "right-8 sm:right-14 lg:right-20 bottom-8 sm:bottom-10 lg:bottom-12 text-right"
-            : "left-6 sm:left-10 lg:left-16 bottom-10 text-left"
-        }`}
-      >
-        <h1
-          className="font-display text-white font-normal leading-none text-on-image"
-          style={{ fontSize: "clamp(2.8rem, 5vw, 6rem)" }}
-        >
+      <div className={titleWrap}>
+        <h1 className={titleClasses} style={{ fontSize: "clamp(2.8rem, 5vw, 6rem)" }}>
           {title}
         </h1>
         {subtitle && (
-          <p
-            className="mt-3 text-white/90 italic font-display text-on-image"
-            style={{ fontSize: "clamp(0.9rem, 1.8vw, 1.3rem)" }}
-          >
+          <p className={subtitleClasses} style={{ fontSize: "clamp(0.9rem, 1.8vw, 1.3rem)" }}>
             {subtitle}
           </p>
         )}
