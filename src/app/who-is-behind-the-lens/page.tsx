@@ -30,42 +30,20 @@ export default function WhoIsBehindTheLensPage() {
 
       {/* ══════════════════════════════════════
           SECTION 2 — SALIL NAIR + RHINO
-          White bg — name & intro LEFT, rhino image RIGHT
+          The image already has all the text baked in
+          (SALIL NAIR + intro), so we use it directly full-width.
+          TODO: swap for plain rhino image + HTML overlay text later.
       ══════════════════════════════════════ */}
-      <section className="bg-white pb-8">
-        <div className="grid lg:grid-cols-2 items-center">
-          {/* Left column — name + intro text */}
-          <div className="px-8 sm:px-12 lg:px-20 order-2 lg:order-1">
-            <h2
-              className="font-display text-gray-900 font-normal mb-10"
-              style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", letterSpacing: "0.08em" }}
-            >
-              SALIL NAIR
-            </h2>
-            <p className="text-gray-800 leading-relaxed mb-6" style={bodyText}>
-              The Man Behind the Lens - the man who crafts stories with shadows,
-              poetry with paws, and portraits that seem to breathe.
-            </p>
-            <p className="text-gray-800 leading-relaxed" style={bodyText}>
-              <em>Salil Nair</em> - the founder of <em>Lens and Latitudes</em>, a
-              company that lives by the motto:{" "}
-              <em>Framing Nature, One Latitude at a Time.</em>
-            </p>
-          </div>
-
-          {/* Right column — rhino B&W image (full natural size) */}
-          <div className="order-1 lg:order-2">
-            <Image
-              src="/images/salil-nair-rhino-bw-wildlife-photography.jpg"
-              alt="Salil Nair wildlife photography — black and white rhino portrait"
-              width={1000}
-              height={800}
-              className="w-full h-auto block"
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-        </div>
+      <section className="bg-white">
+        <Image
+          src="/images/salil-nair-rhino-bw-wildlife-photography.jpg"
+          alt="Salil Nair — the man behind the lens, founder of Lens and Latitudes. Framing Nature, One Latitude at a Time."
+          width={1400}
+          height={787}
+          className="w-full h-auto block"
+          priority
+          sizes="100vw"
+        />
       </section>
 
       {/* ══════════════════════════════════════
@@ -113,9 +91,9 @@ export default function WhoIsBehindTheLensPage() {
           SECTION 5 — TEXT LEFT + TIGER IMAGE RIGHT (black bg)
       ══════════════════════════════════════ */}
       <section className="bg-black py-16 px-4 sm:px-8 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Left — text */}
-          <div className="space-y-6 text-white/90 leading-relaxed order-2 lg:order-1" style={{ fontSize: "20px" }}>
+        <div className="grid lg:grid-cols-[4fr_8fr] gap-8 lg:gap-12 items-center">
+          {/* Left — text (narrower, smaller font) */}
+          <div className="space-y-5 text-white/90 leading-relaxed order-2 lg:order-1" style={{ fontSize: "17px" }}>
             <p>
               Salil brings a blend of creativity, patience, thoughtfulness and the No Photoshop -
               No gimmicks. He sees the extraordinary in the ordinary. The drama in the quiet.
@@ -136,15 +114,15 @@ export default function WhoIsBehindTheLensPage() {
             <p>Come with me along with your Curiosity. There&apos;s so much more to frame.</p>
           </div>
 
-          {/* Right — tiger reflection image (full natural size) */}
+          {/* Right — tiger reflection image (wider, full natural size) */}
           <div className="order-1 lg:order-2">
             <Image
               src="/images/salil-nair-tiger-reflection-wildlife-photography.jpg"
               alt="Salil Nair wildlife photography — tiger walking with reflection in water"
-              width={1200}
-              height={800}
+              width={1400}
+              height={933}
               className="w-full h-auto block"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 66vw"
             />
           </div>
         </div>
