@@ -37,7 +37,7 @@ export default function SignatureShootsPage() {
         <div className="max-w-5xl mx-auto text-center">
           <h2
             className="font-display text-gray-900 font-normal leading-tight mb-6"
-            style={{ fontSize: "clamp(1.8rem, 4vw, 3.4rem)" }}
+            style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
           >
             Join me, and together we&apos;ll turn your vision into signature art that lasts a lifetime.
           </h2>
