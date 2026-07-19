@@ -57,7 +57,7 @@ export default function PageHero({
       >
         <h1
           className="font-display text-white font-normal leading-none text-on-image"
-          style={{ fontSize: "clamp(2.8rem, 5.5vw, 6.5rem)" }}
+          style={{ fontSize: "clamp(2.8rem, 5vw, 6rem)" }}
         >
           {title}
         </h1>
