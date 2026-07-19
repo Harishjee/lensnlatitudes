@@ -14,6 +14,8 @@ interface PageHeroProps {
    * "left-bottom"  = pages like Explore Jungles
    */
   titlePosition?: "right-center" | "left-bottom";
+  /** Optional custom position for the image (e.g. "bottom", "center bottom") */
+  imagePosition?: string;
 }
 
 /**
@@ -28,17 +30,19 @@ export default function PageHero({
   title,
   subtitle,
   titlePosition = "right-center",
+  imagePosition = "center",
 }: PageHeroProps) {
   const isRight = titlePosition === "right-center";
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: "clamp(400px, 62vh, 680px)" }}>
+    <section className="relative w-full overflow-hidden" style={{ height: "clamp(300px, 45vh, 520px)" }}>
       {/* Full-bleed image, cropped to fixed height */}
       <Image
         src={image}
         alt={alt}
         fill
-        className="object-cover object-center"
+        className="object-cover"
+        style={{ objectPosition: imagePosition }}
         priority
         sizes="100vw"
       />
@@ -47,13 +51,13 @@ export default function PageHero({
       <div
         className={`absolute z-10 ${
           isRight
-            ? "right-8 sm:right-14 lg:right-20 top-1/2 -translate-y-1/2 text-right"
+            ? "right-8 sm:right-14 lg:right-20 bottom-8 sm:bottom-10 lg:bottom-12 text-right"
             : "left-6 sm:left-10 lg:left-16 bottom-10 text-left"
         }`}
       >
         <h1
           className="font-display text-white font-normal leading-none text-on-image"
-          style={{ fontSize: "clamp(2.8rem, 7vw, 6.5rem)" }}
+          style={{ fontSize: "clamp(2.8rem, 5.5vw, 6.5rem)" }}
         >
           {title}
         </h1>

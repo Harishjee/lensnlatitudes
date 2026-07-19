@@ -43,7 +43,7 @@ export default function AbstractsUnleashedPage() {
           Side images stretch to match the text height.
       ══════════════════════════════════════ */}
       <section className="bg-black py-12 px-4 sm:px-6 lg:px-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.8fr_1.4fr_0.8fr] gap-6 lg:gap-8 items-stretch">
+        <div className="max-w-8xl mx-auto grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Left image */}
           <div className="relative min-h-[340px] lg:min-h-0">
             <Image
@@ -108,7 +108,7 @@ export default function AbstractsUnleashedPage() {
           Green blur + headline LEFT · blue blur RIGHT (taller)
       ══════════════════════════════════════ */}
       <section className="bg-white py-12 px-4 sm:px-6 lg:px-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-6 items-start">
+        <div className="max-w-8xl mx-auto grid lg:grid-cols-[1.6fr_1fr] gap-6 items-start">
           {/* Left — green blur + headline */}
           <div>
             <Image
