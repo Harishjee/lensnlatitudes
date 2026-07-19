@@ -20,7 +20,7 @@ export default function TrackMePage() {
         image="/images/salil-nair-track-me-wildlife-photographer.jpg"
         alt="Track Me — Salil Nair wildlife photographer on location"
         title="Track Me"
-        titlePosition="left-bottom"
+        titlePosition="right-center"
       />
 
       {/* ── CONTENT — big eagle image LEFT, text RIGHT ─── */}
@@ -56,37 +56,63 @@ export default function TrackMePage() {
             </div>
           </div>
 
-          {/* ── "That's when you will find him here" — designed contact card ── */}
-          <div className="bg-[#0d0d0d] rounded-3xl overflow-hidden">
-            <div className="px-8 sm:px-12 py-10">
-              <h2 className="font-display text-white font-normal text-center mb-10"
-                  style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}>
-                That&apos;s when you will find him here —
-              </h2>
+          {/* ── "That's when you will find him here" — professional contact section ── */}
+          <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#0d1512] via-[#0a0a0a] to-[#0d0d0d] border border-white/10">
+            {/* Subtle top accent line */}
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-[#00bcd4]/50 to-transparent" />
 
-              <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="px-6 sm:px-12 py-14 sm:py-16">
+              <div className="text-center mb-12">
+                <p className="text-[#00bcd4] text-xs font-semibold uppercase tracking-[0.3em] mb-4">
+                  Reach the Wild
+                </p>
+                <h2 className="font-display text-white font-normal" style={{ fontSize: "clamp(1.7rem, 3.5vw, 2.6rem)" }}>
+                  That&apos;s when you will find him here —
+                </h2>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
                 {/* Address */}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:border-[#00bcd4]/40 transition-colors">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#00bcd4]/15 flex items-center justify-center text-2xl">📍</div>
-                  <p className="text-[#00bcd4] text-xs uppercase tracking-widest font-semibold mb-2">Address</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">{CONTACT.address}</p>
+                <div className="group flex flex-col items-center text-center rounded-2xl bg-white/[0.04] border border-white/10 p-8 hover:border-[#00bcd4]/50 hover:bg-white/[0.06] transition-all">
+                  <div className="w-14 h-14 mb-5 rounded-2xl bg-[#00bcd4]/12 flex items-center justify-center text-[#00bcd4] group-hover:bg-[#00bcd4] group-hover:text-white transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <p className="text-[#00bcd4] text-xs uppercase tracking-[0.2em] font-semibold mb-3">Address</p>
+                  <p className="text-gray-300 leading-relaxed" style={{ fontSize: "15px" }}>{CONTACT.address}</p>
                 </div>
+
                 {/* Email */}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:border-[#00bcd4]/40 transition-colors">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#00bcd4]/15 flex items-center justify-center text-2xl">✉️</div>
-                  <p className="text-[#00bcd4] text-xs uppercase tracking-widest font-semibold mb-2">Email</p>
-                  <a href={`mailto:${CONTACT.email}`} className="text-gray-300 text-sm hover:text-white transition-colors break-all">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="group flex flex-col items-center text-center rounded-2xl bg-white/[0.04] border border-white/10 p-8 hover:border-[#00bcd4]/50 hover:bg-white/[0.06] transition-all"
+                >
+                  <div className="w-14 h-14 mb-5 rounded-2xl bg-[#00bcd4]/12 flex items-center justify-center text-[#00bcd4] group-hover:bg-[#00bcd4] group-hover:text-white transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="M3 7l9 6 9-6" />
+                    </svg>
+                  </div>
+                  <p className="text-[#00bcd4] text-xs uppercase tracking-[0.2em] font-semibold mb-3">Email</p>
+                  <span className="text-gray-300 group-hover:text-white transition-colors break-all" style={{ fontSize: "15px" }}>
                     {CONTACT.email}
-                  </a>
-                </div>
+                  </span>
+                </a>
+
                 {/* Call */}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:border-[#00bcd4]/40 transition-colors">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#00bcd4]/15 flex items-center justify-center text-2xl">📞</div>
-                  <p className="text-[#00bcd4] text-xs uppercase tracking-widest font-semibold mb-2">Call</p>
-                  <a href={`tel:${CONTACT.phone2.replace(/-/g, "")}`} className="text-gray-300 text-sm hover:text-white transition-colors block">
+                <div className="group flex flex-col items-center text-center rounded-2xl bg-white/[0.04] border border-white/10 p-8 hover:border-[#00bcd4]/50 hover:bg-white/[0.06] transition-all">
+                  <div className="w-14 h-14 mb-5 rounded-2xl bg-[#00bcd4]/12 flex items-center justify-center text-[#00bcd4] group-hover:bg-[#00bcd4] group-hover:text-white transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z" />
+                    </svg>
+                  </div>
+                  <p className="text-[#00bcd4] text-xs uppercase tracking-[0.2em] font-semibold mb-3">Call</p>
+                  <a href={`tel:${CONTACT.phone2.replace(/[^+\d]/g, "")}`} className="text-gray-300 hover:text-white transition-colors block" style={{ fontSize: "15px" }}>
                     {CONTACT.phone2}
                   </a>
-                  <a href={`tel:${CONTACT.phone.replace(/-/g, "")}`} className="text-gray-300 text-sm hover:text-white transition-colors block mt-1">
+                  <a href={`tel:${CONTACT.phone.replace(/[^+\d]/g, "")}`} className="text-gray-300 hover:text-white transition-colors block mt-1" style={{ fontSize: "15px" }}>
                     {CONTACT.phone}
                   </a>
                 </div>

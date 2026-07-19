@@ -34,7 +34,6 @@ const NAV = [
   {
     label: "Up-coming Safari's", dropdown: [
       { label: "Upcoming Safaris", href: "/upcoming-safaris" },
-      { label: "Story Behind the Photo", href: "/story-behind-the-photo" },
       { label: "Own It", href: "/own-it" },
     ],
   },
