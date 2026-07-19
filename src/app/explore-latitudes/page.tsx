@@ -88,25 +88,26 @@ export default function ExploreLatitudesPage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION B — big lion + dark text boxes (white bg)
+          SECTION B — big lion with OVERLAPPING dark text boxes (white bg)
+          Lion is the base layer (left); dark boxes overlap its right edge.
       ══════════════════════════════════════ */}
-      <section className="bg-white py-4 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left — large B&W lion */}
-          <div>
+      <section className="bg-white py-12 lg:py-20 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto relative">
+          {/* Lion — base layer, vertically centered on desktop */}
+          <div className="w-full lg:w-[58%] lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-0">
             <Image
               src="/images/explore-lion-portrait-bw-rain.jpg"
               alt="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
               width={1200}
               height={800}
               className="w-full h-auto block"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 58vw"
             />
           </div>
 
-          {/* Right — stacked dark text boxes + buffalo */}
-          <div className="space-y-6">
-            {/* Dark box 1 */}
+          {/* Right column — flows normally (defines height), overlaps the lion */}
+          <div className="mt-8 lg:mt-0 lg:ml-[46%] lg:w-[54%] relative z-10 space-y-8 lg:space-y-10">
+            {/* Dark box 1 — overlaps lion top-right */}
             <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
               <p>
                 Our itineraries are crafted to ensure <strong className="text-white">maximum time in
@@ -119,19 +120,19 @@ export default function ExploreLatitudesPage() {
               </p>
             </div>
 
-            {/* Buffalo square */}
+            {/* Buffalo square — sits in the clear area, right of the lion */}
             <div className="flex justify-center">
               <Image
                 src="/images/explore-buffalo-grass-bw-placeholder.jpg"
                 alt="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
                 width={600}
                 height={600}
-                className="w-2/3 h-auto block grayscale"
-                sizes="(max-width: 1024px) 66vw, 33vw"
+                className="w-1/2 lg:w-[52%] h-auto block grayscale"
+                sizes="(max-width: 1024px) 50vw, 28vw"
               />
             </div>
 
-            {/* Dark box 2 */}
+            {/* Dark box 2 — overlaps lion bottom-right */}
             <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={bodyText}>
               <p>
                 Every journey is <strong className="text-white">photography-centric</strong>, offering
