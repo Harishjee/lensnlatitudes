@@ -118,7 +118,7 @@ export default function OwnItPage() {
               alt="Fine art black and white lion portrait print — Salil Nair"
               fill
               className="object-cover"
-              style={{ objectPosition: "center top" }}
+              style={{ objectPosition: "center bottom" }}
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

@@ -3,6 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+/* Routes whose hero has a LIGHT background — header uses dark text there
+   (until the user scrolls and the dark header bar appears). */
+const LIGHT_HERO_ROUTES = new Set([
+  "/explore-the-rest-of-the-world",
+  "/who-is-behind-the-lens",
+]);
 
 /* nav structure matching original Squarespace site exactly */
 const NAV = [
@@ -47,12 +55,17 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMobile, setOpenMobile] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
+
+  /* Use dark text on light-hero pages, but only until the dark header bar
+     appears on scroll. Everywhere else the text stays white. */
+  const darkText = !scrolled && LIGHT_HERO_ROUTES.has(pathname);
 
   return (
     <header
@@ -85,7 +98,9 @@ export default function Header() {
                   <Link
                     key={item.label}
                     href={(item as { href: string }).href}
-                    className="text-white/90 hover:text-white text-sm px-3 py-2 transition-colors whitespace-nowrap"
+                    className={`text-sm px-3 py-2 transition-colors whitespace-nowrap ${
+                      darkText ? "text-gray-800 hover:text-black" : "text-white/90 hover:text-white"
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -95,9 +110,11 @@ export default function Header() {
               const d = item as { label: string; dropdown: DropdownItem[] };
               return (
                 <div key={d.label} className="relative group">
-                  <button className="flex items-center gap-0.5 text-white/90 hover:text-white text-sm px-3 py-2 transition-colors whitespace-nowrap">
+                  <button className={`flex items-center gap-0.5 text-sm px-3 py-2 transition-colors whitespace-nowrap ${
+                    darkText ? "text-gray-800 hover:text-black" : "text-white/90 hover:text-white"
+                  }`}>
                     {d.label}
-                    <span className="ml-0.5 text-white/60 text-base leading-none">+</span>
+                    <span className={`ml-0.5 text-base leading-none ${darkText ? "text-gray-500" : "text-white/60"}`}>+</span>
                   </button>
                   {/* dropdown panel */}
                   <div className="absolute top-full left-0 mt-0.5 min-w-[180px] bg-[#0d0d0d]/98 border border-white/10
@@ -120,8 +137,11 @@ export default function Header() {
             {/* Upcoming Safari CTA — white pill with dark text (matches original) */}
             <Link
               href="/upcoming-safaris"
-              className="ml-3 bg-white text-black text-sm font-medium px-5 py-2.5 rounded-full
-                         hover:bg-gray-100 transition-colors whitespace-nowrap"
+              className={`ml-3 text-sm font-medium px-5 py-2.5 rounded-full transition-colors whitespace-nowrap ${
+                darkText
+                  ? "bg-gray-900 text-white hover:bg-black"
+                  : "bg-white text-black hover:bg-gray-100"
+              }`}
             >
               Upcoming Safari
             </Link>
@@ -133,9 +153,9 @@ export default function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${darkText ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${darkText ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${darkText ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
+import LightboxGallery from "@/components/ui/LightboxGallery";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -58,6 +59,7 @@ export default function AwardsPage() {
         alt="Award-winning tiger resting in water — Tadoba wildlife photography by Salil Nair"
         title="Awards"
         titlePosition="right-center"
+        imagePosition="center bottom"
       />
 
       {/* ══════════════════════════════════════
@@ -144,29 +146,12 @@ export default function AwardsPage() {
           Latest Award Winning Images
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {galleryImages.map((img) => (
-            <div key={img.title}>
-              {/* Image — full natural size, optional black border frame */}
-              <div className={img.border ? "ring-2 ring-black ring-offset-2" : ""}>
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto block"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </div>
-              {/* Caption */}
-              <p
-                className="text-gray-700 mt-3"
-                style={{ fontSize: "19px" }}
-              >
-                {img.title}
-              </p>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <LightboxGallery
+            images={galleryImages}
+            gridClassName="grid grid-cols-1 sm:grid-cols-3 gap-8"
+            aspect="aspect-[4/3]"
+          />
         </div>
       </section>
 
