@@ -1,14 +1,15 @@
-// One-off image optimizer: resize + recompress in place (same filename/format).
+// Image optimizer: resize + recompress in place at HIGH quality (photography site).
 // Run: node scripts/optimize-images.mjs
-import { readdir, stat, rename } from "node:fs/promises";
+import { readdir, stat, rename, unlink } from "node:fs/promises";
 import { join, extname, basename } from "node:path";
 import sharp from "sharp";
 
 const DIR = "public/images";
-const SKIP = new Set(["logo.png"]); // keep the logo pixel-crisp
+const SKIP = new Set(["logo.png"]);
 
-// Max display width. OG/social images only need ~1200px.
-const maxWidthFor = (name) => (name.startsWith("og-") ? 1200 : 2000);
+// Full-bleed heroes need more resolution; social/OG cards need less.
+const maxWidthFor = (name) => (name.startsWith("og-") ? 1200 : 2400);
+const JPEG_QUALITY = 88;
 
 const files = await readdir(DIR);
 let before = 0, after = 0, changed = 0;
@@ -23,8 +24,7 @@ for (const file of files) {
   before += orig;
 
   try {
-    const img = sharp(path, { failOn: "none" });
-    const meta = await img.metadata();
+    const meta = await sharp(path, { failOn: "none" }).metadata();
     const maxW = maxWidthFor(file);
     const pipeline = sharp(path, { failOn: "none" }).rotate();
 
@@ -33,25 +33,22 @@ for (const file of files) {
     }
 
     if (ext === ".png") {
-      pipeline.png({ quality: 80, compressionLevel: 9, palette: true, effort: 8 });
+      pipeline.png({ quality: 90, compressionLevel: 9, palette: true, effort: 9 });
     } else {
-      pipeline.jpeg({ quality: 80, mozjpeg: true, progressive: true });
+      pipeline.jpeg({ quality: JPEG_QUALITY, mozjpeg: true, progressive: true, chromaSubsampling: "4:4:4" });
     }
 
     const tmp = join(DIR, `.tmp-${basename(file)}`);
     await pipeline.toFile(tmp);
     const newSize = (await stat(tmp)).size;
 
-    // Only replace if smaller
     if (newSize < orig) {
       await rename(tmp, path);
       after += newSize;
       changed++;
       console.log(`✓ ${file}  ${(orig / 1024).toFixed(0)}KB → ${(newSize / 1024).toFixed(0)}KB`);
     } else {
-      await rename(tmp, path).catch(() => {});
-      const { unlink } = await import("node:fs/promises");
-      await unlink(path === tmp ? tmp : join(DIR, `.tmp-${basename(file)}`)).catch(() => {});
+      await unlink(tmp).catch(() => {});
       after += orig;
     }
   } catch (e) {
