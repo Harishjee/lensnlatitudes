@@ -61,12 +61,11 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* Title — upper-left, directly below logo position */}
-        <div className="absolute left-6 sm:left-10 lg:left-16 z-10"
-             style={{ top: "clamp(120px, 20vh, 240px)" }}>
+        {/* Title — stacks below image on mobile, overlays upper-left on desktop */}
+        <div className="relative lg:absolute z-10 px-6 py-8 lg:p-0 lg:left-16 lg:top-[18vh]">
           <h1
             className="font-display text-white font-normal leading-none text-on-image"
-            style={{ fontSize: "clamp(2.8rem, 6.5vw, 6rem)" }}
+            style={{ fontSize: "clamp(2.4rem, 6.5vw, 6rem)" }}
           >
             Lens N Latitudes
           </h1>
@@ -95,12 +94,11 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* Top-left text block — wider, no overlay */}
-        <div className="absolute top-[5%] left-6 sm:left-10 lg:left-14 z-10"
-             style={{ maxWidth: "min(42%, 560px)" }}>
+        {/* Top-left text block — stacks below on mobile, overlays on desktop */}
+        <div className="relative lg:absolute lg:top-[5%] lg:left-14 z-10 px-6 pt-8 lg:p-0 max-w-full lg:max-w-[42%]">
           <h2
             className="font-display text-white font-normal leading-snug text-on-image mb-5"
-            style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
+            style={{ fontSize: "clamp(1.7rem, 3.5vw, 3rem)" }}
           >
             Lens N Latitudes
           </h2>
@@ -111,9 +109,8 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Bottom-right text block — wider, no overlay */}
-        <div className="absolute bottom-[5%] right-6 sm:right-10 lg:right-14 z-10 text-right"
-             style={{ maxWidth: "min(45%, 580px)" }}>
+        {/* Bottom-right text block — stacks below on mobile, overlays on desktop */}
+        <div className="relative lg:absolute lg:bottom-[5%] lg:right-14 z-10 text-left lg:text-right px-6 pt-6 pb-8 lg:p-0 max-w-full lg:max-w-[45%]">
           <p className="text-white leading-relaxed text-on-image" style={{ fontSize: "20px" }}>
             Bring your Curiosity &amp; your Camera (or just your Mobile or the Binocs),
             pick a latitude, and let&apos;s frame some nature together, a story
@@ -138,10 +135,10 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* "More Than Just a Safari" — right-aligned, vertically in upper area */}
-        <div className="absolute top-[15%] right-6 sm:right-10 lg:right-16 z-10">
+        {/* "More Than Just a Safari" — stacks below on mobile, overlays on desktop */}
+        <div className="relative lg:absolute lg:top-[15%] lg:right-16 z-10 px-6 py-8 lg:p-0">
           <h2
-            className="font-display text-white font-normal text-right text-on-image"
+            className="font-display text-white font-normal text-left lg:text-right text-on-image"
             style={{ fontSize: "clamp(1.6rem, 3.5vw, 3rem)" }}
           >
             More Than Just a Safari

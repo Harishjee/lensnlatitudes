@@ -60,6 +60,7 @@ export default function AwardsPage() {
         title="Awards"
         titlePosition="right-center"
         imagePosition="center"
+        animate
       />
 
       {/* ══════════════════════════════════════

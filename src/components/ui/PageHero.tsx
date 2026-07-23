@@ -27,6 +27,8 @@ interface PageHeroProps {
   titleColor?: "light" | "dark";
   /** Make the hero a full 100vh section (image sits behind the header) */
   fullHeight?: boolean;
+  /** Subtle cinematic hover effect (slow zoom + light-sweep shimmer) */
+  animate?: boolean;
 }
 
 /**
@@ -45,6 +47,7 @@ export default function PageHero({
   variant = "cover",
   titleColor,
   fullHeight = false,
+  animate = false,
 }: PageHeroProps) {
   const isRight = titlePosition === "right-center";
   const isDark = (titleColor ?? (variant === "contain" ? "dark" : "light")) === "dark";
@@ -103,7 +106,7 @@ export default function PageHero({
   /* ── COVER: full-bleed image cropped to a fixed height ── */
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className={`relative w-full overflow-hidden ${animate ? "hero-animated" : ""}`}
       style={{ height: fullHeight ? "75vh" : "clamp(300px, 45vh, 520px)" }}
     >
       <Image
@@ -116,6 +119,10 @@ export default function PageHero({
         priority
         sizes="100vw"
       />
+      {/* Cinematic light-sweep shimmer (only when `animate`) */}
+      {animate && (
+        <span className="hero-sheen pointer-events-none" aria-hidden="true" />
+      )}
       {/* Soft scrim behind the title for legibility (photo stays fully visible) */}
       {fullHeight && !isDark && (
         <div

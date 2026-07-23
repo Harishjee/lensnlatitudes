@@ -47,6 +47,56 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 2px 12px rgba(0,0,0,0.6), 0 4px 30px rgba(0,0,0,0.45);
 }
 
+/* ── Cinematic hero hover: slow Ken Burns zoom + light-sweep shimmer ── */
+.hero-animated img {
+  transition: transform 7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.hero-animated:hover img {
+  transform: scale(1.07);
+}
+.hero-animated h1,
+.hero-animated p {
+  transition: letter-spacing 1.2s ease, text-shadow 1.2s ease;
+}
+.hero-animated:hover h1 {
+  letter-spacing: 0.025em;
+}
+/* Soft diagonal light sweep that glides across on hover (like light on water) */
+.hero-sheen {
+  position: absolute;
+  top: -60%;
+  bottom: -60%;
+  left: -30%;
+  width: 45%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0.22) 50%,
+    rgba(255, 255, 255, 0.06) 60%,
+    transparent 100%
+  );
+  transform: translateX(-180%) rotate(8deg);
+  opacity: 0;
+  mix-blend-mode: soft-light;
+}
+.hero-animated:hover .hero-sheen {
+  opacity: 1;
+  animation: heroSheen 2.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes heroSheen {
+  0%   { transform: translateX(-180%) rotate(8deg); }
+  100% { transform: translateX(420%) rotate(8deg); }
+}
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animated img { transition: none; }
+  .hero-animated:hover img { transform: none; }
+  .hero-animated:hover .hero-sheen { animation: none; opacity: 0; }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
