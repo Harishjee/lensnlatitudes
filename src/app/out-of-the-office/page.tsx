@@ -76,20 +76,21 @@ export default function OutOfTheOfficePage() {
           </div>
 
           {/* Right — cheetah image with text overlay + caption */}
-          <div>
-            <div className="relative overflow-hidden rounded-lg sm:rounded-none">
+          <div className="flex flex-col">
+            <div className="relative rounded-lg overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/ooo-safari-jeep-team.jpg"
                 alt="Cheetah in grassland — Out of the Office by Salil Nair"
                 title="Cheetah in grassland — Out of the Office by Salil Nair"
                 width={1600}
                 height={1000}
-                className="w-full h-auto min-h-[360px] object-cover block"
+                className="w-full h-auto block rounded-lg lg:rounded-none"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
-              {/* Text overlay — taglines (slate/blue, matching cloud bg) */}
-              <div className="absolute inset-0 flex flex-col justify-start p-5 sm:p-12">
-                <div className="space-y-3 max-w-[95%] sm:max-w-[85%]">
+              
+              {/* Text overlay — DESKTOP ONLY */}
+              <div className="hidden lg:flex absolute inset-0 flex-col justify-start p-12">
+                <div className="space-y-3 max-w-[85%]">
                   {[
                     "Less Corporate, More Curious—A Team Day They'll Talk About.",
                     "Because Grown-Ups Deserve Wild Adventures Too.",
@@ -105,6 +106,26 @@ export default function OutOfTheOfficePage() {
                     </p>
                   ))}
                 </div>
+              </div>
+            </div>
+
+            {/* Styled Quotes — MOBILE ONLY */}
+            <div className="lg:hidden mt-6 bg-gray-50 p-6 border-l-4 border-gray-800 rounded-r-lg shadow-sm">
+              <div className="space-y-4">
+                {[
+                  "Less Corporate, More Curious—A Team Day They'll Talk About.",
+                  "Because Grown-Ups Deserve Wild Adventures Too.",
+                  "A Wild Day Out—No Spreadsheets, Just Stories.",
+                  "Forget Deadlines. Follow Footprints.",
+                ].map((line) => (
+                  <p
+                    key={line}
+                    className="text-gray-700 font-sans font-medium leading-relaxed italic"
+                    style={{ fontSize: "16px" }}
+                  >
+                    &ldquo;{line}&rdquo;
+                  </p>
+                ))}
               </div>
             </div>
             {/* Caption below image */}
