@@ -77,19 +77,19 @@ export default function OutOfTheOfficePage() {
 
           {/* Right — cheetah image with text overlay + caption */}
           <div>
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden rounded-lg sm:rounded-none">
               <Image
                 src="/images/ooo-safari-jeep-team.jpg"
                 alt="Cheetah in grassland — Out of the Office by Salil Nair"
                 title="Cheetah in grassland — Out of the Office by Salil Nair"
                 width={1600}
                 height={1000}
-                className="w-full h-auto block"
+                className="w-full h-auto min-h-[360px] object-cover block"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
               {/* Text overlay — taglines (slate/blue, matching cloud bg) */}
-              <div className="absolute inset-0 flex flex-col justify-start p-8 sm:p-12">
-                <div className="space-y-3 max-w-[85%]">
+              <div className="absolute inset-0 flex flex-col justify-start p-5 sm:p-12">
+                <div className="space-y-3 max-w-[95%] sm:max-w-[85%]">
                   {[
                     "Less Corporate, More Curious—A Team Day They'll Talk About.",
                     "Because Grown-Ups Deserve Wild Adventures Too.",
@@ -99,7 +99,7 @@ export default function OutOfTheOfficePage() {
                     <p
                       key={line}
                       className="text-white font-sans font-medium leading-snug"
-                      style={{ fontSize: "16px", textShadow: "0 1px 3px rgba(0, 0, 0, 0.4)" }}
+                      style={{ fontSize: "16px", textShadow: "0 1px 3px rgba(0, 0, 0, 0.6)" }}
                     >
                       {line}
                     </p>
