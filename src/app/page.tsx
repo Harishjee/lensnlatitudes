@@ -173,7 +173,7 @@ export default function HomePage() {
         {/* Heading — single line, centered */}
         <div className="mb-12 text-center">
           <h2
-            className="font-display text-black font-normal whitespace-nowrap mb-5"
+            className="font-display text-black font-normal mb-5"
             style={{ fontSize: "clamp(1.2rem, 3.2vw, 3rem)" }}
           >
             Your Pack…&nbsp;&nbsp;&nbsp;Your Path…&nbsp;&nbsp;&nbsp;Let Nature Do the Talking
