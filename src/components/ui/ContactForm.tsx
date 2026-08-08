@@ -60,7 +60,7 @@ export default function ContactForm() {
         </div>
         <h3 className="font-display text-white text-2xl font-normal mb-3">Message sent!</h3>
         <p className="text-gray-400 leading-relaxed max-w-sm" style={{ fontSize: "16px" }}>
-          Thank you for reaching out. Salil and the team will get back to you shortly —
+          Thank you for reaching out. Salil and the team will get back to you shortly, 
           keep an eye on your inbox.
         </p>
         <button
@@ -75,7 +75,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-      {/* Honeypot — hidden from real users */}
+      {/* Honeypot, hidden from real users */}
       <input type="text" {...register("honeypot")} className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

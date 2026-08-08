@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us — Lens N Latitudes",
+  title: "Contact Us, Lens N Latitudes",
   description:
     "Get in touch with Salil Nair at Lens N Latitudes. Enquire about upcoming safaris, wildlife photography tours, corporate retreats, or fine art prints.",
   path: "/contact",
@@ -22,16 +22,16 @@ export default function ContactPage() {
     <>
       <PageHero
         image="/images/explore-latitudes-masai-mara-wildlife.jpg"
-        alt="Contact Lens N Latitudes — wildlife safari enquiries"
+        alt="Contact Lens N Latitudes, wildlife safari enquiries"
         title="Contact Us"
         subtitle="Let's plan your next walk on the wild side."
         titlePosition="right-center"
       />
 
-      {/* ── MAIN — info + form ── */}
+      {/* ── MAIN, info + form ── */}
       <section className="bg-[#0a0a0a] py-16 sm:py-20 px-5 sm:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start">
-          {/* Left — intro + contact tiles */}
+          {/* Left, intro + contact tiles */}
           <div>
             <p className="text-[#00bcd4] text-xs font-semibold uppercase tracking-[0.3em] mb-4">
               Get In Touch
@@ -41,7 +41,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-gray-400 leading-relaxed mt-5" style={{ fontSize: "17px" }}>
               Whether it&apos;s an upcoming safari, a bespoke photography tour, a corporate
-              escape or a fine-art print — tell us what you have in mind and we&apos;ll get
+              escape or a fine-art print, tell us what you have in mind and we&apos;ll get
               right back to you.
             </p>
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form card */}
+          {/* Right, form card */}
           <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-[#111] to-[#0d0d0d] p-6 sm:p-9 shadow-2xl">
             <h3 className="font-display text-white font-normal mb-2" style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)" }}>
               Send us a message
@@ -145,7 +145,7 @@ export default function ContactPage() {
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <iframe
-              title="Lens N Latitudes studio location — Chennai"
+              title="Lens N Latitudes studio location, Chennai"
               src={MAP_SRC}
               className="w-full h-[380px] sm:h-[440px] grayscale-[0.2] contrast-[1.05]"
               style={{ border: 0 }}

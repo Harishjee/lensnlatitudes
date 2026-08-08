@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     to: ["lensnlatitudes@gmail.com"],
     replyTo: email,
     subject: `New enquiry from ${firstName} ${lastName}`,
-    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone || "—"}\n\nMessage:\n${message}`,
+    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone || "N/A"}\n\nMessage:\n${message}`,
   });
 
   if (error) {

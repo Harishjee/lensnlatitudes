@@ -64,7 +64,7 @@ function Modal({ t, onClose }: { t: Testimonial; onClose: () => void }) {
               <h3 className="font-display text-white text-xl font-normal mt-1">
                 {t.name}
                 {t.location && (
-                  <span className="text-gray-500 font-serif text-base font-normal"> — {t.location}</span>
+                  <span className="text-gray-500 font-serif text-base font-normal">, {t.location}</span>
                 )}
               </h3>
               <p className="text-[#00bcd4] text-sm mt-0.5 font-medium">

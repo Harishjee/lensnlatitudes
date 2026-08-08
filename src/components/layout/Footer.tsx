@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-none px-8 sm:px-12 lg:px-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* Col 1 — Large logo */}
+          {/* Col 1, Large logo */}
           <div className="flex items-start">
             <Link href="/">
               <div className="relative w-36 h-36 sm:w-44 sm:h-44">
@@ -23,7 +23,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Col 2 — Explore */}
+          {/* Col 2, Explore */}
           <div>
             <h3 className="text-white font-serif font-semibold mb-5">Explore</h3>
             <ul className="space-y-2.5">
@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Follow us */}
+          {/* Col 3, Follow us */}
           <div>
             <h3 className="text-white font-serif font-semibold mb-5">Follow us</h3>
             <ul className="space-y-2.5">
@@ -62,7 +62,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact Us */}
+          {/* Col 4, Contact Us */}
           <div>
             <h3 className="text-white font-serif font-semibold mb-5">Contact Us</h3>
             <address className="not-italic space-y-2 text-sm text-gray-400 leading-relaxed">

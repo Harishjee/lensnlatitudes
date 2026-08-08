@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Signature Shoots — Private One-on-One Wildlife Photography Tours",
+  title: "Signature Shoots, Private One-on-One Wildlife Photography Tours",
   description:
     "Exclusive one-on-one wildlife photography tours with Salil Nair. Create signature art tailored to your vision in India's & Africa's finest wildlife reserves.",
   path: "/signature-shoots",
@@ -13,21 +13,21 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const galleryImages = [
-  { src: "/images/signature-cheetah-bw-high-key-portrait.jpg", alt: "Cheetah high-key black and white portrait — signature wildlife shoot by Salil Nair" },
-  { src: "/images/signature-zebras-fighting-dust-masai-mara.jpg", alt: "Zebras fighting in dust, Masai Mara — signature wildlife photography" },
-  { src: "/images/signature-elephant-dust-devil-amboseli.jpg", alt: "Elephant with dust devil, Amboseli — signature wildlife photography" },
-  { src: "/images/signature-leopard-drinking-water-rocks.jpg", alt: "Leopard drinking water on rocks — signature wildlife photography" },
-  { src: "/images/signature-zebras-bw-high-key-herd.jpg", alt: "Zebra herd high-key black and white — signature wildlife photography" },
-  { src: "/images/signature-photographer-cave-adventure.jpg", alt: "Photographer exploring a cave — signature adventure shoot" },
+  { src: "/images/signature-cheetah-bw-high-key-portrait.jpg", alt: "Cheetah high-key black and white portrait, signature wildlife shoot by Salil Nair" },
+  { src: "/images/signature-zebras-fighting-dust-masai-mara.jpg", alt: "Zebras fighting in dust, Masai Mara, signature wildlife photography" },
+  { src: "/images/signature-elephant-dust-devil-amboseli.jpg", alt: "Elephant with dust devil, Amboseli, signature wildlife photography" },
+  { src: "/images/signature-leopard-drinking-water-rocks.jpg", alt: "Leopard drinking water on rocks, signature wildlife photography" },
+  { src: "/images/signature-zebras-bw-high-key-herd.jpg", alt: "Zebra herd high-key black and white, signature wildlife photography" },
+  { src: "/images/signature-photographer-cave-adventure.jpg", alt: "Photographer exploring a cave, signature adventure shoot" },
 ];
 
 export default function SignatureShootsPage() {
   return (
     <>
-      {/* ── HERO — purple twilight landscape ── */}
+      {/* ── HERO, purple twilight landscape ── */}
       <PageHero
         image="/images/signature-shoots-hero-twilight-landscape.jpg"
-        alt="Signature Shoots — twilight landscape wildlife photography by Salil Nair"
+        alt="Signature Shoots, twilight landscape wildlife photography by Salil Nair"
         title="Signature Shoots"
         titlePosition="left-bottom"
       />
@@ -61,7 +61,7 @@ export default function SignatureShootsPage() {
             As an award-winning wildlife photographer and destination expert, I know exactly where
             and when the wild reveals its most extraordinary moments. When you join my exclusive,
             one-on-one photography tours, you&apos;re not just another face in a crowded safari
-            jeep—you&apos;re guided by someone who knows the secret corners and hidden gems few ever see.
+            jeep, you&apos;re guided by someone who knows the secret corners and hidden gems few ever see.
           </p>
           <p>
             Together, we&apos;ll design signature shoots tailored specifically to your style and

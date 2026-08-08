@@ -5,7 +5,7 @@ import SignatureGallery from "@/components/ui/SignatureGallery";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Out of the Office — Corporate Wildlife Safari Retreats",
+  title: "Out of the Office, Corporate Wildlife Safari Retreats",
   description:
     "Wildlife photography corporate retreats for teams. Swap Zoom calls for jeep rides. Team building, incentive trips, and offsites in India's most spectacular jungles.",
   path: "/out-of-the-office",
@@ -13,38 +13,38 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const workshopGallery = [
-  { src: "/images/ooo-grassland-dawn.jpg",       alt: "Grassland at dawn — Out of Office workshop" },
-  { src: "/images/ooo-sunrise-golden.jpg",        alt: "Golden sunrise — Out of Office workshop" },
-  { src: "/images/ooo-golden-sunset-water.jpg",   alt: "Golden sunset reflection — Out of Office workshop" },
-  { src: "/images/ooo-sunset-reflection-tree.jpg",alt: "Sunset tree reflection — Out of Office workshop" },
-  { src: "/images/ooo-hot-air-balloon-sunrise.jpg",alt: "Hot air balloon at sunrise — Out of Office workshop" },
-  { src: "/images/ooo-jeep-safari-landscape.jpg", alt: "Jeep safari landscape — Out of Office workshop" },
-  { src: "/images/ooo-purple-dusk-sky.jpg",       alt: "Purple dusk sky — Out of Office workshop" },
-  { src: "/images/ooo-landscape-wide.jpg",        alt: "Wide landscape — Out of Office workshop" },
+  { src: "/images/ooo-grassland-dawn.jpg",       alt: "Grassland at dawn, Out of Office workshop" },
+  { src: "/images/ooo-sunrise-golden.jpg",        alt: "Golden sunrise, Out of Office workshop" },
+  { src: "/images/ooo-golden-sunset-water.jpg",   alt: "Golden sunset reflection, Out of Office workshop" },
+  { src: "/images/ooo-sunset-reflection-tree.jpg",alt: "Sunset tree reflection, Out of Office workshop" },
+  { src: "/images/ooo-hot-air-balloon-sunrise.jpg",alt: "Hot air balloon at sunrise, Out of Office workshop" },
+  { src: "/images/ooo-jeep-safari-landscape.jpg", alt: "Jeep safari landscape, Out of Office workshop" },
+  { src: "/images/ooo-purple-dusk-sky.jpg",       alt: "Purple dusk sky, Out of Office workshop" },
+  { src: "/images/ooo-landscape-wide.jpg",        alt: "Wide landscape, Out of Office workshop" },
 ];
 
 export default function OutOfTheOfficePage() {
   return (
     <>
       {/* ══════════════════════════════════════
-          SECTION 1 — HERO
+          SECTION 1, HERO
       ══════════════════════════════════════ */}
       <PageHero
         image="/images/ooo-hero-sunset-elephants-masai-mara.jpg"
-        alt="Out of the Office — corporate wildlife safari retreat"
+        alt="Out of the Office, corporate wildlife safari retreat"
         title="Out of the Office"
         titlePosition="right-center"
         imagePosition="bottom"
       />
 
       {/* ══════════════════════════════════════
-          SECTION 2 — White bg · Text LEFT · Image RIGHT
+          SECTION 2, White bg · Text LEFT · Image RIGHT
           Heading "At Lens and Latitudes" + paragraphs
           Right: cheetah image with taglines overlaid + caption below
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-14">
         <div className="max-w-8xl mx-auto grid lg:grid-cols-[4.2fr_5.8fr] gap-12 lg:gap-16 items-start">
-          {/* Left — heading + text */}
+          {/* Left, heading + text */}
           <div>
             <h2
               className="font-display font-normal text-gray-900 mb-8 leading-tight"
@@ -55,7 +55,7 @@ export default function OutOfTheOfficePage() {
             <div className="space-y-5 text-gray-800 leading-relaxed" style={{ fontSize: "20px" }}>
               <p>
                 we specialize in getting teams out of the inbox and into
-                the wild—because let&apos;s be honest, no one has ever felt
+                the wild, because let&apos;s be honest, no one has ever felt
                 truly inspired between back-to-back Zoom calls and
                 reheated coffee. Let&apos;s face it: your team is over-caffeinated,
                 under-inspired, and probably using one screen to zone out
@@ -75,26 +75,26 @@ export default function OutOfTheOfficePage() {
             </div>
           </div>
 
-          {/* Right — cheetah image with text overlay + caption */}
+          {/* Right, cheetah image with text overlay + caption */}
           <div className="flex flex-col">
             <div className="relative rounded-lg overflow-hidden lg:overflow-visible">
               <Image
                 src="/images/ooo-safari-jeep-team.jpg"
-                alt="Cheetah in grassland — Out of the Office by Salil Nair"
-                title="Cheetah in grassland — Out of the Office by Salil Nair"
+                alt="Cheetah in grassland, Out of the Office by Salil Nair"
+                title="Cheetah in grassland, Out of the Office by Salil Nair"
                 width={1600}
                 height={1000}
                 className="w-full h-auto block rounded-lg lg:rounded-none"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
               
-              {/* Text overlay — DESKTOP ONLY */}
+              {/* Text overlay, DESKTOP ONLY */}
               <div className="hidden lg:flex absolute inset-0 flex-col justify-start p-12">
                 <div className="space-y-3 max-w-[85%]">
                   {[
-                    "Less Corporate, More Curious—A Team Day They'll Talk About.",
+                    "Less Corporate, More Curious, A Team Day They'll Talk About.",
                     "Because Grown-Ups Deserve Wild Adventures Too.",
-                    "A Wild Day Out—No Spreadsheets, Just Stories.",
+                    "A Wild Day Out, No Spreadsheets, Just Stories.",
                     "Forget Deadlines. Follow Footprints.",
                   ].map((line) => (
                     <p
@@ -109,13 +109,13 @@ export default function OutOfTheOfficePage() {
               </div>
             </div>
 
-            {/* Styled Quotes — MOBILE ONLY */}
+            {/* Styled Quotes, MOBILE ONLY */}
             <div className="lg:hidden mt-6 bg-gray-50 p-6 border-l-4 border-gray-800 rounded-r-lg shadow-sm">
               <div className="space-y-4">
                 {[
-                  "Less Corporate, More Curious—A Team Day They'll Talk About.",
+                  "Less Corporate, More Curious, A Team Day They'll Talk About.",
                   "Because Grown-Ups Deserve Wild Adventures Too.",
-                  "A Wild Day Out—No Spreadsheets, Just Stories.",
+                  "A Wild Day Out, No Spreadsheets, Just Stories.",
                   "Forget Deadlines. Follow Footprints.",
                 ].map((line) => (
                   <p
@@ -130,9 +130,9 @@ export default function OutOfTheOfficePage() {
             </div>
             {/* Caption below image */}
             <p className="mt-5 text-gray-800 leading-relaxed" style={{ fontSize: "20px" }}>
-              Out here, there&apos;s no Wi-Fi—but we promise you&apos;ll find a better
-              connection. Teams slow down, breathe deeper, and see the world—and
-              each other—through a different lens (literally). While we can&apos;t promise
+              Out here, there&apos;s no Wi-Fi, but we promise you&apos;ll find a better
+              connection. Teams slow down, breathe deeper, and see the world, and
+              each other, through a different lens (literally). While we can&apos;t promise
               enlightenment, we <em>can</em> promise fewer emails, more eye contact
             </p>
           </div>
@@ -140,7 +140,7 @@ export default function OutOfTheOfficePage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION 3 — Dark · "Out of Office Workshops" heading + Gallery
+          SECTION 3, Dark · "Out of Office Workshops" heading + Gallery
       ══════════════════════════════════════ */}
       <section className="bg-[#0a0a0a] py-14 px-4 sm:px-6">
         <h2
@@ -155,17 +155,17 @@ export default function OutOfTheOfficePage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION 4 — White bg · Image LEFT · Text RIGHT
+          SECTION 4, White bg · Image LEFT · Text RIGHT
           Safari jeep image + creative ideas text
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-14">
         <div className="max-w-8xl mx-auto grid lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16 items-start">
-          {/* Left — DSLR on jeep dashboard */}
+          {/* Left, DSLR on jeep dashboard */}
           <div className="relative">
             <Image
               src="/images/ooo-dslr-on-jeep-dashboard.jpg"
-              alt="DSLR camera on jeep dashboard — Out of the Office by Salil Nair"
-              title="DSLR camera on jeep dashboard — Out of the Office by Salil Nair"
+              alt="DSLR camera on jeep dashboard, Out of the Office by Salil Nair"
+              title="DSLR camera on jeep dashboard, Out of the Office by Salil Nair"
               width={1200}
               height={900}
               className="w-full h-auto block"
@@ -173,7 +173,7 @@ export default function OutOfTheOfficePage() {
             />
           </div>
 
-          {/* Right — text */}
+          {/* Right, text */}
           <div className="space-y-6 text-gray-800 leading-relaxed" style={{ fontSize: "20px" }}>
             <p>
               It&apos;s where creative ideas sneak up on you, usually right after a leopard
@@ -191,18 +191,18 @@ export default function OutOfTheOfficePage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION 5 — White bg · Text LEFT (centered) · Image RIGHT
+          SECTION 5, White bg · Text LEFT (centered) · Image RIGHT
           Corporate tailoring paragraph + giraffe image
       ══════════════════════════════════════ */}
       <section className="bg-white pb-16 px-4 sm:px-8 lg:px-14">
         <div className="max-w-8xl mx-auto grid lg:grid-cols-[3fr_2fr] gap-12 lg:gap-16 items-start">
-          {/* Left — centered text */}
+          {/* Left, centered text */}
           <div
             className="space-y-6 text-gray-800 leading-relaxed text-center"
             style={{ fontSize: "20px" }}
           >
             <p>
-              We also tailor these experiences to your corporate needs—whether it&apos;s a
+              We also tailor these experiences to your corporate needs, whether it&apos;s a
               high-impact incentive trip, a mid-year offsite, or a reward for top
               performers. We can seamlessly arrange meetings, presentations, team-building
               adventures, or a corporate retreat or award ceremonies in serene natural
@@ -214,12 +214,12 @@ export default function OutOfTheOfficePage() {
             </p>
           </div>
 
-          {/* Right — sunset elephants image */}
+          {/* Right, sunset elephants image */}
           <div className="relative">
             <Image
               src="/images/ooo-sunset-elephants-savanna.jpg"
-              alt="Sunset elephants in savanna — Out of the Office by Salil Nair"
-              title="Sunset elephants in savanna — Out of the Office by Salil Nair"
+              alt="Sunset elephants in savanna, Out of the Office by Salil Nair"
+              title="Sunset elephants in savanna, Out of the Office by Salil Nair"
               width={1200}
               height={800}
               className="w-full h-auto block"
@@ -230,12 +230,12 @@ export default function OutOfTheOfficePage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION 6 — White bg · Full-width centered closing line
+          SECTION 6, White bg · Full-width centered closing line
       ══════════════════════════════════════ */}
       <section className="bg-white pb-20 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto text-center text-gray-800 leading-relaxed" style={{ fontSize: "20px" }}>
           <p>
-            Because when the mind rests, it resets. When it resets, it performs. And when it performs—so does your business. Let&apos;s turn your next
+            Because when the mind rests, it resets. When it resets, it performs. And when it performs, so does your business. Let&apos;s turn your next
             corporate retreat into something wildly effective.
           </p>
         </div>

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Explore Latitudes — Wildlife Safari Photography Journeys",
+  title: "Explore Latitudes, Wildlife Safari Photography Journeys",
   description:
-    "Curated wildlife photography safaris to India, Africa & worldwide. Under the mentorship of Salil Nair — 18+ years of global experience, photography-centric itineraries.",
+    "Curated wildlife photography safaris to India, Africa & worldwide. Under the mentorship of Salil Nair, 18+ years of global experience, photography-centric itineraries.",
   path: "/explore-latitudes",
   image: "/images/explore-latitudes-masai-mara-wildlife.jpg",
 });
@@ -19,23 +19,23 @@ export default function ExploreLatitudesPage() {
       {/* ── HERO / TITLE (unchanged) ── */}
       <PageHero
         image="/images/explore-latitudes-masai-mara-wildlife.jpg"
-        alt="Explore Latitudes — wildlife safari photography journeys worldwide"
+        alt="Explore Latitudes, wildlife safari photography journeys worldwide"
         title="Explore Latitudes"
         titlePosition="left-bottom"
       />
 
       {/* ══════════════════════════════════════
-          SECTION A — magazine grid (white bg)
+          SECTION A, magazine grid (white bg)
           Maasai (tall, left) · intro + cubs (middle) · elephants + tigers text (right)
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
         <div className="max-w-8xl mx-auto grid lg:grid-cols-3 gap-8 items-start">
-          {/* Left — Maasai warrior, spans both rows */}
+          {/* Left, Maasai warrior, spans both rows */}
           <div className="lg:row-span-2">
             <Image
               src="/images/explore-maasai-warrior-jumping-kenya.jpg"
-              alt="Maasai warrior jumping in traditional dress, Kenya — Lens and Latitudes safari"
-              title="Maasai warrior jumping in traditional dress, Kenya — Lens and Latitudes safari"
+              alt="Maasai warrior jumping in traditional dress, Kenya, Lens and Latitudes safari"
+              title="Maasai warrior jumping in traditional dress, Kenya, Lens and Latitudes safari"
               width={900}
               height={1350}
               className="w-full h-auto block"
@@ -44,21 +44,21 @@ export default function ExploreLatitudesPage() {
             />
           </div>
 
-          {/* Middle top — intro paragraph */}
+          {/* Middle top, intro paragraph */}
           <div className="flex items-start">
             <p className="text-gray-800 leading-relaxed" style={bodyText}>
-              At <strong>Lens and Latitudes</strong>, we don&apos;t just plan wildlife safaris—we
+              At <strong>Lens and Latitudes</strong>, we don&apos;t just plan wildlife safaris, we
               curate immersive, purpose-driven photography journeys to some of the most spectacular
               jungles in India and around the world.
             </p>
           </div>
 
-          {/* Right top — elephants image */}
+          {/* Right top, elephants image */}
           <div>
             <Image
               src="/images/explore-elephants-playing-amboseli.jpg"
-              alt="Two elephants playing in green savanna with mountain backdrop — Amboseli safari"
-              title="Two elephants playing in green savanna with mountain backdrop — Amboseli safari"
+              alt="Two elephants playing in green savanna with mountain backdrop, Amboseli safari"
+              title="Two elephants playing in green savanna with mountain backdrop, Amboseli safari"
               width={1000}
               height={667}
               className="w-full h-auto block"
@@ -66,12 +66,12 @@ export default function ExploreLatitudesPage() {
             />
           </div>
 
-          {/* Middle bottom — lion cubs image */}
+          {/* Middle bottom, lion cubs image */}
           <div>
             <Image
               src="/images/explore-lion-cubs-walking-masai-mara.jpg"
-              alt="Two lion cubs walking together in Masai Mara — Lens and Latitudes safari"
-              title="Two lion cubs walking together in Masai Mara — Lens and Latitudes safari"
+              alt="Two lion cubs walking together in Masai Mara, Lens and Latitudes safari"
+              title="Two lion cubs walking together in Masai Mara, Lens and Latitudes safari"
               width={1000}
               height={667}
               className="w-full h-auto block"
@@ -79,7 +79,7 @@ export default function ExploreLatitudesPage() {
             />
           </div>
 
-          {/* Right bottom — tigers text */}
+          {/* Right bottom, tigers text */}
           <div className="flex items-center">
             <p className="text-gray-800 leading-relaxed" style={bodyText}>
               Whether it&apos;s tracking tigers in Jim Corbett, leopards in Jawai, a pride of lions in
@@ -91,17 +91,17 @@ export default function ExploreLatitudesPage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION B — big lion with OVERLAPPING dark text boxes (white bg)
+          SECTION B, big lion with OVERLAPPING dark text boxes (white bg)
           Lion is the base layer (left); dark boxes overlap its right edge.
       ══════════════════════════════════════ */}
       <section className="bg-white py-12 lg:py-20 px-4 sm:px-8 lg:px-12">
         <div className="max-w-8xl mx-auto relative">
-          {/* Lion — base layer, vertically centered on desktop */}
+          {/* Lion, base layer, vertically centered on desktop */}
           <div className="w-full lg:w-[58%] lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-0">
             <Image
               src="/images/explore-lion-portrait-bw-rain.jpg"
-              alt="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
-              title="Black and white portrait of a male lion in the rain — Salil Nair wildlife photography"
+              alt="Black and white portrait of a male lion in the rain, Salil Nair wildlife photography"
+              title="Black and white portrait of a male lion in the rain, Salil Nair wildlife photography"
               width={1200}
               height={800}
               className="w-full h-auto block"
@@ -109,9 +109,9 @@ export default function ExploreLatitudesPage() {
             />
           </div>
 
-          {/* Right column — flows normally (defines height), overlaps the lion */}
+          {/* Right column, flows normally (defines height), overlaps the lion */}
           <div className="mt-8 lg:mt-0 lg:ml-[46%] lg:w-[54%] relative z-10 space-y-8 lg:space-y-10">
-            {/* Dark box 1 — overlaps lion top-right */}
+            {/* Dark box 1, overlaps lion top-right */}
             <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={{ fontSize: "16px" }}>
               <p>
                 Our itineraries are crafted to ensure <strong className="text-white">maximum time in
@@ -120,16 +120,16 @@ export default function ExploreLatitudesPage() {
               </p>
               <p>
                 Travel logistics are handled seamlessly, so your time and energy stay focused on the
-                field—not on figuring out transit or schedules.
+                field, not on figuring out transit or schedules.
               </p>
             </div>
 
-            {/* Buffalo square — sits in the clear area, right of the lion */}
+            {/* Buffalo square, sits in the clear area, right of the lion */}
             <div className="flex justify-center">
               <Image
                 src="/images/explore-cape-buffalo-bw-grass.webp"
-                alt="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
-                title="Cape buffalo standing in tall grass, black and white — Salil Nair wildlife photography"
+                alt="Cape buffalo standing in tall grass, black and white, Salil Nair wildlife photography"
+                title="Cape buffalo standing in tall grass, black and white, Salil Nair wildlife photography"
                 width={600}
                 height={600}
                 className="w-1/2 lg:w-[52%] h-auto block"
@@ -137,7 +137,7 @@ export default function ExploreLatitudesPage() {
               />
             </div>
 
-            {/* Dark box 2 — overlaps lion bottom-right */}
+            {/* Dark box 2, overlaps lion bottom-right */}
             <div className="bg-[#0d0d0d] px-8 py-10 text-center space-y-5 text-white/90 leading-relaxed" style={{ fontSize: "16px" }}>
               <p>
                 Every journey is <strong className="text-white">photography-centric</strong>, offering
@@ -155,16 +155,16 @@ export default function ExploreLatitudesPage() {
       </section>
 
       {/* ══════════════════════════════════════
-          SECTION C — tiger reflection + closing text (white bg)
+          SECTION C, tiger reflection + closing text (white bg)
       ══════════════════════════════════════ */}
       <section className="bg-white py-16 px-4 sm:px-8 lg:px-12">
         <div className="max-w-8xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left — tiger reflection */}
+          {/* Left, tiger reflection */}
           <div>
             <Image
               src="/images/salil-nair-tiger-reflection-wildlife-photography.jpg"
-              alt="Tiger walking beside water with reflection, lush jungle — Salil Nair wildlife photography"
-              title="Tiger walking beside water with reflection, lush jungle — Salil Nair wildlife photography"
+              alt="Tiger walking beside water with reflection, lush jungle, Salil Nair wildlife photography"
+              title="Tiger walking beside water with reflection, lush jungle, Salil Nair wildlife photography"
               width={1200}
               height={800}
               className="w-full h-auto block"
@@ -172,7 +172,7 @@ export default function ExploreLatitudesPage() {
             />
           </div>
 
-          {/* Right — closing text */}
+          {/* Right, closing text */}
           <div className="space-y-6 text-gray-800 leading-relaxed" style={bodyText}>
             <p>
               Whether you&apos;re a beginner or an enthusiast, you&apos;ll return not just with great
@@ -180,7 +180,7 @@ export default function ExploreLatitudesPage() {
             </p>
             <p>
               Safety, comfort, and an eye for rare moments define our safaris. With Lens and Latitudes,
-              you&apos;re not just seeing the wild—you&apos;re learning to{" "}
+              you&apos;re not just seeing the wild, you&apos;re learning to{" "}
               <strong className="text-gray-900">see through it, with intent and creative imagination</strong>.
             </p>
           </div>

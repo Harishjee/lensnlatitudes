@@ -5,9 +5,9 @@ import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Track Me — Find Salil Nair, Wildlife Photographer",
+  title: "Track Me, Find Salil Nair, Wildlife Photographer",
   description:
-    "Track Salil Nair across latitudes. Not for likes, not for glory — somewhere across the next latitude, nature is posing for her next masterpiece.",
+    "Track Salil Nair across latitudes. Not for likes, not for glory, somewhere across the next latitude, nature is posing for her next masterpiece.",
   path: "/track-me",
   image: "/images/salil-nair-track-me-wildlife-photographer.jpg",
 });
@@ -15,24 +15,24 @@ export const metadata: Metadata = buildMetadata({
 export default function TrackMePage() {
   return (
     <>
-      {/* ── HERO — person on rock with text overlay ── */}
+      {/* ── HERO, person on rock with text overlay ── */}
             <PageHero
         image="/images/salil-nair-track-me-wildlife-photographer.jpg"
-        alt="Track Me — Salil Nair wildlife photographer on location"
+        alt="Track Me, Salil Nair wildlife photographer on location"
         title="Track Me"
         titlePosition="right-center"
       />
 
-      {/* ── CONTENT — big eagle image LEFT, text RIGHT ─── */}
+      {/* ── CONTENT, big eagle image LEFT, text RIGHT ─── */}
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid lg:grid-cols-[3fr_1fr] gap-8 lg:gap-10 items-center mb-20">
-            {/* Eagle image — big */}
+            {/* Eagle image, big */}
             <div className="relative">
               <Image
                 src="/images/eagle-flight-wildlife-photography-india.jpg"
-                alt="African fish eagle swooping to catch fish — Salil Nair wildlife photography"
-                title="African fish eagle swooping to catch fish — Salil Nair wildlife photography"
+                alt="African fish eagle swooping to catch fish, Salil Nair wildlife photography"
+                title="African fish eagle swooping to catch fish, Salil Nair wildlife photography"
                 width={1600}
                 height={1067}
                 className="w-full h-auto block"
@@ -40,7 +40,7 @@ export default function TrackMePage() {
                 priority
               />
             </div>
-            {/* Text — right, centered */}
+            {/* Text, right, centered */}
             <div className="space-y-6 text-gray-800 leading-relaxed text-center lg:text-left" style={{ fontSize: "19px" }}>
               <p>
                 Not for likes, Not for glory, Because somewhere, across the next latitude, nature is
@@ -57,7 +57,7 @@ export default function TrackMePage() {
             </div>
           </div>
 
-          {/* ── "That's when you will find him here" — professional contact section ── */}
+          {/* ── "That's when you will find him here", professional contact section ── */}
           <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#0d1512] via-[#0a0a0a] to-[#0d0d0d] border border-white/10">
             {/* Subtle top accent line */}
             <div className="h-px w-full bg-gradient-to-r from-transparent via-[#00bcd4]/50 to-transparent" />
@@ -68,7 +68,7 @@ export default function TrackMePage() {
                   Reach the Wild
                 </p>
                 <h2 className="font-display text-white font-normal" style={{ fontSize: "clamp(1.7rem, 3.5vw, 2.6rem)" }}>
-                  That&apos;s when you will find him here —
+                  That&apos;s when you will find him here
                 </h2>
               </div>
 

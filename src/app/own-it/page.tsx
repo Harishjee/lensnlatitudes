@@ -7,9 +7,9 @@ import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Own It — Wildlife Photography Fine Art Prints by Salil Nair",
+  title: "Own It, Wildlife Photography Fine Art Prints by Salil Nair",
   description:
-    "Own a real, unfiltered moment from the wild. Salil Nair's award-winning wildlife photography prints turn any wall into a story — buy one, gift one, hang one.",
+    "Own a real, unfiltered moment from the wild. Salil Nair's award-winning wildlife photography prints turn any wall into a story, buy one, gift one, hang one.",
   path: "/own-it",
   image: "/images/ooo-sunset-reflection-tree.jpg",
 });
@@ -26,39 +26,39 @@ type Row = {
 const rows: Row[] = [
   {
     image: "/images/signature-photographer-cave-adventure.jpg",
-    alt: "Photographer standing inside a sunlit canyon cave — Salil Nair",
+    alt: "Photographer standing inside a sunlit canyon cave, Salil Nair",
     width: 1620,
     height: 1080,
-    heading: <>These photographs don&apos;t just hang—they speak.</>,
+    heading: <>These photographs don&apos;t just hang, they speak.</>,
     text: "Of tigers that prowl and jungles that breathe, Of quiet moments the wild lets us keep.",
   },
   {
     image: "/images/abstracts-hero-green-glow-plants.jpg",
-    alt: "Abstract green glowing water plants — Salil Nair wildlife art",
+    alt: "Abstract green glowing water plants, Salil Nair wildlife art",
     width: 1620,
     height: 1080,
     heading: (
       <>
-        They don&apos;t just hang—they <em>watch</em>.
+        They don&apos;t just hang, they <em>watch</em>.
       </>
     ),
     text: "With eyes that remember, with stories to tell, They hold the hush between heartbeat and yell.",
   },
   {
     image: "/images/ooo-safari-jeep-lion-team-masai-mara.jpg",
-    alt: "Safari jeep with photographers on the green Masai Mara plains — Salil Nair",
+    alt: "Safari jeep with photographers on the green Masai Mara plains, Salil Nair",
     width: 2500,
     height: 1407,
-    heading: <>They don&apos;t just hang—they invite.</>,
+    heading: <>They don&apos;t just hang, they invite.</>,
     text: "To pause, to wonder, to ask, “Where is this?” And maybe even dream of the wilderness.",
   },
   {
     image: "/images/eagle-flight-wildlife-photography-india.jpg",
-    alt: "Fish eagle swooping to catch prey over water — Salil Nair",
+    alt: "Fish eagle swooping to catch prey over water, Salil Nair",
     width: 1885,
     height: 1060,
-    heading: <>They don&apos;t just hang—they protect.</>,
-    text: "Because every glance plants a seed of care — A reminder the wild is still out there.",
+    heading: <>They don&apos;t just hang, they protect.</>,
+    text: "Because every glance plants a seed of care, A reminder the wild is still out there.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function OwnItPage() {
       {/* ── HERO ── */}
       <PageHero
         image="/images/ooo-sunset-reflection-tree.jpg"
-        alt="Own It — wildlife photography fine art prints by Salil Nair"
+        alt="Own It, wildlife photography fine art prints by Salil Nair"
         title="Own It"
         titlePosition="left-bottom"
       />
@@ -86,16 +86,16 @@ export default function OwnItPage() {
                 <p>
                   Imagine a child walking into your home and stopping mid-step, eyes wide at
                   the sight of a tiger staring back from the wall. Or a friend at your office
-                  asking, &ldquo;Wait—<em>where</em> was this taken?&rdquo; A cozy coffee shop
+                  asking, &ldquo;Wait, <em>where</em> was this taken?&rdquo; A cozy coffee shop
                   transforms into a roaring rainforest. A little shop turns into a jungle trail.
                 </p>
                 <p>
-                  These photographs don&apos;t just hang—they <em>speak</em>. They <em>speak</em>{" "}
+                  These photographs don&apos;t just hang, they <em>speak</em>. They <em>speak</em>{" "}
                   for what can&apos;t <em>shout</em> for itself… They spark curiosity, wonder,
                   and conversations that matter.
                 </p>
                 <p>
-                  Every image is a real moment from the wild—untouched, unfiltered, and often,
+                  Every image is a real moment from the wild, untouched, unfiltered, and often,
                   unrepeatable. These aren&apos;t just photos, they&apos;re whispers in a frame,
                   of jungles that breathe, of beasts with no names. And when someone asks about
                   it, you get to tell the story. Maybe even inspire them to go see it, feel it,
@@ -111,12 +111,12 @@ export default function OwnItPage() {
             </div>
           </div>
 
-          {/* Lion image — fills the right panel fully */}
+          {/* Lion image, fills the right panel fully */}
           <div className="relative bg-[#f2f2f2] min-h-[480px] lg:min-h-full">
             <Image
               src="/images/own-it-hero.jpg"
-              alt="Fine art black and white lion portrait print — Salil Nair"
-              title="Fine art black and white lion portrait print — Salil Nair"
+              alt="Fine art black and white lion portrait print, Salil Nair"
+              title="Fine art black and white lion portrait print, Salil Nair"
               fill
               className="object-cover"
               style={{ objectPosition: "center bottom" }}
@@ -138,7 +138,7 @@ export default function OwnItPage() {
           <div className="mt-10 space-y-7 text-gray-800 leading-relaxed" style={{ fontSize: "20px" }}>
             <p>
               This isn&apos;t about buying art. &ldquo;It&apos;s About Investing In
-              Awareness&rdquo;. The amount you spend isn&apos;t just for a frame—it&apos;s for the
+              Awareness&rdquo;. The amount you spend isn&apos;t just for a frame, it&apos;s for the
               future. It&apos;s for every person who stops and stares and suddenly sees the wild
               not as something far away, but something worth caring for.
             </p>
@@ -147,7 +147,7 @@ export default function OwnItPage() {
               Let your space do more than look good. Let it <em>mean</em> something.
             </p>
             <p>
-              Nature is waiting—and your wall could be its loudest voice. Will your walls answer?
+              Nature is waiting, and your wall could be its loudest voice. Will your walls answer?
             </p>
           </div>
         </div>

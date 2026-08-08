@@ -32,7 +32,7 @@ export default function SignatureGallery({ images }: { images: GalleryImage[] })
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* ── Main stage — image shown at full natural aspect (no crop) ── */}
+      {/* ── Main stage, image shown at full natural aspect (no crop) ── */}
       <div className="relative flex items-center justify-center">
         {/* Prev arrow */}
         <button
@@ -44,7 +44,7 @@ export default function SignatureGallery({ images }: { images: GalleryImage[] })
           ‹
         </button>
 
-        {/* Image — object-contain so it is never cropped */}
+        {/* Image, object-contain so it is never cropped */}
         <div className="w-full flex items-center justify-center px-12 sm:px-16">
           <Image
             key={current}
@@ -86,7 +86,7 @@ export default function SignatureGallery({ images }: { images: GalleryImage[] })
           >
             <Image
               src={img.src}
-              alt={`${img.alt} — thumbnail`}
+              alt={`${img.alt}, thumbnail`}
               title={img.alt}
               fill
               className="object-cover"

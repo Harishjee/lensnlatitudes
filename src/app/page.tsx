@@ -5,7 +5,7 @@ import TestimonialsSection from "@/components/ui/TestimonialsSection";
 import VideoTestimonials from "@/components/ui/VideoTestimonials";
 
 export const metadata: Metadata = {
-  title: "Lens N Latitudes — Wildlife Photography & Safari Tours India",
+  title: "Lens N Latitudes, Wildlife Photography & Safari Tours India",
   description:
     "Award-winning wildlife photography safaris led by Salil Nair. India, Africa & worldwide expeditions. Expert guidance, small groups, luxury stays. Based in Chennai.",
   alternates: { canonical: "https://www.lensnlatitudes.com/" },
@@ -17,28 +17,28 @@ const capabilities = [
     desc: "Not Just Captured. Crafted to Stand Apart",
     href: "/signature-shoots",
     image: "/images/home-hero-wildlife-safari-lens-n-latitudes.jpg",
-    alt: "Signature wildlife photography shoots — Lens N Latitudes",
+    alt: "Signature wildlife photography shoots, Lens N Latitudes",
   },
   {
     title: "Abstracts Unleased",
     desc: "Minimal in Form. Monumental in Feeling.",
     href: "/abstracts-unleashed",
     image: "/images/home-capability-abstracts-wildlife.jpg",
-    alt: "Abstract wildlife photography — Lens N Latitudes",
+    alt: "Abstract wildlife photography, Lens N Latitudes",
   },
   {
     title: "Out Of Office",
-    desc: "From deadlines to treelines — the perfect escape...The Only Meeting is in the Wild.",
+    desc: "From deadlines to treelines, the perfect escape...The Only Meeting is in the Wild.",
     href: "/out-of-the-office",
     image: "/images/home-capability-out-of-office-safari.jpg",
-    alt: "Corporate wildlife safari retreat — Out of Office",
+    alt: "Corporate wildlife safari retreat, Out of Office",
   },
   {
     title: "Beyond The Classrooms",
-    desc: "Where the jungle teaches what walls cannot...\nOut of their textbooks & Into the wild.\nBecause the forest has no blackboard — only lessons.",
+    desc: "Where the jungle teaches what walls cannot...\nOut of their textbooks & Into the wild.\nBecause the forest has no blackboard, only lessons.",
     href: "/beyond-the-classrooms",
     image: "/images/home-capability-beyond-classrooms-elephant.jpg",
-    alt: "Wildlife education tour for students — Beyond The Classrooms",
+    alt: "Wildlife education tour for students, Beyond The Classrooms",
   },
 ];
 
@@ -46,14 +46,14 @@ export default function HomePage() {
   return (
     <>
       {/* ══════════════════════════════════════════════
-          SECTION 1 — HERO
+          SECTION 1, HERO
           Full natural-size image, NO overlay, text-shadow for readability
       ══════════════════════════════════════════════ */}
       <section className="relative w-full">
         <Image
           src="/images/home-hero-wildlife-safari-lens-n-latitudes.jpg"
-          alt="Lens N Latitudes — wildlife photography safari"
-          title="Lens N Latitudes — wildlife photography safari"
+          alt="Lens N Latitudes, wildlife photography safari"
+          title="Lens N Latitudes, wildlife photography safari"
           width={1920}
           height={1280}
           className="w-full h-auto block"
@@ -61,7 +61,7 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* Title — stacks below image on mobile, overlays upper-left on desktop */}
+        {/* Title, stacks below image on mobile, overlays upper-left on desktop */}
         <div className="relative lg:absolute z-10 px-6 py-8 lg:p-0 lg:left-16 lg:top-[18vh]">
           <h1
             className="font-display text-white font-normal leading-none text-on-image"
@@ -79,22 +79,22 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECTION 2 — BEACH INTRO
+          SECTION 2, BEACH INTRO
           Full natural-size image, NO overlay
           Text top-left + bottom-right, 20px font, text-shadow
       ══════════════════════════════════════════════ */}
       <section className="relative w-full">
         <Image
           src="/images/home-wildlife-photography-intro.jpg"
-          alt="Lens N Latitudes — wildlife photography story, Goa beach landscape"
-          title="Lens N Latitudes — wildlife photography story, Goa beach landscape"
+          alt="Lens N Latitudes, wildlife photography story, Goa beach landscape"
+          title="Lens N Latitudes, wildlife photography story, Goa beach landscape"
           width={1920}
           height={1280}
           className="w-full h-auto block"
           sizes="100vw"
         />
 
-        {/* Top-left text block — stacks below on mobile, overlays on desktop */}
+        {/* Top-left text block, stacks below on mobile, overlays on desktop */}
         <div className="relative lg:absolute lg:top-[5%] lg:left-14 z-10 px-6 pt-8 lg:p-0 max-w-full lg:max-w-[42%]">
           <h2
             className="font-display text-white font-normal leading-snug text-on-image mb-5"
@@ -109,7 +109,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Bottom-right text block — stacks below on mobile, overlays on desktop */}
+        {/* Bottom-right text block, stacks below on mobile, overlays on desktop */}
         <div className="relative lg:absolute lg:bottom-[5%] lg:right-14 z-10 text-left lg:text-right px-6 pt-6 pb-8 lg:p-0 max-w-full lg:max-w-[45%]">
           <p className="text-white leading-relaxed text-on-image" style={{ fontSize: "20px" }}>
             Bring your Curiosity &amp; your Camera (or just your Mobile or the Binocs),
@@ -120,22 +120,22 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECTION 3 — MORE THAN JUST A SAFARI (banner image)
+          SECTION 3, MORE THAN JUST A SAFARI (banner image)
           Full natural-size image, NO overlay
           Title right-aligned, text-shadow
       ══════════════════════════════════════════════ */}
       <section className="relative w-full">
         <Image
           src="/images/home-more-than-safari-jeep-wild.jpg"
-          alt="More than just a safari — safari jeep at dramatic sunset, Masai Mara"
-          title="More than just a safari — safari jeep at dramatic sunset, Masai Mara"
+          alt="More than just a safari, safari jeep at dramatic sunset, Masai Mara"
+          title="More than just a safari, safari jeep at dramatic sunset, Masai Mara"
           width={1920}
           height={1280}
           className="w-full h-auto block"
           sizes="100vw"
         />
 
-        {/* "More Than Just a Safari" — stacks below on mobile, overlays on desktop */}
+        {/* "More Than Just a Safari", stacks below on mobile, overlays on desktop */}
         <div className="relative lg:absolute lg:top-[15%] lg:right-16 z-10 px-6 py-8 lg:p-0">
           <h2
             className="font-display text-white font-normal text-left lg:text-right text-on-image"
@@ -147,14 +147,14 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECTION 4 — MORE THAN SAFARI BODY TEXT (dark bg)
+          SECTION 4, MORE THAN SAFARI BODY TEXT (dark bg)
       ══════════════════════════════════════════════ */}
       <section className="bg-black py-14 px-6 sm:px-10 lg:px-20">
         <div className="max-w-4xl space-y-5 text-white/85 leading-relaxed mb-12">
           <p>At Lens and Latitudes, we design wildlife experiences for people who want more than just a simple vacation.</p>
           <p>There is No script, No Stage, Just Wildlife that Roams - with Drama that makes you feel Right at Home.</p>
           <p>Whether you&apos;re a solo shutterbug chasing the perfect frame, a group of friends with an itch for adventure, or a corporate team that&apos;s over trust falls - or students in a room with walls that wish to Grow roots together.</p>
-          <p>This is where the Wi-Fi ends and real connection begins — we&apos;ve got you covered.</p>
+          <p>This is where the Wi-Fi ends and real connection begins, we&apos;ve got you covered.</p>
           <p>We&apos;re talking dusty boots, foggy forests, jeep rides that feel like rollercoasters, and quiet moments when wildlife looks straight back at you.</p>
         </div>
         <Link
@@ -166,11 +166,11 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECTION 5 — YOUR PACK… CAPABILITIES (WHITE bg)
-          Images displayed at FULL NATURAL SIZE — no cropping, no overlay
+          SECTION 5, YOUR PACK… CAPABILITIES (WHITE bg)
+          Images displayed at FULL NATURAL SIZE, no cropping, no overlay
       ══════════════════════════════════════════════ */}
       <section className="bg-white py-16 px-6 sm:px-10 lg:px-20">
-        {/* Heading — single line, centered */}
+        {/* Heading, single line, centered */}
         <div className="mb-12 text-center">
           <h2
             className="font-display text-black font-normal mb-5"
@@ -179,15 +179,15 @@ export default function HomePage() {
             Your Pack…&nbsp;&nbsp;&nbsp;Your Path…&nbsp;&nbsp;&nbsp;Let Nature Do the Talking
           </h2>
           <p className="text-gray-700 text-center" style={{ fontSize: "20px" }}>
-            This is where the Wi-Fi ends and real connection begins — we&apos;ve got you covered.
+            This is where the Wi-Fi ends and real connection begins, we&apos;ve got you covered.
           </p>
         </div>
 
-        {/* Capability cards — image LEFT at full natural size, text RIGHT */}
+        {/* Capability cards, image LEFT at full natural size, text RIGHT */}
         <div className="space-y-16">
           {capabilities.map((cap) => (
             <div key={cap.href} className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start">
-              {/* Image — full natural size, no cropping, no overlay */}
+              {/* Image, full natural size, no cropping, no overlay */}
               <Link href={cap.href} className="shrink-0 w-full sm:w-[380px] lg:w-[420px]">
                 <Image
                   src={cap.image}
@@ -227,12 +227,12 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECTION 6 — TESTIMONIALS
+          SECTION 6, TESTIMONIALS
       ══════════════════════════════════════════════ */}
       <TestimonialsSection />
 
       {/* ══════════════════════════════════════════════
-          SECTION 7 — REAL ADVENTURES (light bg + 2×2 videos)
+          SECTION 7, REAL ADVENTURES (light bg + 2×2 videos)
       ══════════════════════════════════════════════ */}
       <section className="bg-gray-50 py-16 px-6 sm:px-10 lg:px-20">
         <div className="text-center mb-10">
@@ -249,32 +249,32 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Inline video testimonials — uniform 16:9 cards, click to play */}
+        {/* Inline video testimonials, uniform 16:9 cards, click to play */}
         <VideoTestimonials
           videos={[
             {
               src: "/videos/dr-manivannan-masai-mara.mp4",
               poster: "/videos/dr-manivannan-masai-mara-poster.jpg",
               name: "Dr. S. Manivannan",
-              role: "Founder & MD, Kauvery Hospital — Masai Mara",
+              role: "Founder & MD, Kauvery Hospital, Masai Mara",
             },
             {
               src: "/videos/jaykumar-chennai.mp4",
               poster: "/videos/jaykumar-chennai-poster.jpg",
               name: "Jaykumar",
-              role: "Chennai — Wildlife Safari",
+              role: "Chennai, Wildlife Safari",
             },
             {
               src: "/videos/ambika-bangalore.mp4",
               poster: "/videos/ambika-bangalore-poster.jpg",
               name: "Ambika",
-              role: "Bangalore — Wildlife Safari",
+              role: "Bangalore, Wildlife Safari",
             },
             {
               src: "/videos/bala-masai-mara.mp4",
               poster: "/videos/bala-masai-mara-poster.jpg",
               name: "Bala",
-              role: "Masai Mara — Trip Testimonial",
+              role: "Masai Mara, Trip Testimonial",
             },
           ]}
         />

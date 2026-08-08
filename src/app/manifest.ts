@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Lens N Latitudes — Wildlife Photography & Safari Tours",
+    name: "Lens N Latitudes, Wildlife Photography & Safari Tours",
     short_name: "Lens N Latitudes",
     description:
       "Award-winning wildlife photography safaris led by Salil Nair. India, Africa & worldwide expeditions.",

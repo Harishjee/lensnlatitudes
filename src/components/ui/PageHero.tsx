@@ -23,7 +23,7 @@ interface PageHeroProps {
    *             (for high-key / airy compositions like the elephant).
    */
   variant?: "cover" | "contain";
-  /** Title colour — "light" for photos, "dark" for high-key white images */
+  /** Title colour, "light" for photos, "dark" for high-key white images */
   titleColor?: "light" | "dark";
   /** Make the hero a full 100vh section (image sits behind the header) */
   fullHeight?: boolean;
@@ -35,7 +35,7 @@ interface PageHeroProps {
  * Reusable hero for all inner pages.
  * - cover:   fixed height (~45vh), image cropped, light title with shadow.
  * - contain: full uncropped image on white, title overlaps the bottom-left.
- * NO dark overlay — the photo always shows fully.
+ * NO dark overlay, the photo always shows fully.
  */
 export default function PageHero({
   image,

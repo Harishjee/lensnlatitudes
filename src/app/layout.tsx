@@ -24,7 +24,7 @@ const ptSerif = PT_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Lens N Latitudes — Wildlife Photography & Safari Tours",
+    default: "Lens N Latitudes, Wildlife Photography & Safari Tours",
     template: "%s | Lens N Latitudes",
   },
   description: SITE.description,
@@ -70,7 +70,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-/* Sitewide brand entity — Organization + WebSite (John Mueller–recommended). */
+/* Sitewide brand entity, Organization + WebSite (John Mueller, recommended). */
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@graph": [

@@ -112,7 +112,7 @@ export default function TestimonialsCarousel() {
               <div className="text-right">
                 <span className="text-2xl">{getSafariIcon(t.safari)}</span>
                 <p className="text-[#00bcd4] text-xs font-semibold uppercase tracking-wide mt-1">
-                  {t.safari.split("–")[0].trim()}
+                  {t.safari.split(",")[0].trim()}
                 </p>
               </div>
             </div>

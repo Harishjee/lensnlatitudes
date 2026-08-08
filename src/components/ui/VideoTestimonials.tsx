@@ -40,8 +40,8 @@ export default function VideoTestimonials({ videos }: { videos: VideoTestimonial
             >
               <Image
                 src={v.poster}
-                alt={`${v.name} — ${v.role} video testimonial`}
-                title={`${v.name} — ${v.role}`}
+                alt={`${v.name}, ${v.role} video testimonial`}
+                title={`${v.name}, ${v.role}`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, 50vw"

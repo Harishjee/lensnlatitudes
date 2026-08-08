@@ -105,7 +105,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
           </h2>
           <p className="text-gray-600 leading-relaxed mt-5" style={{ fontSize: "18px" }}>
             Everything you might wonder about before joining a Lens &amp; Latitudes
-            safari — gear, groups, comfort, and the wild little details in between.
+            safari, gear, groups, comfort, and the wild little details in between.
           </p>
 
           {/* Contact card */}
@@ -114,7 +114,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
               Still curious?
             </p>
             <p className="text-gray-500 text-sm mb-5">
-              Salil is a living, breathing safari encyclopedia — just ask.
+              Salil is a living, breathing safari encyclopedia, just ask.
             </p>
             <a
               href={`tel:${CONTACT.phone.replace(/[^+\d]/g, "")}`}
@@ -157,7 +157,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
           <div className="space-y-3">
             {filtered.length === 0 ? (
               <p className="text-gray-500 text-center py-12" style={{ fontSize: "17px" }}>
-                No questions match &ldquo;{query}&rdquo;. Try another word — or just{" "}
+                No questions match &ldquo;{query}&rdquo;. Try another word, or just{" "}
                 <a href={`tel:${CONTACT.phone.replace(/[^+\d]/g, "")}`} className="text-[#00bcd4] underline">
                   call us
                 </a>

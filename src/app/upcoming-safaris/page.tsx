@@ -5,9 +5,9 @@ import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Upcoming Safaris 2026 — Kenya Wildlife Photography Expeditions with Salil Nair",
+  title: "Upcoming Safaris 2026, Kenya Wildlife Photography Expeditions with Salil Nair",
   description:
-    "Join Salil Nair on Kenya's most iconic wildlife photography expeditions — The Super Tuskers & Walk with the Cheetahs. Oct 14–20, 2026. Amboseli, Lake Naivasha, Lake Nakuru & Masai Mara. Small groups, luxury all-inclusive stays, limited seats.",
+    "Join Salil Nair on Kenya's most iconic wildlife photography expeditions, The Super Tuskers & Walk with the Cheetahs. Oct 14-20, 2026. Amboseli, Lake Naivasha, Lake Nakuru & Masai Mara. Small groups, luxury all-inclusive stays, limited seats.",
   path: "/upcoming-safaris",
   image: "/images/ooo-hero-sunset-elephants-masai-mara.jpg",
 });
@@ -39,11 +39,11 @@ const safaris: Safari[] = [
   {
     title: "The Super Tuskers",
     subtitle: "Kenya Wildlife Expedition · Discover Kenya's Legendary Giants",
-    hook: "Stand before Kenya's last great Super Tuskers beneath Kilimanjaro's snows — a photographic pilgrimage to giants whose ivory nearly touches the earth.",
+    hook: "Stand before Kenya's last great Super Tuskers beneath Kilimanjaro's snows, a photographic pilgrimage to giants whose ivory nearly touches the earth.",
     image: "/images/kenya-safari-1.png",
     imageAlt:
-      "Kenya The Super Tuskers wildlife photography expedition poster — Oct 14–20 2026, led by Salil S. Nair, Amboseli, Lake Naivasha, Lake Nakuru, Masai Mara",
-    date: "Oct 14–20, 2026",
+      "Kenya The Super Tuskers wildlife photography expedition poster, Oct 14-20 2026, led by Salil S. Nair, Amboseli, Lake Naivasha, Lake Nakuru, Masai Mara",
+    date: "Oct 14-20, 2026",
     duration: "7 Days · 6 Nights",
     destinations: ["Amboseli", "Lake Naivasha", "Lake Nakuru", "Masai Mara"],
     highlights: [
@@ -55,16 +55,16 @@ const safaris: Safari[] = [
       "Storytelling & conservation sessions",
     ],
     whatsapp:
-      "Hi Salil, I'm interested in the Kenya Super Tuskers Expedition (Oct 14–20, 2026). Please share details, pricing and availability.",
+      "Hi Salil, I'm interested in the Kenya Super Tuskers Expedition (Oct 14-20, 2026). Please share details, pricing and availability.",
   },
   {
     title: "Walk with the Cheetahs",
     subtitle: "Kenya Wildlife Expedition · The Fastest Animal on Earth",
-    hook: "Chase the light with the world's fastest land animal — from Nakuru's flamingo shores to the Mara's endless plains, every frame a burst of raw speed and grace.",
+    hook: "Chase the light with the world's fastest land animal, from Nakuru's flamingo shores to the Mara's endless plains, every frame a burst of raw speed and grace.",
     image: "/images/kenya-safari-2.png",
     imageAlt:
-      "Kenya Walk with the Cheetahs wildlife photography expedition poster — Oct 14–20 2026, led by Salil S. Nair, Amboseli, Lake Naivasha, Lake Nakuru, Masai Mara",
-    date: "Oct 14–20, 2026",
+      "Kenya Walk with the Cheetahs wildlife photography expedition poster, Oct 14-20 2026, led by Salil S. Nair, Amboseli, Lake Naivasha, Lake Nakuru, Masai Mara",
+    date: "Oct 14-20, 2026",
     duration: "7 Days · 6 Nights",
     destinations: ["Amboseli", "Lake Naivasha", "Lake Nakuru", "Masai Mara"],
     highlights: [
@@ -76,13 +76,13 @@ const safaris: Safari[] = [
       "Daily wildlife & conservation sessions",
     ],
     whatsapp:
-      "Hi Salil, I'm interested in the Kenya Cheetah Expedition (Oct 14–20, 2026). Please share details, pricing and availability.",
+      "Hi Salil, I'm interested in the Kenya Cheetah Expedition (Oct 14-20, 2026). Please share details, pricing and availability.",
   },
 ];
 
 const trust = [
   { icon: "🏆", label: "Award-winning guide", sub: "Led by Salil S. Nair" },
-  { icon: "👥", label: "Small groups", sub: "Only 6–10 travellers" },
+  { icon: "👥", label: "Small groups", sub: "Only 6-10 travellers" },
   { icon: "🛖", label: "All-inclusive luxury", sub: "Stays, meals & 4×4s" },
   { icon: "⭐", label: "5-star rated", sub: "Loved by past guests" },
 ];
@@ -100,11 +100,11 @@ const included = [
 
 export default function UpcomingSafarisPage() {
   const heroWhatsApp =
-    "Hi Salil, I'd like to reserve a seat on your Kenya 2026 expedition (Oct 14–20). Please share details.";
+    "Hi Salil, I'd like to reserve a seat on your Kenya 2026 expedition (Oct 14-20). Please share details.";
 
   return (
     <>
-      {/* ══════════ HERO — image collage + overlay ══════════ */}
+      {/* ══════════ HERO, image collage + overlay ══════════ */}
       <section className="relative min-h-[88vh] flex items-center overflow-hidden">
         {/* Collage background */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 grid-rows-2">
@@ -122,7 +122,7 @@ export default function UpcomingSafarisPage() {
             </div>
           ))}
         </div>
-        {/* Overlays — light enough to show the collage, dark enough to read */}
+        {/* Overlays, light enough to show the collage, dark enough to read */}
         <div className="absolute inset-0 bg-black/48" />
         <div
           className="absolute inset-0"
@@ -148,7 +148,7 @@ export default function UpcomingSafarisPage() {
             style={{ fontSize: "clamp(1.05rem, 2vw, 1.4rem)" }}
           >
             Two once-in-a-lifetime wildlife photography journeys across Kenya&apos;s
-            most iconic wildernesses — led by award-winning photographer Salil S. Nair.
+            most iconic wildernesses, led by award-winning photographer Salil S. Nair.
           </p>
 
           {/* Urgency chip */}
@@ -157,7 +157,7 @@ export default function UpcomingSafarisPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00bcd4] opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00bcd4]" />
             </span>
-            Oct 14–20, 2026 · Limited seats — small groups only
+            Oct 14-20, 2026 · Limited seats, small groups only
           </div>
 
           {/* CTAs */}
@@ -192,7 +192,7 @@ export default function UpcomingSafarisPage() {
         </div>
       </section>
 
-      {/* ══════════ EXPEDITIONS — full posters + details ══════════ */}
+      {/* ══════════ EXPEDITIONS, full posters + details ══════════ */}
       <section id="expeditions" className="bg-[#0a0a0a] py-20 sm:py-24 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -212,7 +212,7 @@ export default function UpcomingSafarisPage() {
                   key={safari.title}
                   className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
                 >
-                  {/* Full poster — shown completely, never cropped */}
+                  {/* Full poster, shown completely, never cropped */}
                   <div className={reversed ? "lg:order-2" : ""}>
                     <a
                       href={`${CONTACT.whatsapp}?text=${encodeURIComponent(safari.whatsapp)}`}
@@ -223,7 +223,7 @@ export default function UpcomingSafarisPage() {
                       <Image
                         src={safari.image}
                         alt={safari.imageAlt}
-                        title={`${safari.title} — ${safari.date}`}
+                        title={`${safari.title}, ${safari.date}`}
                         width={1024}
                         height={1536}
                         className="w-full h-auto"
@@ -324,7 +324,7 @@ export default function UpcomingSafarisPage() {
             &ldquo;Salil, your enthusiasm is dangerous, in a good way. Within 48 hours all
             of us became wildlife experts, photographers, and bird watchers. What a trip!&rdquo;
           </blockquote>
-          <p className="text-gray-400 mt-6 text-sm">— Masai Mara Expedition, 2026</p>
+          <p className="text-gray-400 mt-6 text-sm">Masai Mara Expedition, 2026</p>
         </div>
       </section>
 
@@ -344,7 +344,7 @@ export default function UpcomingSafarisPage() {
             Only a Few Seats Remain
           </h2>
           <p className="text-gray-200 mt-5 leading-relaxed text-on-image" style={{ fontSize: "18px" }}>
-            Kenya, October 2026. Small groups fill fast — secure your place on the
+            Kenya, October 2026. Small groups fill fast, secure your place on the
             expedition of a lifetime today.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -372,7 +372,7 @@ export default function UpcomingSafarisPage() {
             "@graph": [
               ...safaris.map((s) => ({
                 "@type": "Event",
-                name: `Kenya Wildlife Expedition — ${s.title}`,
+                name: `Kenya Wildlife Expedition, ${s.title}`,
                 description: s.hook,
                 startDate: "2026-10-14",
                 endDate: "2026-10-20",

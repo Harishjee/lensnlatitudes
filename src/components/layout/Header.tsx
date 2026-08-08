@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-/* Routes whose hero has a LIGHT background — header uses dark text there
+/* Routes whose hero has a LIGHT background, header uses dark text there
    (until the user scrolls and the dark header bar appears). */
 const LIGHT_HERO_ROUTES = new Set([
   "/explore-the-rest-of-the-world",
@@ -71,7 +71,7 @@ export default function Header() {
       <div className="max-w-none px-6 sm:px-10">
         <div className="flex items-center justify-between h-16 lg:h-20">
 
-          {/* Logo — icon only (no text beside it) */}
+          {/* Logo, icon only (no text beside it) */}
           <Link href="/" className="shrink-0">
             <div className="relative w-16 h-16 lg:w-20 lg:h-20">
               <Image
@@ -130,7 +130,7 @@ export default function Header() {
               );
             })}
 
-            {/* Upcoming Safari CTA — white pill with dark text (matches original) */}
+            {/* Upcoming Safari CTA, white pill with dark text (matches original) */}
             <Link
               href="/upcoming-safaris"
               className={`ml-3 text-[16px] font-semibold px-5 py-2.5 rounded-full transition-colors whitespace-nowrap ${
