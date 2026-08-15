@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/metadata";
+import { service, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Explore Latitudes, Wildlife Safari Photography Journeys",
@@ -186,6 +188,22 @@ export default function ExploreLatitudesPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          service({
+            name: "Explore Latitudes",
+            description:
+              "Curated wildlife photography safaris to India, Africa and worldwide under the mentorship of Salil Nair.",
+            path: "/explore-latitudes",
+            serviceType: "Wildlife Safari Photography Tours",
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Explore Latitudes", path: "/explore-latitudes" },
+          ]),
+        ]}
+      />
     </>
   );
 }

@@ -3,6 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Track Me, Find Salil Nair, Wildlife Photographer",
@@ -136,6 +138,13 @@ export default function TrackMePage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Track Me", path: "/track-me" },
+        ])}
+      />
     </>
   );
 }

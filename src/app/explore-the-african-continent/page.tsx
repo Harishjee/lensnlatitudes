@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/metadata";
+import { touristTrip, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Explore the African Continent, African Wildlife Safari Photography",
@@ -152,6 +154,28 @@ export default function ExploreAfricanContinentPage() {
           </p>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          touristTrip({
+            name: "Explore the African Continent",
+            description:
+              "African wildlife photography safaris across the Masai Mara, Serengeti, Okavango, Etosha and South Luangwa, led by Salil Nair.",
+            path: "/explore-the-african-continent",
+            destinations: [
+              "Masai Mara",
+              "Serengeti",
+              "Okavango Delta",
+              "Etosha National Park",
+              "South Luangwa",
+            ],
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Explore the African Continent", path: "/explore-the-african-continent" },
+          ]),
+        ]}
+      />
     </>
   );
 }

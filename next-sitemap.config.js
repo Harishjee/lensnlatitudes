@@ -5,7 +5,12 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ["/api/*"],
+  exclude: [
+    "/api/*",
+    "/icon.png",
+    "/apple-icon.png",
+    "/manifest.webmanifest",
+  ],
   additionalPaths: async () => [
     { loc: "/", changefreq: "weekly", priority: 1.0 },
     { loc: "/upcoming-safaris", changefreq: "weekly", priority: 0.9 },

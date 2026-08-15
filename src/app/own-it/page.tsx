@@ -5,6 +5,8 @@ import PageHero from "@/components/ui/PageHero";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Own It, Wildlife Photography Fine Art Prints by Salil Nair",
@@ -207,6 +209,13 @@ export default function OwnItPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Own It", path: "/own-it" },
+        ])}
+      />
     </>
   );
 }

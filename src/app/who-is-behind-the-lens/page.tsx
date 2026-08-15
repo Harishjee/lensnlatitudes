@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Who's Behind the Lens, Salil Nair, Wildlife Photographer",
@@ -147,20 +149,11 @@ export default function WhoIsBehindTheLensPage() {
         </div>
       </section>
 
-      {/* JSON-LD Person schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Salil Nair",
-            jobTitle: "Wildlife Photographer & Safari Guide",
-            worksFor: { "@type": "Organization", name: "Lens N Latitudes" },
-            description:
-              "Founder of Lens and Latitudes, award-winning wildlife photographer crafting stories with shadows, poetry with paws.",
-          }),
-        }}
+      <JsonLd
+        data={breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Who's Behind the Lens", path: "/who-is-behind-the-lens" },
+        ])}
       />
     </>
   );

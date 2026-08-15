@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/metadata";
+import { touristTrip, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Explore the Rest of the World, Global Wildlife Photography Expeditions",
@@ -157,6 +159,28 @@ export default function ExploreRestOfWorldPage() {
           <p>you can bet we&apos;ll get you there, keep your camera ready.</p>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          touristTrip({
+            name: "Explore the Rest of the World",
+            description:
+              "Global wildlife photography expeditions, from Pantanal jaguars and Yellowstone wolves to Svalbard polar bears, led by Salil Nair.",
+            path: "/explore-the-rest-of-the-world",
+            destinations: [
+              "Pantanal",
+              "Yellowstone National Park",
+              "Svalbard",
+              "Sumatra",
+              "Scottish Highlands",
+            ],
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Explore the Rest of the World", path: "/explore-the-rest-of-the-world" },
+          ]),
+        ]}
+      />
     </>
   );
 }

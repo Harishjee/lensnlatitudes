@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import FAQSection from "@/components/ui/FAQSection";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "FAQ, Wildlife Safari Questions Answered",
@@ -87,11 +89,9 @@ export default function FAQPage() {
 
       <FAQSection faqs={faqs} />
 
-      {/* JSON-LD FAQPage structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+      <JsonLd
+        data={[
+          {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: faqs.map((faq) => ({
@@ -99,8 +99,12 @@ export default function FAQPage() {
               name: faq.q,
               acceptedAnswer: { "@type": "Answer", text: faq.a },
             })),
-          }),
-        }}
+          },
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "FAQ", path: "/faq" },
+          ]),
+        ]}
       />
     </>
   );

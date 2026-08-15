@@ -3,6 +3,8 @@ import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import LightboxGallery from "@/components/ui/LightboxGallery";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Awards, Award-Winning Wildlife Photography by Salil Nair",
@@ -216,26 +218,11 @@ export default function AwardsPage() {
         </div>
       </section>
 
-      {/* JSON-LD Person schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Salil Nair",
-            jobTitle: "Wildlife Photographer & Safari Guide",
-            worksFor: { "@type": "Organization", name: "Lens N Latitudes" },
-            award: [
-              "Nature in Focus Winner 2019",
-              "Canon All India Live Competition Winner 2019",
-              "Sony All India Live Competition Winner 2025",
-              "FIP Gold for Nature 2022",
-              "FIP Bronze for Nature 2023",
-              "Wildlife Association of India, 6 Gold Medals",
-            ],
-          }),
-        }}
+      <JsonLd
+        data={breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Awards", path: "/awards" },
+        ])}
       />
     </>
   );

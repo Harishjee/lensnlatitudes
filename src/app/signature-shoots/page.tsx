@@ -3,6 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import SignatureGallery from "@/components/ui/SignatureGallery";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
+import { service, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Signature Shoots, Private One-on-One Wildlife Photography Tours",
@@ -79,6 +81,22 @@ export default function SignatureShootsPage() {
           </div>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          service({
+            name: "Signature Shoots",
+            description:
+              "Private, one-on-one wildlife photography tours with Salil Nair to the secret corners and hidden gems few ever see.",
+            path: "/signature-shoots",
+            serviceType: "Private Wildlife Photography Tour",
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Signature Shoots", path: "/signature-shoots" },
+          ]),
+        ]}
+      />
     </>
   );
 }

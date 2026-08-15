@@ -3,7 +3,9 @@ import { Gilda_Display, PT_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { SITE, CONTACT } from "@/lib/constants";
+import { SITE } from "@/lib/constants";
+import { organizationGraph } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 import Script from "next/script";
 
 const gildaDisplay = Gilda_Display({
@@ -70,57 +72,13 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-/* Sitewide brand entity, Organization + WebSite (John Mueller, recommended). */
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${SITE.url}/#organization`,
-      name: SITE.name,
-      url: SITE.url,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE.url}/icon-512.png`,
-        width: 512,
-        height: 512,
-      },
-      image: `${SITE.url}/images/og-default.jpg`,
-      description: SITE.description,
-      founder: { "@type": "Person", name: "Salil Nair" },
-      email: CONTACT.email,
-      telephone: CONTACT.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "3rd floor, 115, above union bank, Arcot Road",
-        addressLocality: "Alwarthirunagar, Chennai",
-        postalCode: "600087",
-        addressCountry: "IN",
-      },
-      sameAs: [CONTACT.instagram, CONTACT.youtube],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE.url}/#website`,
-      url: SITE.url,
-      name: SITE.name,
-      description: SITE.description,
-      publisher: { "@id": `${SITE.url}/#organization` },
-      inLanguage: "en-IN",
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${gildaDisplay.variable} ${ptSerif.variable}`}>
       <body className="bg-[#0a0a0a] text-white antialiased flex flex-col min-h-screen font-serif">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-        />
+        <JsonLd data={organizationGraph} />
         
         {/* Google Analytics 4 */}
         <Script

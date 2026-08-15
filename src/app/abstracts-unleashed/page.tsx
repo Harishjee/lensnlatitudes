@@ -4,6 +4,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import SignatureGallery from "@/components/ui/SignatureGallery";
 import { buildMetadata } from "@/lib/metadata";
+import { service, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Abstracts Unleashed, Abstract Wildlife Photography Tours",
@@ -182,6 +184,22 @@ export default function AbstractsUnleashedPage() {
           <SignatureGallery images={gallery} />
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          service({
+            name: "Abstracts Unleashed",
+            description:
+              "A creative wildlife photography experience with Salil Nair, chasing abstraction, emotion, and movement, photos that distill wildlife into art.",
+            path: "/abstracts-unleashed",
+            serviceType: "Abstract Wildlife Photography Workshop",
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Abstracts Unleashed", path: "/abstracts-unleashed" },
+          ]),
+        ]}
+      />
     </>
   );
 }

@@ -3,6 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import ContactForm from "@/components/ui/ContactForm";
 import { CONTACT } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
+import { breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us, Lens N Latitudes",
@@ -170,32 +172,11 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* LocalBusiness JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": ["LocalBusiness", "ProfessionalService"],
-            name: "Lens N Latitudes",
-            description: "Award-winning wildlife photography safaris led by Salil Nair. India, Africa & worldwide expeditions.",
-            url: "https://www.lensnlatitudes.com",
-            telephone: "+91-9930123699",
-            email: "lensnlatitudes@gmail.com",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "3rd floor, 115, above union bank, Arcot Road",
-              addressLocality: "Alwarthirunagar, Chennai",
-              postalCode: "600087",
-              addressCountry: "IN",
-            },
-            geo: { "@type": "GeoCoordinates", latitude: 13.044674, longitude: 80.1852768 },
-            sameAs: [
-              "https://www.instagram.com/lensnlatitudes/",
-              "https://www.youtube.com/channel/UCYuLxoEjjepb6nBw9EG1W8g",
-            ],
-          }),
-        }}
+      <JsonLd
+        data={breadcrumb([
+          { name: "Home", path: "/" },
+          { name: "Contact Us", path: "/contact" },
+        ])}
       />
     </>
   );

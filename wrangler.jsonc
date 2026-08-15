@@ -10,7 +10,15 @@
   },
   "observability": {
     "enabled": true
-  }
-  // Secrets (set in the Cloudflare dashboard or via `wrangler secret put`):
-  //   RESEND_API_KEY
+  },
+  // Cloudflare Email Sending — the contact form sends through this binding.
+  // The `from` address must use a domain onboarded to Email Sending:
+  //   Dashboard → Compute & AI → Email Service → Email Sending → Onboard Domain
+  //   (or: npx wrangler email sending enable lensnlatitudes.com)
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_sender_addresses": ["noreply@lensnlatitudes.com"]
+    }
+  ]
 }

@@ -4,6 +4,8 @@ import Image from "next/image";
 import SignatureGallery from "@/components/ui/SignatureGallery";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { buildMetadata } from "@/lib/metadata";
+import { service, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Beyond the Classrooms, Wildlife Education Tours for Students",
@@ -155,6 +157,22 @@ export default function BeyondTheClassroomsPage() {
           <SignatureGallery images={gallery} />
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          service({
+            name: "Beyond the Classrooms",
+            description:
+              "Wildlife education tours for students that bring nature alive under open skies, with storytellers, scientists, and expert guides.",
+            path: "/beyond-the-classrooms",
+            serviceType: "Student Wildlife Education Tour",
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Beyond the Classrooms", path: "/beyond-the-classrooms" },
+          ]),
+        ]}
+      />
     </>
   );
 }

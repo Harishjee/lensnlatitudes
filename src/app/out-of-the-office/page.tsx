@@ -3,6 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import Image from "next/image";
 import SignatureGallery from "@/components/ui/SignatureGallery";
 import { buildMetadata } from "@/lib/metadata";
+import { service, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Out of the Office, Corporate Wildlife Safari Retreats",
@@ -240,6 +242,22 @@ export default function OutOfTheOfficePage() {
           </p>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          service({
+            name: "Out of the Office",
+            description:
+              "Corporate wildlife safari retreats that trade spreadsheets for the wild, helping teams slow down, reconnect, and see the world through a new lens.",
+            path: "/out-of-the-office",
+            serviceType: "Corporate Wildlife Safari Retreat",
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Out of the Office", path: "/out-of-the-office" },
+          ]),
+        ]}
+      />
     </>
   );
 }

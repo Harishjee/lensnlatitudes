@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/metadata";
+import { touristTrip, breadcrumb } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Explore Jungles of India, Wildlife Safari Tours India",
@@ -151,6 +153,29 @@ export default function ExploreJunglesOfIndiaPage() {
           <p>So get your lens to find stories that others miss.</p>
         </div>
       </section>
+
+      <JsonLd
+        data={[
+          touristTrip({
+            name: "Explore Jungles of India",
+            description:
+              "Wildlife photography safaris in India's legendary jungles, led by award-winning photographer Salil Nair.",
+            path: "/explore-jungles-of-india",
+            destinations: [
+              "Bandhavgarh National Park",
+              "Tadoba-Andhari Tiger Reserve",
+              "Kaziranga National Park",
+              "Corbett National Park",
+              "Kabini",
+              "Bera",
+            ],
+          }),
+          breadcrumb([
+            { name: "Home", path: "/" },
+            { name: "Explore Jungles of India", path: "/explore-jungles-of-india" },
+          ]),
+        ]}
+      />
     </>
   );
 }
