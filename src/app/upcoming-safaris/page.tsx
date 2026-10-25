@@ -40,13 +40,6 @@ export default function UpcomingSafarisPage() {
             className="justify-center px-7 py-3"
           />
           <a
-            href={PDF}
-            download
-            className="inline-flex items-center gap-2 rounded-lg border border-white/25 text-white px-7 py-3 font-semibold hover:bg-white hover:text-gray-900 transition-colors text-sm"
-          >
-            📄 Download PDF
-          </a>
-          <a
             href={`tel:${CONTACT.phone2.replace(/[^+\d]/g, "")}`}
             className="inline-flex items-center gap-2 rounded-lg bg-white text-gray-900 px-7 py-3 font-semibold hover:bg-gray-100 transition-colors text-sm"
           >
@@ -56,33 +49,33 @@ export default function UpcomingSafarisPage() {
       </section>
 
       {/* ══════ FULL-PAGE PDF EMBED ══════ */}
-      <section className="bg-[#111] w-full">
-        {/* Desktop: iframe embed */}
+      <section className="bg-[#111] w-full flex justify-center py-6">
+        {/* Desktop: 80% wide, full viewport height */}
         <object
           data={`${PDF}#toolbar=1&navpanes=0&scrollbar=1&view=FitH`}
           type="application/pdf"
-          className="hidden sm:block w-full"
-          style={{ height: "calc(100vh - 80px)", minHeight: "800px" }}
+          className="hidden sm:block"
+          style={{ width: "80%", height: "100vh" }}
           aria-label="BNI Exclusive Kenya Tour Itinerary Jan 2027"
         >
-          {/* Fallback for browsers that can't embed PDFs */}
           <div className="flex flex-col items-center justify-center h-96 gap-4 text-gray-400">
             <p>Your browser cannot display PDFs inline.</p>
             <a
               href={PDF}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-white text-gray-900 px-6 py-3 font-semibold hover:bg-gray-100 transition-colors text-sm"
             >
-              📄 Download the Itinerary PDF
+              Open Itinerary
             </a>
           </div>
         </object>
 
-        {/* Mobile: PDF doesn't embed reliably — show download prompt instead */}
+        {/* Mobile: open in new tab */}
         <div className="sm:hidden flex flex-col items-center justify-center py-20 px-6 gap-6 text-center">
           <p className="text-gray-300 text-lg font-display">View the Full Itinerary</p>
           <p className="text-gray-500 text-sm leading-relaxed">
-            Open or download the complete BNI Exclusive Kenya Safari itinerary, including day-by-day schedule,
+            Open the complete BNI Exclusive Kenya Safari itinerary, including day-by-day schedule,
             pricing, inclusions, and lodge details.
           </p>
           <a
@@ -91,14 +84,7 @@ export default function UpcomingSafarisPage() {
             rel="noopener noreferrer"
             className="rounded-lg bg-[#00bcd4] text-black px-8 py-4 font-semibold text-base hover:bg-[#00acc1] transition-colors"
           >
-            Open Itinerary PDF
-          </a>
-          <a
-            href={PDF}
-            download
-            className="text-gray-400 hover:text-white text-sm underline underline-offset-2 transition-colors"
-          >
-            Download instead →
+            Open Itinerary
           </a>
         </div>
       </section>
